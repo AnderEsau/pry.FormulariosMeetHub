@@ -41,20 +41,22 @@
             // TextBox1
             // 
             TextBox1.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox1.Font = new Font("Arial", 11F);
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox1.Location = new Point(-1, 0);
             TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(702, 23);
+            TextBox1.Size = new Size(702, 24);
             TextBox1.TabIndex = 4;
             TextBox1.Text = resources.GetString("TextBox1.Text");
             // 
             // TextBox2
             // 
             TextBox2.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox2.Font = new Font("Arial", 11F);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(-1, 29);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(702, 23);
+            TextBox2.Size = new Size(702, 24);
             TextBox2.TabIndex = 5;
             TextBox2.Text = "   Reservaciones                             Reporte Periodico";
             // 
@@ -92,9 +94,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(701, 0);
+            pictureBox1.Location = new Point(713, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 68);
+            pictureBox1.Size = new Size(89, 67);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;

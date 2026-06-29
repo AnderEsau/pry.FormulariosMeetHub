@@ -42,10 +42,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Arial", 11F);
             label1.ForeColor = Color.FromArgb(63, 95, 132);
             label1.Location = new Point(76, 42);
             label1.Name = "label1";
-            label1.Size = new Size(238, 15);
+            label1.Size = new Size(296, 17);
             label1.TabIndex = 0;
             label1.Text = "Motivo por el cual desea cancelar la reserva:";
             // 
@@ -60,10 +61,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial", 11F);
             label2.ForeColor = Color.FromArgb(63, 95, 132);
             label2.Location = new Point(76, 124);
             label2.Name = "label2";
-            label2.Size = new Size(158, 15);
+            label2.Size = new Size(198, 17);
             label2.TabIndex = 2;
             label2.Text = "Ingrese el folio de su reserva:";
             // 

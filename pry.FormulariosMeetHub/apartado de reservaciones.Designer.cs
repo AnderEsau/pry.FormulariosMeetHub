@@ -60,43 +60,47 @@
             // ComboBox1
             // 
             ComboBox1.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox1.Font = new Font("Arial", 11F);
             ComboBox1.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox1.FormattingEnabled = true;
-            ComboBox1.ItemHeight = 15;
+            ComboBox1.ItemHeight = 17;
             ComboBox1.Location = new Point(100, 50);
             ComboBox1.Name = "ComboBox1";
-            ComboBox1.Size = new Size(293, 23);
+            ComboBox1.Size = new Size(293, 25);
             ComboBox1.TabIndex = 2;
             ComboBox1.Text = "Sala:";
             // 
             // Label1
             // 
             Label1.AutoSize = true;
+            Label1.Font = new Font("Arial", 11F);
             Label1.ForeColor = Color.FromArgb(63, 95, 132);
             Label1.Location = new Point(100, 88);
             Label1.Name = "Label1";
-            Label1.Size = new Size(75, 15);
+            Label1.Size = new Size(98, 17);
             Label1.TabIndex = 3;
             Label1.Text = "Detalles Sala:";
             // 
             // ComboBox2
             // 
             ComboBox2.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox2.Font = new Font("Arial", 11F);
             ComboBox2.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox2.FormattingEnabled = true;
             ComboBox2.Location = new Point(100, 117);
             ComboBox2.Name = "ComboBox2";
-            ComboBox2.Size = new Size(293, 23);
+            ComboBox2.Size = new Size(293, 25);
             ComboBox2.TabIndex = 5;
             ComboBox2.Text = "Àrea Academica/Departamento";
             // 
             // Label2
             // 
             Label2.AutoSize = true;
+            Label2.Font = new Font("Arial", 11F);
             Label2.ForeColor = Color.FromArgb(63, 95, 132);
             Label2.Location = new Point(100, 161);
             Label2.Name = "Label2";
-            Label2.Size = new Size(98, 15);
+            Label2.Size = new Size(131, 17);
             Label2.TabIndex = 6;
             Label2.Text = "Fecha De Reserva";
             // 
@@ -104,58 +108,64 @@
             // 
             DateTimePicker1.CalendarForeColor = Color.FromArgb(63, 95, 132);
             DateTimePicker1.CalendarTitleBackColor = Color.FromArgb(231, 238, 246);
-            DateTimePicker1.Location = new Point(255, 155);
+            DateTimePicker1.Font = new Font("Arial", 11F);
+            DateTimePicker1.Location = new Point(289, 155);
             DateTimePicker1.Name = "DateTimePicker1";
-            DateTimePicker1.Size = new Size(243, 23);
+            DateTimePicker1.Size = new Size(263, 24);
             DateTimePicker1.TabIndex = 7;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial", 11F);
             label3.ForeColor = Color.FromArgb(63, 95, 132);
             label3.Location = new Point(100, 202);
             label3.Name = "label3";
-            label3.Size = new Size(132, 15);
+            label3.Size = new Size(168, 17);
             label3.TabIndex = 8;
             label3.Text = "Fecha De Formalización";
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(255, 202);
+            dateTimePicker2.Font = new Font("Arial", 11F);
+            dateTimePicker2.Location = new Point(289, 198);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(243, 23);
+            dateTimePicker2.Size = new Size(263, 24);
             dateTimePicker2.TabIndex = 9;
             // 
             // ComboBox3
             // 
             ComboBox3.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox3.Font = new Font("Arial", 11F);
             ComboBox3.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox3.FormattingEnabled = true;
             ComboBox3.Location = new Point(100, 248);
             ComboBox3.Name = "ComboBox3";
-            ComboBox3.Size = new Size(89, 23);
+            ComboBox3.Size = new Size(98, 25);
             ComboBox3.TabIndex = 10;
             ComboBox3.Text = "Hora Inicio:";
             // 
             // ComboBox4
             // 
             ComboBox4.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox4.Font = new Font("Arial", 11F);
             ComboBox4.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox4.FormattingEnabled = true;
             ComboBox4.Location = new Point(289, 248);
             ComboBox4.Name = "ComboBox4";
-            ComboBox4.Size = new Size(104, 23);
+            ComboBox4.Size = new Size(115, 25);
             ComboBox4.TabIndex = 11;
             ComboBox4.Text = "Hora Termino:";
             // 
             // ComboBox5
             // 
             ComboBox5.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox5.Font = new Font("Arial", 11F);
             ComboBox5.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox5.FormattingEnabled = true;
             ComboBox5.Location = new Point(100, 289);
             ComboBox5.Name = "ComboBox5";
-            ComboBox5.Size = new Size(293, 23);
+            ComboBox5.Size = new Size(293, 25);
             ComboBox5.TabIndex = 12;
             ComboBox5.Text = "Tipo de Evento:";
             ComboBox5.UseWaitCursor = true;
@@ -163,27 +173,30 @@
             // TextBox2
             // 
             TextBox2.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox2.Font = new Font("Arial", 11F);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(100, 328);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(293, 23);
+            TextBox2.Size = new Size(293, 24);
             TextBox2.TabIndex = 13;
             TextBox2.Text = "Descripciòn del evento";
             // 
             // ComboBox6
             // 
             ComboBox6.BackColor = Color.FromArgb(231, 238, 246);
+            ComboBox6.Font = new Font("Arial", 11F);
             ComboBox6.ForeColor = Color.FromArgb(63, 95, 132);
             ComboBox6.FormattingEnabled = true;
             ComboBox6.Location = new Point(100, 369);
             ComboBox6.Name = "ComboBox6";
-            ComboBox6.Size = new Size(293, 23);
+            ComboBox6.Size = new Size(293, 25);
             ComboBox6.TabIndex = 14;
             ComboBox6.Text = "Total de Asistentes:";
             // 
             // Button1
             // 
             Button1.BackColor = Color.FromArgb(231, 238, 246);
+            Button1.Font = new Font("Arial", 11F);
             Button1.ForeColor = Color.FromArgb(63, 95, 132);
             Button1.Location = new Point(138, 405);
             Button1.Name = "Button1";
@@ -195,6 +208,7 @@
             // Button2
             // 
             Button2.BackColor = Color.FromArgb(231, 238, 246);
+            Button2.Font = new Font("Arial", 11F);
             Button2.ForeColor = Color.FromArgb(63, 95, 132);
             Button2.Location = new Point(310, 405);
             Button2.Name = "Button2";
@@ -206,10 +220,11 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial", 11F);
             label4.ForeColor = Color.FromArgb(63, 95, 132);
             label4.Location = new Point(546, 50);
             label4.Name = "label4";
-            label4.Size = new Size(33, 15);
+            label4.Size = new Size(38, 17);
             label4.TabIndex = 17;
             label4.Text = "Nota";
             // 
