@@ -42,18 +42,20 @@
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(63, 95, 132);
-            lblLogin.Location = new Point(199, 31);
+            lblLogin.Location = new Point(284, 52);
+            lblLogin.Margin = new Padding(4, 0, 4, 0);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(135, 50);
+            lblLogin.Size = new Size(204, 74);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "LOGIN";
             // 
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(443, 12);
+            pcbLogo.Location = new Point(633, 20);
+            pcbLogo.Margin = new Padding(4, 5, 4, 5);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(84, 80);
+            pcbLogo.Size = new Size(120, 133);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 1;
             pcbLogo.TabStop = false;
@@ -92,7 +94,7 @@
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(539, 307);
@@ -101,8 +103,9 @@
             Controls.Add(textBox1);
             Controls.Add(pcbLogo);
             Controls.Add(lblLogin);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
-            Text = "Control de Acceso";
+            Text = "Control de acceso - Meet Hub";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
