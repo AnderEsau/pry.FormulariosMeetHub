@@ -48,22 +48,22 @@
             // TextBox1
             // 
             TextBox1.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox1.Font = new Font("Arial", 11F);
+            TextBox1.Font = new Font("Franklin Gothic Medium Cond", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox1.Location = new Point(-2, 0);
             TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(725, 24);
+            TextBox1.Size = new Size(725, 44);
             TextBox1.TabIndex = 1;
             TextBox1.Text = resources.GetString("TextBox1.Text");
             // 
             // TextBox2
             // 
             TextBox2.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox2.Font = new Font("Arial", 11F);
+            TextBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox2.Location = new Point(-2, 29);
+            TextBox2.Location = new Point(-2, 41);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(725, 24);
+            TextBox2.Size = new Size(725, 35);
             TextBox2.TabIndex = 2;
             TextBox2.Text = "Reservaciones                                         Cancelaciones";
             // 
@@ -94,11 +94,11 @@
             // TextBox3
             // 
             TextBox3.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox3.Font = new Font("Arial", 11F);
+            TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox3.Location = new Point(-2, 427);
+            TextBox3.Location = new Point(-2, 426);
             TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(802, 24);
+            TextBox3.Size = new Size(802, 27);
             TextBox3.TabIndex = 10;
             TextBox3.Text = "TEL:                                                                                      EMAIL:";
             // 
@@ -132,9 +132,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(711, 0);
+            pictureBox4.Location = new Point(694, -21);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(89, 67);
+            pictureBox4.Size = new Size(120, 120);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;

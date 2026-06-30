@@ -40,11 +40,11 @@
             // lblLogin
             // 
             lblLogin.AutoSize = true;
-            lblLogin.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLogin.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblLogin.ForeColor = Color.FromArgb(63, 95, 132);
-            lblLogin.Location = new Point(315, 93);
+            lblLogin.Location = new Point(251, 101);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(135, 50);
+            lblLogin.Size = new Size(80, 30);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "LOGIN";
             // 
@@ -62,8 +62,8 @@
             // 
             textBox1.Font = new Font("Arial", 11F);
             textBox1.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox1.Location = new Point(324, 179);
-            textBox1.Margin = new Padding(1, 1, 1, 1);
+            textBox1.Location = new Point(222, 144);
+            textBox1.Margin = new Padding(1);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(132, 24);
             textBox1.TabIndex = 11;
@@ -73,10 +73,10 @@
             // 
             textBox2.Font = new Font("Arial", 11F);
             textBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox2.Location = new Point(336, 231);
-            textBox2.Margin = new Padding(1, 1, 1, 1);
+            textBox2.Location = new Point(244, 188);
+            textBox2.Margin = new Padding(1);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(92, 24);
+            textBox2.Size = new Size(87, 24);
             textBox2.TabIndex = 12;
             textBox2.Text = "Contraseña";
             textBox2.TextChanged += textBox2_TextChanged;
@@ -85,8 +85,8 @@
             // 
             button1.BackColor = Color.FromArgb(235, 197, 153);
             button1.Font = new Font("Arial", 11F);
-            button1.Location = new Point(336, 290);
-            button1.Margin = new Padding(1, 1, 1, 1);
+            button1.Location = new Point(244, 237);
+            button1.Margin = new Padding(1);
             button1.Name = "button1";
             button1.Size = new Size(80, 26);
             button1.TabIndex = 13;
@@ -98,7 +98,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(584, 361);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
