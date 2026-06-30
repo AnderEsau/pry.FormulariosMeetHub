@@ -40,9 +40,10 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(235, 197, 153);
-            button1.Location = new Point(246, 368);
+            button1.Location = new Point(172, 221);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(78, 20);
             button1.TabIndex = 0;
             button1.Text = "ACEPTAR";
             button1.UseVisualStyleBackColor = false;
@@ -50,9 +51,10 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(235, 197, 153);
-            button2.Location = new Point(376, 368);
+            button2.Location = new Point(263, 221);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(78, 20);
             button2.TabIndex = 1;
             button2.Text = "RECHAZAR";
             button2.UseVisualStyleBackColor = false;
@@ -61,10 +63,11 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridView1.Location = new Point(36, 12);
+            dataGridView1.Location = new Point(25, 7);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(358, 329);
+            dataGridView1.Size = new Size(251, 197);
             dataGridView1.TabIndex = 2;
             // 
             // Column1
@@ -83,22 +86,26 @@
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(465, 28);
+            groupBox1.Font = new Font("Arial", 11F);
+            groupBox1.Location = new Point(326, 17);
+            groupBox1.Margin = new Padding(2, 2, 2, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(300, 215);
+            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Size = new Size(210, 129);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Detalles de la Reserva:";
             // 
             // frmReservasPendientes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "frmReservasPendientes";
             Text = "Reservas Pendientes";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
