@@ -59,11 +59,11 @@
             // TextBox2
             // 
             TextBox2.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TextBox2.Font = new Font("Segoe UI", 16F);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(-2, 41);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(725, 35);
+            TextBox2.Size = new Size(725, 36);
             TextBox2.TabIndex = 2;
             TextBox2.Text = "Reservaciones                                         Cancelaciones";
             // 
@@ -96,7 +96,7 @@
             TextBox3.BackColor = Color.FromArgb(231, 238, 246);
             TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox3.Location = new Point(-2, 426);
+            TextBox3.Location = new Point(-2, 423);
             TextBox3.Name = "TextBox3";
             TextBox3.Size = new Size(802, 27);
             TextBox3.TabIndex = 10;

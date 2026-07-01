@@ -45,7 +45,7 @@
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox1.Location = new Point(-1, 0);
             TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(702, 44);
+            TextBox1.Size = new Size(725, 44);
             TextBox1.TabIndex = 4;
             TextBox1.Text = resources.GetString("TextBox1.Text");
             // 
@@ -56,7 +56,7 @@
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(-1, 41);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(702, 35);
+            TextBox2.Size = new Size(725, 35);
             TextBox2.TabIndex = 5;
             TextBox2.Text = "   Reservaciones                             Reporte Periodico";
             // 
@@ -84,10 +84,11 @@
             // TextBox3
             // 
             TextBox3.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox3.Location = new Point(-1, 427);
             TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(803, 23);
+            TextBox3.Size = new Size(803, 27);
             TextBox3.TabIndex = 8;
             TextBox3.Text = "TEL:                                                                                      EMAIL:";
             // 
