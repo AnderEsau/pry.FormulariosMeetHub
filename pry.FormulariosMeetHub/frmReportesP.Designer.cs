@@ -44,17 +44,19 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 11F);
-            label1.Location = new Point(59, 21);
+            label1.Location = new Point(62, 32);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(55, 17);
@@ -65,7 +67,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 11F);
-            label2.Location = new Point(401, 24);
+            label2.Location = new Point(62, 110);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(50, 17);
@@ -76,29 +78,29 @@
             // 
             dateTimePicker1.Font = new Font("Arial", 11F);
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(118, 17);
+            dateTimePicker1.Location = new Point(146, 25);
             dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(151, 24);
+            dateTimePicker1.Size = new Size(285, 24);
             dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Font = new Font("Arial", 11F);
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(455, 24);
+            dateTimePicker2.Location = new Point(146, 103);
             dateTimePicker2.Margin = new Padding(2);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(168, 24);
+            dateTimePicker2.Size = new Size(285, 24);
             dateTimePicker2.TabIndex = 3;
             // 
             // pcbLogo
             // 
             pcbLogo.BorderStyle = BorderStyle.FixedSingle;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(709, 1);
+            pcbLogo.Location = new Point(810, 1);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(89, 67);
+            pcbLogo.Size = new Size(116, 136);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 4;
             pcbLogo.TabStop = false;
@@ -108,12 +110,12 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dataGridView1.Location = new Point(156, 105);
+            dataGridView1.Location = new Point(62, 153);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(464, 190);
+            dataGridView1.Size = new Size(694, 215);
             dataGridView1.TabIndex = 5;
             // 
             // Column1
@@ -154,21 +156,22 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(235, 197, 153);
             button1.Font = new Font("Arial", 11F);
-            button1.Location = new Point(341, 319);
+            button1.Location = new Point(381, 399);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(78, 27);
+            button1.Size = new Size(88, 26);
             button1.TabIndex = 6;
             button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(275, 19);
+            pictureBox1.Location = new Point(470, 19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(29, 25);
+            pictureBox1.Size = new Size(46, 45);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -176,18 +179,30 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(628, 24);
+            pictureBox2.Location = new Point(470, 103);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(29, 25);
+            pictureBox2.Size = new Size(46, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(680, 7);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(120, 120);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
             // frmReportesP
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSlateGray;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -197,6 +212,7 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Font = new Font("Arial", 11F);
             Margin = new Padding(2);
             Name = "frmReportesP";
             Text = "Reporte periodico";
@@ -204,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,5 +242,6 @@
         private Button button1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
