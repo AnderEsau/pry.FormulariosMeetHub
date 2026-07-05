@@ -47,7 +47,7 @@
             // 
             // TextBox1
             // 
-            TextBox1.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox1.BackColor = Color.LightSteelBlue;
             TextBox1.Font = new Font("Franklin Gothic Medium Cond", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox1.Location = new Point(-2, 0);
@@ -58,7 +58,7 @@
             // 
             // TextBox2
             // 
-            TextBox2.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox2.BackColor = Color.LightSteelBlue;
             TextBox2.Font = new Font("Segoe UI", 16F);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(-2, 41);
@@ -93,7 +93,7 @@
             // 
             // TextBox3
             // 
-            TextBox3.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox3.BackColor = Color.LightSteelBlue;
             TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox3.Location = new Point(-2, 423);
@@ -101,6 +101,7 @@
             TextBox3.Size = new Size(802, 27);
             TextBox3.TabIndex = 10;
             TextBox3.Text = "TEL:                                                                                      EMAIL:";
+            TextBox3.TextChanged += TextBox3_TextChanged;
             // 
             // Label1
             // 
@@ -143,7 +144,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.LightSlateGray;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox4);
             Controls.Add(label3);

@@ -40,7 +40,7 @@
             // 
             // TextBox1
             // 
-            TextBox1.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox1.BackColor = Color.LightSteelBlue;
             TextBox1.Font = new Font("Franklin Gothic Medium Cond", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox1.Location = new Point(-1, 0);
@@ -51,7 +51,7 @@
             // 
             // TextBox2
             // 
-            TextBox2.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox2.BackColor = Color.LightSteelBlue;
             TextBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox2.Location = new Point(-1, 41);
@@ -63,7 +63,7 @@
             // Label1
             // 
             Label1.AutoSize = true;
-            Label1.BackColor = SystemColors.ButtonHighlight;
+            Label1.BackColor = Color.LightSlateGray;
             Label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Label1.Location = new Point(109, 94);
             Label1.Margin = new Padding(2, 0, 2, 0);
@@ -83,7 +83,7 @@
             // 
             // TextBox3
             // 
-            TextBox3.BackColor = Color.FromArgb(231, 238, 246);
+            TextBox3.BackColor = Color.LightSteelBlue;
             TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
             TextBox3.Location = new Point(-1, 427);
@@ -106,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.HighlightText;
+            BackColor = Color.LightSlateGray;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(TextBox3);

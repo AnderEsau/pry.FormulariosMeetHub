@@ -37,6 +37,7 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -91,13 +92,14 @@
             // 
             button1.BackColor = Color.FromArgb(235, 197, 153);
             button1.Font = new Font("Arial", 11F);
-            button1.Location = new Point(267, 236);
+            button1.Location = new Point(213, 250);
             button1.Margin = new Padding(1);
             button1.Name = "button1";
-            button1.Size = new Size(80, 26);
+            button1.Size = new Size(88, 26);
             button1.TabIndex = 13;
             button1.Text = "Ingresar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // pictureBox1
             // 
@@ -121,7 +123,6 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(488, -17);
             pictureBox3.Name = "pictureBox3";
@@ -130,12 +131,23 @@
             pictureBox3.TabIndex = 16;
             pictureBox3.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(235, 197, 153);
+            button2.Location = new Point(337, 250);
+            button2.Name = "button2";
+            button2.Size = new Size(88, 26);
+            button2.TabIndex = 17;
+            button2.Text = "Salir";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.LightSlateGray;
             ClientSize = new Size(584, 361);
+            Controls.Add(button2);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -146,6 +158,7 @@
             Controls.Add(lblLogin);
             Name = "frmLogin";
             Text = "Control de acceso - Meet Hub";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -164,5 +177,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Button button2;
     }
 }
