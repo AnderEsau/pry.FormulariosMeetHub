@@ -151,7 +151,7 @@
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(145, 55);
             btnGuardar.TabIndex = 18;
-            btnGuardar.Text = "GUARDAR";
+            btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
             // frmReportesP

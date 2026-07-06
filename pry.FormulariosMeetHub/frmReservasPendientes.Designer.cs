@@ -45,7 +45,7 @@
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(139, 55);
             btnAceptar.TabIndex = 0;
-            btnAceptar.Text = "ACEPTAR";
+            btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
             // 
             // btnRechazar
@@ -56,7 +56,7 @@
             btnRechazar.Name = "btnRechazar";
             btnRechazar.Size = new Size(139, 55);
             btnRechazar.TabIndex = 1;
-            btnRechazar.Text = "RECHAZA";
+            btnRechazar.Text = "Recharzar";
             btnRechazar.UseVisualStyleBackColor = false;
             // 
             // dgvReservasPendientes
