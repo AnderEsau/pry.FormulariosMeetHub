@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservasPendientes));
-            btnAceptar = new Button();
+            btnAutorizar = new Button();
             btnRechazar = new Button();
             dgvReservasPendientes = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -42,17 +42,17 @@
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
             SuspendLayout();
             // 
-            // btnAceptar
+            // btnAutorizar
             // 
-            btnAceptar.BackColor = Color.FromArgb(235, 197, 153);
-            btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold);
-            btnAceptar.Location = new Point(500, 382);
-            btnAceptar.Margin = new Padding(2);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(97, 33);
-            btnAceptar.TabIndex = 0;
-            btnAceptar.Text = "Autorizar";
-            btnAceptar.UseVisualStyleBackColor = false;
+            btnAutorizar.BackColor = Color.FromArgb(235, 197, 153);
+            btnAutorizar.Font = new Font("Arial", 12F, FontStyle.Bold);
+            btnAutorizar.Location = new Point(500, 382);
+            btnAutorizar.Margin = new Padding(2);
+            btnAutorizar.Name = "btnAutorizar";
+            btnAutorizar.Size = new Size(97, 33);
+            btnAutorizar.TabIndex = 0;
+            btnAutorizar.Text = "Autorizar";
+            btnAutorizar.UseVisualStyleBackColor = false;
             // 
             // btnRechazar
             // 
@@ -69,14 +69,14 @@
             // dgvReservasPendientes
             // 
             dgvReservasPendientes.BackgroundColor = Color.FromArgb(231, 238, 246);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
-            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvReservasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(63, 95, 132);
+            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvReservasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvReservasPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReservasPendientes.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dgvReservasPendientes.EnableHeadersVisualStyles = false;
@@ -109,8 +109,9 @@
             // 
             // grpDetalles
             // 
-            grpDetalles.BackColor = SystemColors.ControlDark;
-            grpDetalles.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpDetalles.BackColor = Color.FromArgb(231, 238, 246);
+            grpDetalles.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            grpDetalles.ForeColor = Color.FromArgb(63, 95, 132);
             grpDetalles.Location = new Point(580, 11);
             grpDetalles.Margin = new Padding(2);
             grpDetalles.Name = "grpDetalles";
@@ -140,7 +141,7 @@
             Controls.Add(grpDetalles);
             Controls.Add(dgvReservasPendientes);
             Controls.Add(btnRechazar);
-            Controls.Add(btnAceptar);
+            Controls.Add(btnAutorizar);
             Margin = new Padding(2);
             Name = "frmReservasPendientes";
             Text = "Reservas Pendientes";
@@ -151,7 +152,7 @@
 
         #endregion
 
-        private Button btnAceptar;
+        private Button btnAutorizar;
         private Button btnRechazar;
         private DataGridView dgvReservasPendientes;
         private GroupBox grpDetalles;
