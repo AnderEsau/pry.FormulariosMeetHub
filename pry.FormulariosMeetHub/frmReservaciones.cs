@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pry.FormulariosMeetHub
 {
-    public partial class apartado_de_reservaciones : Form
+    public partial class Reservaciones : Form
     {
-        public apartado_de_reservaciones()
+        public Reservaciones()
         {
             InitializeComponent();
         }
