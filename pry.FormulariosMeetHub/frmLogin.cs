@@ -14,10 +14,5 @@ namespace pry.FormulariosMeetHub
             this.Hide();
 
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

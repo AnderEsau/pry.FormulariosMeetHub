@@ -31,131 +31,152 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             lblLogin = new Label();
             pcbLogo = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            txtUsuario = new TextBox();
+            txtPassword = new TextBox();
+            btnIngresar = new Button();
+            pcbPasswordIcono = new PictureBox();
+            pcbUsuarioIcono = new PictureBox();
+            pcbLogotipo = new PictureBox();
+            btnSalir = new Button();
+            lblMeetHub = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPasswordIcono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuarioIcono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
             SuspendLayout();
             // 
             // lblLogin
             // 
             lblLogin.AutoSize = true;
-            lblLogin.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(63, 95, 132);
-            lblLogin.Location = new Point(381, 165);
-            lblLogin.Margin = new Padding(4, 0, 4, 0);
+            lblLogin.Location = new Point(212, 40);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(117, 45);
+            lblLogin.Size = new Size(175, 65);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "LOGIN";
             // 
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(1023, 2);
-            pcbLogo.Margin = new Padding(4, 5, 4, 5);
+            pcbLogo.Location = new Point(716, 1);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(127, 112);
+            pcbLogo.Size = new Size(89, 67);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 1;
             pcbLogo.TabStop = false;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Font = new Font("Arial", 11F);
-            textBox1.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox1.Location = new Point(279, 240);
-            textBox1.Margin = new Padding(1, 2, 1, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(355, 33);
-            textBox1.TabIndex = 11;
-            textBox1.Text = "Nombre de usuario";
+            txtUsuario.BackColor = Color.FromArgb(231, 238, 246);
+            txtUsuario.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.Location = new Point(186, 132);
+            txtUsuario.Margin = new Padding(1);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.PlaceholderText = "Nombre de usuario";
+            txtUsuario.Size = new Size(250, 29);
+            txtUsuario.TabIndex = 11;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Font = new Font("Arial", 11F);
-            textBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox2.Location = new Point(279, 313);
-            textBox2.Margin = new Padding(1, 2, 1, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(355, 33);
-            textBox2.TabIndex = 12;
-            textBox2.Text = "Contraseña";
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtPassword.BackColor = Color.FromArgb(231, 238, 246);
+            txtPassword.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(186, 188);
+            txtPassword.Margin = new Padding(1);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "Contraseña";
+            txtPassword.Size = new Size(250, 29);
+            txtPassword.TabIndex = 12;
+            txtPassword.UseSystemPasswordChar = true;
             // 
-            // button1
+            // btnIngresar
             // 
-            button1.BackColor = Color.FromArgb(235, 197, 153);
-            button1.Font = new Font("Arial", 11F);
-            button1.Location = new Point(381, 393);
-            button1.Margin = new Padding(1, 2, 1, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(114, 43);
-            button1.TabIndex = 13;
-            button1.Text = "Ingresar";
-            button1.UseVisualStyleBackColor = false;
+            btnIngresar.BackColor = Color.FromArgb(235, 197, 153);
+            btnIngresar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIngresar.ForeColor = Color.Black;
+            btnIngresar.Location = new Point(196, 243);
+            btnIngresar.Margin = new Padding(1);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(97, 33);
+            btnIngresar.TabIndex = 13;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pcbPasswordIcono
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(183, 313);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 67);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 14;
-            pictureBox1.TabStop = false;
+            pcbPasswordIcono.Image = Properties.Resources.IconoContraseña_removebg_preview;
+            pcbPasswordIcono.Location = new Point(138, 184);
+            pcbPasswordIcono.Name = "pcbPasswordIcono";
+            pcbPasswordIcono.Size = new Size(40, 40);
+            pcbPasswordIcono.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbPasswordIcono.TabIndex = 14;
+            pcbPasswordIcono.TabStop = false;
             // 
-            // pictureBox2
+            // pcbUsuarioIcono
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(183, 213);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(57, 67);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 15;
-            pictureBox2.TabStop = false;
+            pcbUsuarioIcono.Image = (Image)resources.GetObject("pcbUsuarioIcono.Image");
+            pcbUsuarioIcono.Location = new Point(138, 125);
+            pcbUsuarioIcono.Name = "pcbUsuarioIcono";
+            pcbUsuarioIcono.Size = new Size(40, 40);
+            pcbUsuarioIcono.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbUsuarioIcono.TabIndex = 15;
+            pcbUsuarioIcono.TabStop = false;
             // 
-            // pictureBox3
+            // pcbLogotipo
             // 
-            pictureBox3.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(697, -28);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(171, 199);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 16;
-            pictureBox3.TabStop = false;
+            pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
+            pcbLogotipo.Location = new Point(481, 1);
+            pcbLogotipo.Name = "pcbLogotipo";
+            pcbLogotipo.Size = new Size(102, 104);
+            pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbLogotipo.TabIndex = 16;
+            pcbLogotipo.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.FromArgb(235, 197, 153);
+            btnSalir.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalir.Location = new Point(328, 243);
+            btnSalir.Margin = new Padding(1);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(97, 33);
+            btnSalir.TabIndex = 17;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            // 
+            // lblMeetHub
+            // 
+            lblMeetHub.AutoSize = true;
+            lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMeetHub.ForeColor = Color.FromArgb(63, 95, 132);
+            lblMeetHub.Location = new Point(12, 9);
+            lblMeetHub.Name = "lblMeetHub";
+            lblMeetHub.Size = new Size(100, 30);
+            lblMeetHub.TabIndex = 18;
+            lblMeetHub.Text = "MeetHub";
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSlateGray;
-            ClientSize = new Size(834, 602);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(584, 361);
+            Controls.Add(lblMeetHub);
+            Controls.Add(btnSalir);
+            Controls.Add(pcbLogotipo);
+            Controls.Add(pcbUsuarioIcono);
+            Controls.Add(pcbPasswordIcono);
+            Controls.Add(btnIngresar);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsuario);
             Controls.Add(pcbLogo);
             Controls.Add(lblLogin);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
-            Text = "Control de acceso - Meet Hub";
+            Text = "Control de acceso";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPasswordIcono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuarioIcono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -164,11 +185,13 @@
 
         private Label lblLogin;
         private PictureBox pcbLogo;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private TextBox txtUsuario;
+        private TextBox txtPassword;
+        private Button btnIngresar;
+        private PictureBox pcbPasswordIcono;
+        private PictureBox pcbUsuarioIcono;
+        private PictureBox pcbLogotipo;
+        private Button btnSalir;
+        private Label lblMeetHub;
     }
 }
