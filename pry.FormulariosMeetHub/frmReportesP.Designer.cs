@@ -40,13 +40,9 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             pcbLogotipo = new PictureBox();
             btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReporte).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
             SuspendLayout();
             // 
@@ -136,28 +132,6 @@
             Column6.MinimumWidth = 8;
             Column6.Name = "Column6";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(390, 35);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(41, 42);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(897, 40);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(41, 42);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 8;
-            pictureBox2.TabStop = false;
-            // 
             // pcbLogotipo
             // 
             pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
@@ -188,8 +162,6 @@
             ClientSize = new Size(1143, 750);
             Controls.Add(btnGuardar);
             Controls.Add(pcbLogotipo);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(dgvReporte);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
@@ -198,8 +170,6 @@
             Name = "frmReportesP";
             Text = "Reporte periodico";
             ((System.ComponentModel.ISupportInitialize)dgvReporte).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -218,8 +188,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private PictureBox pcbLogotipo;
         private Button btnGuardar;
     }
