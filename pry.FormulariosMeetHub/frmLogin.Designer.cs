@@ -69,23 +69,23 @@
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.FromArgb(231, 238, 246);
-            txtUsuario.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(186, 132);
             txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
-            txtUsuario.Size = new Size(250, 29);
+            txtUsuario.Size = new Size(250, 26);
             txtUsuario.TabIndex = 11;
             // 
             // txtPassword
             // 
             txtPassword.BackColor = Color.FromArgb(231, 238, 246);
-            txtPassword.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPassword.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(186, 188);
             txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
-            txtPassword.Size = new Size(250, 29);
+            txtPassword.Size = new Size(250, 26);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
