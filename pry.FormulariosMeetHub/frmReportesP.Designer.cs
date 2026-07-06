@@ -28,178 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportesP));
             lblDesde = new Label();
             lblHasta = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            dtpInicio = new DateTimePicker();
+            dtpFinal = new DateTimePicker();
+            btnGuardar = new Button();
             dgvReporte = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             pcbLogotipo = new PictureBox();
-            btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReporte).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
             SuspendLayout();
             // 
             // lblDesde
             // 
             lblDesde.AutoSize = true;
-            lblDesde.Font = new Font("Arial", 11F);
-            lblDesde.Location = new Point(82, 40);
+            lblDesde.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDesde.Location = new Point(14, 39);
+            lblDesde.Margin = new Padding(2, 0, 2, 0);
             lblDesde.Name = "lblDesde";
-            lblDesde.Size = new Size(81, 25);
+            lblDesde.Size = new Size(64, 19);
             lblDesde.TabIndex = 0;
             lblDesde.Text = "Desde:";
             // 
             // lblHasta
             // 
             lblHasta.AutoSize = true;
-            lblHasta.Font = new Font("Arial", 11F);
-            lblHasta.Location = new Point(573, 40);
+            lblHasta.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHasta.Location = new Point(365, 39);
+            lblHasta.Margin = new Padding(2, 0, 2, 0);
             lblHasta.Name = "lblHasta";
-            lblHasta.Size = new Size(75, 25);
+            lblHasta.Size = new Size(59, 19);
             lblHasta.TabIndex = 1;
             lblHasta.Text = "Hasta:";
             // 
-            // dateTimePicker1
+            // dtpInicio
             // 
-            dateTimePicker1.Font = new Font("Arial", 11F);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(169, 40);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(214, 33);
-            dateTimePicker1.TabIndex = 2;
+            dtpInicio.Font = new Font("Arial", 11F);
+            dtpInicio.Format = DateTimePickerFormat.Short;
+            dtpInicio.Location = new Point(82, 37);
+            dtpInicio.Margin = new Padding(2);
+            dtpInicio.Name = "dtpInicio";
+            dtpInicio.Size = new Size(151, 24);
+            dtpInicio.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // dtpFinal
             // 
-            dateTimePicker2.Font = new Font("Arial", 11F);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(650, 40);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(238, 33);
-            dateTimePicker2.TabIndex = 3;
-            // 
-            // dgvReporte
-            // 
-            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReporte.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dgvReporte.Location = new Point(223, 175);
-            dgvReporte.Name = "dgvReporte";
-            dgvReporte.RowHeadersVisible = false;
-            dgvReporte.RowHeadersWidth = 62;
-            dgvReporte.Size = new Size(663, 317);
-            dgvReporte.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "text1";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "text2";
-            Column2.MinimumWidth = 8;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "text3";
-            Column3.MinimumWidth = 8;
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "text4";
-            Column4.MinimumWidth = 8;
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "text5";
-            Column5.MinimumWidth = 8;
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "text6";
-            Column6.MinimumWidth = 8;
-            Column6.Name = "Column6";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(390, 35);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(41, 42);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(897, 40);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(41, 42);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 8;
-            pictureBox2.TabStop = false;
-            // 
-            // pcbLogotipo
-            // 
-            pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
-            pcbLogotipo.Location = new Point(984, 14);
-            pcbLogotipo.Margin = new Padding(4, 5, 4, 5);
-            pcbLogotipo.Name = "pcbLogotipo";
-            pcbLogotipo.Size = new Size(146, 173);
-            pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbLogotipo.TabIndex = 17;
-            pcbLogotipo.TabStop = false;
+            dtpFinal.Font = new Font("Arial", 11F);
+            dtpFinal.Format = DateTimePickerFormat.Short;
+            dtpFinal.Location = new Point(428, 37);
+            dtpFinal.Margin = new Padding(2);
+            dtpFinal.Name = "dtpFinal";
+            dtpFinal.Size = new Size(168, 24);
+            dtpFinal.TabIndex = 3;
             // 
             // btnGuardar
             // 
             btnGuardar.BackColor = Color.FromArgb(235, 197, 153);
             btnGuardar.Font = new Font("Arial", 12F, FontStyle.Bold);
-            btnGuardar.Location = new Point(463, 524);
+            btnGuardar.Location = new Point(681, 387);
+            btnGuardar.Margin = new Padding(2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(145, 55);
+            btnGuardar.Size = new Size(102, 33);
             btnGuardar.TabIndex = 18;
-            btnGuardar.Text = "GUARDAR";
+            btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // dgvReporte
+            // 
+            dgvReporte.BackgroundColor = Color.FromArgb(231, 238, 246);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(63, 95, 132);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReporte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvReporte.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, Column1, Column2, Column3, Column4, Column5 });
+            dgvReporte.EnableHeadersVisualStyles = false;
+            dgvReporte.Location = new Point(11, 109);
+            dgvReporte.Margin = new Padding(2);
+            dgvReporte.Name = "dgvReporte";
+            dgvReporte.RowHeadersWidth = 62;
+            dgvReporte.Size = new Size(1265, 258);
+            dgvReporte.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "text1";
+            dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "text2";
+            dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "text3";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "text4";
+            Column1.Name = "Column1";
+            Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "text5";
+            Column2.Name = "Column2";
+            Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "text6";
+            Column3.Name = "Column3";
+            Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "text7";
+            Column4.Name = "Column4";
+            Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "text8";
+            Column5.Name = "Column5";
+            Column5.Width = 150;
+            // 
+            // pcbLogotipo
+            // 
+            pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
+            pcbLogotipo.Location = new Point(1201, 0);
+            pcbLogotipo.Name = "pcbLogotipo";
+            pcbLogotipo.Size = new Size(102, 104);
+            pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbLogotipo.TabIndex = 22;
+            pcbLogotipo.TabStop = false;
             // 
             // frmReportesP
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSlateGray;
-            ClientSize = new Size(1143, 750);
-            Controls.Add(btnGuardar);
+            BackColor = Color.FromArgb(213, 220, 228);
+            ClientSize = new Size(1303, 445);
             Controls.Add(pcbLogotipo);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(dgvReporte);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(btnGuardar);
+            Controls.Add(dtpFinal);
+            Controls.Add(dtpInicio);
             Controls.Add(lblHasta);
             Controls.Add(lblDesde);
+            Margin = new Padding(2);
             Name = "frmReportesP";
             Text = "Reporte periodico";
             ((System.ComponentModel.ISupportInitialize)dgvReporte).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -209,18 +210,18 @@
 
         private Label lblDesde;
         private Label lblHasta;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpInicio;
+        private DateTimePicker dtpFinal;
+        private Button btnGuardar;
         private DataGridView dgvReporte;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private PictureBox pcbLogotipo;
-        private Button btnGuardar;
     }
 }

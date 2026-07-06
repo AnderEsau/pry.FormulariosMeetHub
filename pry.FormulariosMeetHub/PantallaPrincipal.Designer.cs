@@ -168,6 +168,7 @@
             lblReservaciones.Size = new Size(176, 32);
             lblReservaciones.TabIndex = 26;
             lblReservaciones.Text = "Reservaciones";
+            lblReservaciones.Click += lblReservaciones_Click;
             // 
             // lblCancelaciones
             // 
