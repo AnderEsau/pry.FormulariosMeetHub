@@ -181,6 +181,7 @@
             lblCancelaciones.Size = new Size(175, 32);
             lblCancelaciones.TabIndex = 27;
             lblCancelaciones.Text = "Cancelaciones";
+            lblCancelaciones.Click += lblCancelaciones_Click;
             // 
             // lblPendientes
             // 
@@ -245,7 +246,7 @@
             Controls.Add(pcbTiraInferior);
             Controls.Add(pictureBox1);
             Name = "frmPrincipal";
-            Text = "PantallaPrincipal";
+            Text = "Inicio";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbTiraSuperior1).EndInit();
