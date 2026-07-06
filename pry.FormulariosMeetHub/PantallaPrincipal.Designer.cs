@@ -1,6 +1,6 @@
 ﻿namespace pry.FormulariosMeetHub
 {
-    partial class PantallaPrincipal
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,165 +28,231 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
-            TextBox1 = new TextBox();
-            TextBox2 = new TextBox();
-            PictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            TextBox3 = new TextBox();
-            Label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            pictureBox4 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            pcbTiraInferior = new PictureBox();
+            pcbTiraSuperior1 = new PictureBox();
+            pcbLogotipo = new PictureBox();
+            lblTelefono = new Label();
+            label1 = new Label();
+            lblBienvenida = new Label();
+            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            lblUsuario = new Label();
+            lblMeetHub = new Label();
+            lblReservaciones = new Label();
+            lblCancelaciones = new Label();
+            lblPendientes = new Label();
+            lblPeriodo = new Label();
+            ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbTiraSuperior1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // TextBox1
+            // pcbTiraInferior
             // 
-            TextBox1.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox1.Font = new Font("Franklin Gothic Medium Cond", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox1.Location = new Point(-3, 0);
-            TextBox1.Margin = new Padding(4, 5, 4, 5);
-            TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(1034, 62);
-            TextBox1.TabIndex = 1;
-            TextBox1.Text = resources.GetString("TextBox1.Text");
+            pcbTiraInferior.Image = (Image)resources.GetObject("pcbTiraInferior.Image");
+            pcbTiraInferior.Location = new Point(0, 672);
+            pcbTiraInferior.Name = "pcbTiraInferior";
+            pcbTiraInferior.Size = new Size(1365, 33);
+            pcbTiraInferior.TabIndex = 0;
+            pcbTiraInferior.TabStop = false;
             // 
-            // TextBox2
+            // pcbTiraSuperior1
             // 
-            TextBox2.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox2.Font = new Font("Segoe UI", 16F);
-            TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox2.Location = new Point(-3, 68);
-            TextBox2.Margin = new Padding(4, 5, 4, 5);
-            TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(1034, 50);
-            TextBox2.TabIndex = 2;
-            TextBox2.Text = "Reservaciones                                         Cancelaciones";
+            pcbTiraSuperior1.Image = (Image)resources.GetObject("pcbTiraSuperior1.Image");
+            pcbTiraSuperior1.Location = new Point(0, 0);
+            pcbTiraSuperior1.Name = "pcbTiraSuperior1";
+            pcbTiraSuperior1.Size = new Size(1264, 45);
+            pcbTiraSuperior1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbTiraSuperior1.TabIndex = 1;
+            pcbTiraSuperior1.TabStop = false;
             // 
-            // PictureBox1
+            // pcbLogotipo
             // 
-            PictureBox1.Location = new Point(460, 243);
-            PictureBox1.Margin = new Padding(4, 5, 4, 5);
-            PictureBox1.Name = "PictureBox1";
-            PictureBox1.Size = new Size(226, 227);
-            PictureBox1.TabIndex = 3;
-            PictureBox1.TabStop = false;
+            pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
+            pcbLogotipo.Location = new Point(1262, 1);
+            pcbLogotipo.Name = "pcbLogotipo";
+            pcbLogotipo.Size = new Size(103, 99);
+            pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbLogotipo.TabIndex = 17;
+            pcbLogotipo.TabStop = false;
             // 
-            // pictureBox2
+            // lblTelefono
             // 
-            pictureBox2.Location = new Point(807, 243);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(226, 227);
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
+            lblTelefono.AutoSize = true;
+            lblTelefono.BackColor = Color.FromArgb(231, 238, 246);
+            lblTelefono.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTelefono.ForeColor = Color.FromArgb(63, 95, 132);
+            lblTelefono.Location = new Point(2, 674);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(182, 30);
+            lblTelefono.TabIndex = 19;
+            lblTelefono.Text = "TEL: 555-343-3422";
             // 
-            // pictureBox3
+            // label1
             // 
-            pictureBox3.Location = new Point(116, 243);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(226, 227);
-            pictureBox3.TabIndex = 5;
-            pictureBox3.TabStop = false;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(231, 238, 246);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(63, 95, 132);
+            label1.Location = new Point(981, 674);
+            label1.Name = "label1";
+            label1.Size = new Size(384, 30);
+            label1.TabIndex = 20;
+            label1.Text = "EMAIL:MEETHUBDASDAS@GMAIL.COM";
             // 
-            // TextBox3
+            // lblBienvenida
             // 
-            TextBox3.BackColor = Color.FromArgb(231, 238, 246);
-            TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox3.Location = new Point(-3, 705);
-            TextBox3.Margin = new Padding(4, 5, 4, 5);
-            TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(1144, 37);
-            TextBox3.TabIndex = 10;
-            TextBox3.Text = "TEL:                                                                                      EMAIL:";
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBienvenida.ForeColor = Color.FromArgb(63, 95, 132);
+            lblBienvenida.Location = new Point(12, 103);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(282, 65);
+            lblBienvenida.TabIndex = 21;
+            lblBienvenida.Text = "Bienvenido";
             // 
-            // Label1
+            // pictureBox1
             // 
-            Label1.AutoSize = true;
-            Label1.Location = new Point(116, 475);
-            Label1.Margin = new Padding(4, 0, 4, 0);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(63, 25);
-            Label1.TabIndex = 11;
-            Label1.Text = "Label1";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 43);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1264, 57);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 22;
+            pictureBox1.TabStop = false;
             // 
-            // label2
+            // panel1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(460, 475);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(59, 25);
-            label2.TabIndex = 12;
-            label2.Text = "label2";
+            panel1.BackColor = Color.FromArgb(231, 238, 246);
+            panel1.Location = new Point(24, 171);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1319, 484);
+            panel1.TabIndex = 23;
             // 
-            // label3
+            // lblUsuario
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(807, 475);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 25);
-            label3.TabIndex = 13;
-            label3.Text = "label3";
+            lblUsuario.AutoSize = true;
+            lblUsuario.BackColor = Color.FromArgb(231, 238, 246);
+            lblUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.FromArgb(63, 95, 132);
+            lblUsuario.Location = new Point(1098, 8);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(83, 30);
+            lblUsuario.TabIndex = 24;
+            lblUsuario.Text = "Usuario";
             // 
-            // pictureBox4
+            // lblMeetHub
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(991, -35);
-            pictureBox4.Margin = new Padding(4, 5, 4, 5);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(171, 200);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 14;
-            pictureBox4.TabStop = false;
+            lblMeetHub.AutoSize = true;
+            lblMeetHub.BackColor = Color.FromArgb(231, 238, 246);
+            lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMeetHub.ForeColor = Color.FromArgb(63, 95, 132);
+            lblMeetHub.Location = new Point(12, 8);
+            lblMeetHub.Name = "lblMeetHub";
+            lblMeetHub.Size = new Size(100, 30);
+            lblMeetHub.TabIndex = 25;
+            lblMeetHub.Text = "MeetHub";
             // 
-            // PantallaPrincipal
+            // lblReservaciones
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            lblReservaciones.AutoSize = true;
+            lblReservaciones.BackColor = Color.FromArgb(231, 238, 246);
+            lblReservaciones.Cursor = Cursors.Hand;
+            lblReservaciones.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReservaciones.ForeColor = Color.FromArgb(63, 95, 132);
+            lblReservaciones.Location = new Point(12, 57);
+            lblReservaciones.Name = "lblReservaciones";
+            lblReservaciones.Size = new Size(176, 32);
+            lblReservaciones.TabIndex = 26;
+            lblReservaciones.Text = "Reservaciones";
+            // 
+            // lblCancelaciones
+            // 
+            lblCancelaciones.AutoSize = true;
+            lblCancelaciones.BackColor = Color.FromArgb(231, 238, 246);
+            lblCancelaciones.Cursor = Cursors.Hand;
+            lblCancelaciones.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCancelaciones.ForeColor = Color.FromArgb(63, 95, 132);
+            lblCancelaciones.Location = new Point(209, 57);
+            lblCancelaciones.Name = "lblCancelaciones";
+            lblCancelaciones.Size = new Size(175, 32);
+            lblCancelaciones.TabIndex = 27;
+            lblCancelaciones.Text = "Cancelaciones";
+            // 
+            // lblPendientes
+            // 
+            lblPendientes.AutoSize = true;
+            lblPendientes.BackColor = Color.FromArgb(231, 238, 246);
+            lblPendientes.Cursor = Cursors.Hand;
+            lblPendientes.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPendientes.ForeColor = Color.FromArgb(63, 95, 132);
+            lblPendientes.Location = new Point(408, 57);
+            lblPendientes.Name = "lblPendientes";
+            lblPendientes.Size = new Size(246, 32);
+            lblPendientes.TabIndex = 28;
+            lblPendientes.Text = "Reservas Pendientes";
+            // 
+            // lblPeriodo
+            // 
+            lblPeriodo.AutoSize = true;
+            lblPeriodo.BackColor = Color.FromArgb(231, 238, 246);
+            lblPeriodo.Cursor = Cursors.Hand;
+            lblPeriodo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPeriodo.ForeColor = Color.FromArgb(63, 95, 132);
+            lblPeriodo.Location = new Point(683, 57);
+            lblPeriodo.Name = "lblPeriodo";
+            lblPeriodo.Size = new Size(220, 32);
+            lblPeriodo.TabIndex = 29;
+            lblPeriodo.Text = "Reporte Periódico";
+            // 
+            // frmPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSlateGray;
-            ClientSize = new Size(1143, 750);
-            Controls.Add(pictureBox4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(Label1);
-            Controls.Add(TextBox3);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(PictureBox1);
-            Controls.Add(TextBox2);
-            Controls.Add(TextBox1);
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "PantallaPrincipal";
+            ClientSize = new Size(1366, 705);
+            Controls.Add(lblPeriodo);
+            Controls.Add(lblPendientes);
+            Controls.Add(lblCancelaciones);
+            Controls.Add(lblReservaciones);
+            Controls.Add(lblMeetHub);
+            Controls.Add(lblUsuario);
+            Controls.Add(panel1);
+            Controls.Add(lblBienvenida);
+            Controls.Add(label1);
+            Controls.Add(lblTelefono);
+            Controls.Add(pcbLogotipo);
+            Controls.Add(pcbTiraSuperior1);
+            Controls.Add(pcbTiraInferior);
+            Controls.Add(pictureBox1);
+            Name = "frmPrincipal";
             Text = "PantallaPrincipal";
-            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbTiraSuperior1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        internal TextBox TextBox1;
-        internal TextBox TextBox2;
-        internal PictureBox PictureBox1;
-        internal PictureBox pictureBox2;
-        internal PictureBox pictureBox3;
-        internal TextBox TextBox3;
-        internal Label Label1;
-        internal Label label2;
-        internal Label label3;
-        private PictureBox pictureBox4;
+        private PictureBox pcbTiraInferior;
+        private PictureBox pcbTiraSuperior1;
+        private PictureBox pcbLogotipo;
+        private Label lblTelefono;
+        private Label label1;
+        private Label lblBienvenida;
+        private PictureBox pictureBox1;
+        private Panel panel1;
+        private Label lblUsuario;
+        private Label lblMeetHub;
+        private Label lblReservaciones;
+        private Label lblCancelaciones;
+        private Label lblPendientes;
+        private Label lblPeriodo;
     }
 }

@@ -101,6 +101,7 @@
             btnIngresar.TabIndex = 13;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // pcbPasswordIcono
             // 
@@ -143,6 +144,7 @@
             btnSalir.TabIndex = 17;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lblMeetHub
             // 
