@@ -210,6 +210,7 @@
             lblPeriodo.Size = new Size(220, 32);
             lblPeriodo.TabIndex = 29;
             lblPeriodo.Text = "Reporte Periódico";
+            lblPeriodo.Click += lblPeriodo_Click;
             // 
             // lblSalir
             // 
