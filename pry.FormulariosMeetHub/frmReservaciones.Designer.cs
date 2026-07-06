@@ -1,6 +1,6 @@
 ﻿namespace pry.FormulariosMeetHub
 {
-    partial class Reservaciones
+    partial class frmReservaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservaciones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservaciones));
             txtResponsable = new TextBox();
             cmbSala = new ComboBox();
             lblDetalles = new Label();
@@ -309,7 +309,7 @@
             dtpFormalizacion.Size = new Size(299, 26);
             dtpFormalizacion.TabIndex = 29;
             // 
-            // Reservaciones
+            // frmReservaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -338,7 +338,7 @@
             Controls.Add(cmbSala);
             Controls.Add(txtResponsable);
             ForeColor = Color.Gray;
-            Name = "Reservaciones";
+            Name = "frmReservaciones";
             Text = "Reservaciones";
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbNota).EndInit();
