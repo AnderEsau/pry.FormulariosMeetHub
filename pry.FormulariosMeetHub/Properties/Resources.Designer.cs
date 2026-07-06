@@ -59,5 +59,25 @@ namespace pry.FormulariosMeetHub.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconoContraseña_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("IconoContraseña-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconoLogin_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("IconoLogin-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
