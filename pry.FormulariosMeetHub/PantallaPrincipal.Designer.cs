@@ -50,9 +50,10 @@
             TextBox1.BackColor = Color.FromArgb(231, 238, 246);
             TextBox1.Font = new Font("Franklin Gothic Medium Cond", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox1.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox1.Location = new Point(-2, 0);
+            TextBox1.Location = new Point(-3, 0);
+            TextBox1.Margin = new Padding(4, 5, 4, 5);
             TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(725, 44);
+            TextBox1.Size = new Size(1034, 62);
             TextBox1.TabIndex = 1;
             TextBox1.Text = resources.GetString("TextBox1.Text");
             // 
@@ -61,33 +62,37 @@
             TextBox2.BackColor = Color.FromArgb(231, 238, 246);
             TextBox2.Font = new Font("Segoe UI", 16F);
             TextBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox2.Location = new Point(-2, 41);
+            TextBox2.Location = new Point(-3, 68);
+            TextBox2.Margin = new Padding(4, 5, 4, 5);
             TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(725, 36);
+            TextBox2.Size = new Size(1034, 50);
             TextBox2.TabIndex = 2;
             TextBox2.Text = "Reservaciones                                         Cancelaciones";
             // 
             // PictureBox1
             // 
-            PictureBox1.Location = new Point(322, 146);
+            PictureBox1.Location = new Point(460, 243);
+            PictureBox1.Margin = new Padding(4, 5, 4, 5);
             PictureBox1.Name = "PictureBox1";
-            PictureBox1.Size = new Size(158, 136);
+            PictureBox1.Size = new Size(226, 227);
             PictureBox1.TabIndex = 3;
             PictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(565, 146);
+            pictureBox2.Location = new Point(807, 243);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(158, 136);
+            pictureBox2.Size = new Size(226, 227);
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(81, 146);
+            pictureBox3.Location = new Point(116, 243);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(158, 136);
+            pictureBox3.Size = new Size(226, 227);
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
@@ -96,55 +101,60 @@
             TextBox3.BackColor = Color.FromArgb(231, 238, 246);
             TextBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBox3.ForeColor = Color.FromArgb(63, 95, 132);
-            TextBox3.Location = new Point(-2, 423);
+            TextBox3.Location = new Point(-3, 705);
+            TextBox3.Margin = new Padding(4, 5, 4, 5);
             TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(802, 27);
+            TextBox3.Size = new Size(1144, 37);
             TextBox3.TabIndex = 10;
             TextBox3.Text = "TEL:                                                                                      EMAIL:";
             // 
             // Label1
             // 
             Label1.AutoSize = true;
-            Label1.Location = new Point(81, 285);
+            Label1.Location = new Point(116, 475);
+            Label1.Margin = new Padding(4, 0, 4, 0);
             Label1.Name = "Label1";
-            Label1.Size = new Size(41, 15);
+            Label1.Size = new Size(63, 25);
             Label1.TabIndex = 11;
             Label1.Text = "Label1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(322, 285);
+            label2.Location = new Point(460, 475);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(59, 25);
             label2.TabIndex = 12;
             label2.Text = "label2";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(565, 285);
+            label3.Location = new Point(807, 475);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(59, 25);
             label3.TabIndex = 13;
             label3.Text = "label3";
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(694, -21);
+            pictureBox4.Location = new Point(991, -35);
+            pictureBox4.Margin = new Padding(4, 5, 4, 5);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(120, 120);
+            pictureBox4.Size = new Size(171, 200);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
             // 
             // PantallaPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.LightSlateGray;
+            ClientSize = new Size(1143, 750);
             Controls.Add(pictureBox4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -155,6 +165,7 @@
             Controls.Add(PictureBox1);
             Controls.Add(TextBox2);
             Controls.Add(TextBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "PantallaPrincipal";
             Text = "PantallaPrincipal";
             ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();

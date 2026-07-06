@@ -48,18 +48,20 @@
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblLogin.ForeColor = Color.FromArgb(63, 95, 132);
-            lblLogin.Location = new Point(267, 99);
+            lblLogin.Location = new Point(381, 165);
+            lblLogin.Margin = new Padding(4, 0, 4, 0);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(80, 30);
+            lblLogin.Size = new Size(117, 45);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "LOGIN";
             // 
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(716, 1);
+            pcbLogo.Location = new Point(1023, 2);
+            pcbLogo.Margin = new Padding(4, 5, 4, 5);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(89, 67);
+            pcbLogo.Size = new Size(127, 112);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 1;
             pcbLogo.TabStop = false;
@@ -68,10 +70,10 @@
             // 
             textBox1.Font = new Font("Arial", 11F);
             textBox1.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox1.Location = new Point(195, 144);
-            textBox1.Margin = new Padding(1);
+            textBox1.Location = new Point(279, 240);
+            textBox1.Margin = new Padding(1, 2, 1, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(250, 24);
+            textBox1.Size = new Size(355, 33);
             textBox1.TabIndex = 11;
             textBox1.Text = "Nombre de usuario";
             // 
@@ -79,10 +81,10 @@
             // 
             textBox2.Font = new Font("Arial", 11F);
             textBox2.ForeColor = Color.FromArgb(63, 95, 132);
-            textBox2.Location = new Point(195, 188);
-            textBox2.Margin = new Padding(1);
+            textBox2.Location = new Point(279, 313);
+            textBox2.Margin = new Padding(1, 2, 1, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(250, 24);
+            textBox2.Size = new Size(355, 33);
             textBox2.TabIndex = 12;
             textBox2.Text = "Contraseña";
             textBox2.TextChanged += textBox2_TextChanged;
@@ -91,10 +93,10 @@
             // 
             button1.BackColor = Color.FromArgb(235, 197, 153);
             button1.Font = new Font("Arial", 11F);
-            button1.Location = new Point(267, 236);
-            button1.Margin = new Padding(1);
+            button1.Location = new Point(381, 393);
+            button1.Margin = new Padding(1, 2, 1, 2);
             button1.Name = "button1";
-            button1.Size = new Size(80, 26);
+            button1.Size = new Size(114, 43);
             button1.TabIndex = 13;
             button1.Text = "Ingresar";
             button1.UseVisualStyleBackColor = false;
@@ -102,9 +104,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(128, 188);
+            pictureBox1.Location = new Point(183, 313);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 40);
+            pictureBox1.Size = new Size(57, 67);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
@@ -112,9 +115,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(128, 128);
+            pictureBox2.Location = new Point(183, 213);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 40);
+            pictureBox2.Size = new Size(57, 67);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -123,19 +127,20 @@
             // 
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(488, -17);
+            pictureBox3.Location = new Point(697, -28);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(120, 120);
+            pictureBox3.Size = new Size(171, 199);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 16;
             pictureBox3.TabStop = false;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(584, 361);
+            BackColor = Color.LightSlateGray;
+            ClientSize = new Size(834, 602);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -144,6 +149,7 @@
             Controls.Add(textBox1);
             Controls.Add(pcbLogo);
             Controls.Add(lblLogin);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
             Text = "Control de acceso - Meet Hub";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
