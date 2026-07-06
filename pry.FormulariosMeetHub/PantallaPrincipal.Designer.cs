@@ -36,13 +36,14 @@
             label1 = new Label();
             lblBienvenida = new Label();
             pictureBox1 = new PictureBox();
-            panel1 = new Panel();
+            pnlContenedor = new Panel();
             lblUsuario = new Label();
             lblMeetHub = new Label();
             lblReservaciones = new Label();
             lblCancelaciones = new Label();
             lblPendientes = new Label();
             lblPeriodo = new Label();
+            lblSalir = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbTiraSuperior1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
@@ -123,13 +124,13 @@
             pictureBox1.TabIndex = 22;
             pictureBox1.TabStop = false;
             // 
-            // panel1
+            // pnlContenedor
             // 
-            panel1.BackColor = Color.FromArgb(231, 238, 246);
-            panel1.Location = new Point(24, 171);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1319, 484);
-            panel1.TabIndex = 23;
+            pnlContenedor.BackColor = Color.FromArgb(231, 238, 246);
+            pnlContenedor.Location = new Point(24, 171);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(1319, 484);
+            pnlContenedor.TabIndex = 23;
             // 
             // lblUsuario
             // 
@@ -193,6 +194,7 @@
             lblPendientes.Size = new Size(246, 32);
             lblPendientes.TabIndex = 28;
             lblPendientes.Text = "Reservas Pendientes";
+            lblPendientes.Click += lblPendientes_Click;
             // 
             // lblPeriodo
             // 
@@ -207,19 +209,34 @@
             lblPeriodo.TabIndex = 29;
             lblPeriodo.Text = "Reporte Periódico";
             // 
+            // lblSalir
+            // 
+            lblSalir.AutoSize = true;
+            lblSalir.BackColor = Color.FromArgb(231, 238, 246);
+            lblSalir.Cursor = Cursors.Hand;
+            lblSalir.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSalir.ForeColor = Color.FromArgb(63, 95, 132);
+            lblSalir.Location = new Point(1192, 57);
+            lblSalir.Name = "lblSalir";
+            lblSalir.Size = new Size(64, 32);
+            lblSalir.TabIndex = 30;
+            lblSalir.Text = "Salir";
+            lblSalir.Click += lblSalir_Click;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSlateGray;
             ClientSize = new Size(1366, 705);
+            Controls.Add(lblSalir);
             Controls.Add(lblPeriodo);
             Controls.Add(lblPendientes);
             Controls.Add(lblCancelaciones);
             Controls.Add(lblReservaciones);
             Controls.Add(lblMeetHub);
             Controls.Add(lblUsuario);
-            Controls.Add(panel1);
+            Controls.Add(pnlContenedor);
             Controls.Add(lblBienvenida);
             Controls.Add(label1);
             Controls.Add(lblTelefono);
@@ -247,12 +264,13 @@
         private Label label1;
         private Label lblBienvenida;
         private PictureBox pictureBox1;
-        private Panel panel1;
+        private Panel pnlContenedor;
         private Label lblUsuario;
         private Label lblMeetHub;
         private Label lblReservaciones;
         private Label lblCancelaciones;
         private Label lblPendientes;
         private Label lblPeriodo;
+        private Label lblSalir;
     }
 }

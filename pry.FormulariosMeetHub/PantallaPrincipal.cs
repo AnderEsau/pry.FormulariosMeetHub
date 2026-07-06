@@ -12,9 +12,21 @@ namespace pry.FormulariosMeetHub
 {
     public partial class frmPrincipal : Form
     {
+        clsPrincipal principal;
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void lblPendientes_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmReservasPendientes(), pnlContenedor);
+        }
+
+        private void lblSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
