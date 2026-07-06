@@ -42,5 +42,11 @@ namespace pry.FormulariosMeetHub
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmReservaciones(), pnlContenedor);
         }
+
+        private void lblPeriodo_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmReportesP(), pnlContenedor);
+        }
     }
 }
