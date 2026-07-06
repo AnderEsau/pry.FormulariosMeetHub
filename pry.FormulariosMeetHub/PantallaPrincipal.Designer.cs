@@ -221,6 +221,7 @@
             lblSalir.Size = new Size(64, 32);
             lblSalir.TabIndex = 30;
             lblSalir.Text = "Salir";
+            lblSalir.Click += lblSalir_Click;
             // 
             // frmPrincipal
             // 

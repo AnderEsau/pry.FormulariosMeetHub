@@ -23,5 +23,10 @@ namespace pry.FormulariosMeetHub
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmReservasPendientes(), pnlContenedor);
         }
+
+        private void lblSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
