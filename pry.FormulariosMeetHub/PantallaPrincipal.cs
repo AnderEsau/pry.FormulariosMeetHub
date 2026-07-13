@@ -18,35 +18,33 @@ namespace pry.FormulariosMeetHub
             InitializeComponent();
         }
 
-        private void lblPendientes_Click(object sender, EventArgs e)
-        {
-            principal = new clsPrincipal();
-            principal.agregarAlContenedor(new frmReservasPendientes(), pnlContenedor);
-        }
-
-
-
-        private void lblSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void lblCancelaciones_Click(object sender, EventArgs e)
-        {
-            principal = new clsPrincipal();
-            principal.agregarAlContenedor(new frmCancelaciones(), pnlContenedor);
-        }
-
-        private void lblReservaciones_Click(object sender, EventArgs e)
+        private void btnReservaciones_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmReservaciones(), pnlContenedor);
         }
 
-        private void lblPeriodo_Click(object sender, EventArgs e)
+        private void btnReservasPnds_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmReservasPendientes(), pnlContenedor);
+        }
+
+        private void btnCancelaciones_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmCancelaciones(), pnlContenedor);
+        }
+
+        private void btnReporteP_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmReportesP(), pnlContenedor);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
