@@ -51,10 +51,9 @@
             lblLogin.BackColor = Color.White;
             lblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(43, 62, 80);
-            lblLogin.Location = new Point(207, 308);
-            lblLogin.Margin = new Padding(4, 0, 4, 0);
+            lblLogin.Location = new Point(145, 185);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(261, 96);
+            lblLogin.Size = new Size(175, 65);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "LOGIN";
             // 
@@ -62,24 +61,24 @@
             // 
             txtUsuario.BackColor = Color.White;
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
-            txtUsuario.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(167, 478);
-            txtUsuario.Margin = new Padding(1, 2, 1, 2);
+            txtUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.Location = new Point(117, 284);
+            txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
-            txtUsuario.Size = new Size(356, 35);
+            txtUsuario.Size = new Size(250, 29);
             txtUsuario.TabIndex = 11;
             // 
             // txtPassword
             // 
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtPassword.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(167, 575);
-            txtPassword.Margin = new Padding(1, 2, 1, 2);
+            txtPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(117, 345);
+            txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
-            txtPassword.Size = new Size(356, 35);
+            txtPassword.Size = new Size(250, 29);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
@@ -91,10 +90,10 @@
             btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIngresar.ForeColor = Color.White;
-            btnIngresar.Location = new Point(207, 650);
-            btnIngresar.Margin = new Padding(1, 2, 1, 2);
+            btnIngresar.Location = new Point(145, 390);
+            btnIngresar.Margin = new Padding(1);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(250, 55);
+            btnIngresar.Size = new Size(175, 33);
             btnIngresar.TabIndex = 13;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = false;
@@ -108,10 +107,10 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.FromArgb(42, 36, 33);
-            btnSalir.Location = new Point(207, 732);
-            btnSalir.Margin = new Padding(1, 2, 1, 2);
+            btnSalir.Location = new Point(145, 439);
+            btnSalir.Margin = new Padding(1);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(250, 55);
+            btnSalir.Size = new Size(175, 33);
             btnSalir.TabIndex = 17;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
@@ -123,10 +122,9 @@
             lblMeetHub.BackColor = Color.White;
             lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMeetHub.ForeColor = Color.FromArgb(179, 138, 88);
-            lblMeetHub.Location = new Point(260, 258);
-            lblMeetHub.Margin = new Padding(4, 0, 4, 0);
+            lblMeetHub.Location = new Point(182, 155);
             lblMeetHub.Name = "lblMeetHub";
-            lblMeetHub.Size = new Size(154, 45);
+            lblMeetHub.Size = new Size(100, 30);
             lblMeetHub.TabIndex = 18;
             lblMeetHub.Text = "MeetHub";
             // 
@@ -134,10 +132,9 @@
             // 
             pcbLoginMenu.BackColor = Color.Transparent;
             pcbLoginMenu.Image = (Image)resources.GetObject("pcbLoginMenu.Image");
-            pcbLoginMenu.Location = new Point(57, 45);
-            pcbLoginMenu.Margin = new Padding(4, 5, 4, 5);
+            pcbLoginMenu.Location = new Point(40, 27);
             pcbLoginMenu.Name = "pcbLoginMenu";
-            pcbLoginMenu.Size = new Size(536, 792);
+            pcbLoginMenu.Size = new Size(375, 475);
             pcbLoginMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginMenu.TabIndex = 20;
             pcbLoginMenu.TabStop = false;
@@ -146,10 +143,9 @@
             // 
             pcbPasswordIcono.BackColor = Color.White;
             pcbPasswordIcono.Image = Properties.Resources.IconoContraseña_removebg_preview;
-            pcbPasswordIcono.Location = new Point(104, 562);
-            pcbPasswordIcono.Margin = new Padding(4, 5, 4, 5);
+            pcbPasswordIcono.Location = new Point(73, 337);
             pcbPasswordIcono.Name = "pcbPasswordIcono";
-            pcbPasswordIcono.Size = new Size(57, 67);
+            pcbPasswordIcono.Size = new Size(40, 40);
             pcbPasswordIcono.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbPasswordIcono.TabIndex = 23;
             pcbPasswordIcono.TabStop = false;
@@ -158,10 +154,9 @@
             // 
             pcbLogotipo.BackColor = Color.White;
             pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
-            pcbLogotipo.Location = new Point(260, 70);
-            pcbLogotipo.Margin = new Padding(4, 5, 4, 5);
+            pcbLogotipo.Location = new Point(182, 42);
             pcbLogotipo.Name = "pcbLogotipo";
-            pcbLogotipo.Size = new Size(146, 173);
+            pcbLogotipo.Size = new Size(102, 104);
             pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogotipo.TabIndex = 25;
             pcbLogotipo.TabStop = false;
@@ -170,20 +165,19 @@
             // 
             pcbUsuarioIcono.BackColor = Color.White;
             pcbUsuarioIcono.Image = (Image)resources.GetObject("pcbUsuarioIcono.Image");
-            pcbUsuarioIcono.Location = new Point(104, 462);
-            pcbUsuarioIcono.Margin = new Padding(4, 5, 4, 5);
+            pcbUsuarioIcono.Location = new Point(73, 277);
             pcbUsuarioIcono.Name = "pcbUsuarioIcono";
-            pcbUsuarioIcono.Size = new Size(57, 67);
+            pcbUsuarioIcono.Size = new Size(40, 40);
             pcbUsuarioIcono.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbUsuarioIcono.TabIndex = 24;
             pcbUsuarioIcono.TabStop = false;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(210, 195, 175);
-            ClientSize = new Size(649, 888);
+            ClientSize = new Size(454, 527);
             Controls.Add(pcbLogotipo);
             Controls.Add(pcbUsuarioIcono);
             Controls.Add(pcbPasswordIcono);
@@ -194,7 +188,6 @@
             Controls.Add(btnIngresar);
             Controls.Add(txtPassword);
             Controls.Add(pcbLoginMenu);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Control de acceso";

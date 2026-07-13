@@ -33,7 +33,6 @@
             lblHasta = new Label();
             dtpInicio = new DateTimePicker();
             dtpFinal = new DateTimePicker();
-            btnGuardar = new Button();
             dgvReporte = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -43,60 +42,57 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReporte).BeginInit();
             SuspendLayout();
             // 
             // lblDesde
             // 
             lblDesde.AutoSize = true;
-            lblDesde.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDesde.Location = new Point(20, 65);
+            lblDesde.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblDesde.ForeColor = Color.FromArgb(63, 95, 132);
+            lblDesde.Location = new Point(19, 40);
+            lblDesde.Margin = new Padding(2, 0, 2, 0);
             lblDesde.Name = "lblDesde";
-            lblDesde.Size = new Size(91, 29);
+            lblDesde.Size = new Size(60, 21);
             lblDesde.TabIndex = 0;
             lblDesde.Text = "Desde:";
             // 
             // lblHasta
             // 
             lblHasta.AutoSize = true;
-            lblHasta.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHasta.Location = new Point(521, 65);
+            lblHasta.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblHasta.ForeColor = Color.FromArgb(63, 95, 132);
+            lblHasta.Location = new Point(365, 39);
+            lblHasta.Margin = new Padding(2, 0, 2, 0);
             lblHasta.Name = "lblHasta";
-            lblHasta.Size = new Size(84, 29);
+            lblHasta.Size = new Size(55, 21);
             lblHasta.TabIndex = 1;
             lblHasta.Text = "Hasta:";
             // 
             // dtpInicio
             // 
+            dtpInicio.CalendarFont = new Font("Arial", 12F);
             dtpInicio.CalendarMonthBackground = Color.FromArgb(235, 197, 153);
             dtpInicio.Font = new Font("Arial", 11F);
             dtpInicio.Format = DateTimePickerFormat.Short;
-            dtpInicio.Location = new Point(117, 62);
+            dtpInicio.Location = new Point(87, 38);
+            dtpInicio.Margin = new Padding(2);
             dtpInicio.Name = "dtpInicio";
-            dtpInicio.Size = new Size(214, 33);
+            dtpInicio.Size = new Size(151, 24);
             dtpInicio.TabIndex = 2;
             // 
             // dtpFinal
             // 
+            dtpFinal.CalendarFont = new Font("Arial", 12F);
             dtpFinal.CalendarMonthBackground = Color.FromArgb(235, 197, 153);
             dtpFinal.Font = new Font("Arial", 11F);
             dtpFinal.Format = DateTimePickerFormat.Short;
-            dtpFinal.Location = new Point(611, 62);
+            dtpFinal.Location = new Point(428, 37);
+            dtpFinal.Margin = new Padding(2);
             dtpFinal.Name = "dtpFinal";
-            dtpFinal.Size = new Size(238, 33);
+            dtpFinal.Size = new Size(168, 24);
             dtpFinal.TabIndex = 3;
-            // 
-            // btnGuardar
-            // 
-            btnGuardar.BackColor = Color.FromArgb(43, 62, 80);
-            btnGuardar.Font = new Font("Arial", 12F, FontStyle.Bold);
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(575, 652);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(146, 55);
-            btnGuardar.TabIndex = 18;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // dgvReporte
             // 
@@ -112,10 +108,11 @@
             dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReporte.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, Column1, Column2, Column3, Column4, Column5 });
             dgvReporte.EnableHeadersVisualStyles = false;
-            dgvReporte.Location = new Point(16, 182);
+            dgvReporte.Location = new Point(19, 110);
+            dgvReporte.Margin = new Padding(2);
             dgvReporte.Name = "dgvReporte";
             dgvReporte.RowHeadersWidth = 62;
-            dgvReporte.Size = new Size(1265, 430);
+            dgvReporte.Size = new Size(1265, 258);
             dgvReporte.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
@@ -174,18 +171,35 @@
             Column5.Name = "Column5";
             Column5.Width = 150;
             // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.FromArgb(43, 62, 80);
+            btnGuardar.Cursor = Cursors.Hand;
+            btnGuardar.FlatAppearance.BorderSize = 0;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Location = new Point(608, 394);
+            btnGuardar.Margin = new Padding(1);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(112, 33);
+            btnGuardar.TabIndex = 35;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = false;
+            // 
             // frmReportesP
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(210, 195, 175);
-            ClientSize = new Size(1296, 742);
-            Controls.Add(dgvReporte);
+            BackColor = Color.FromArgb(240, 236, 230);
+            ClientSize = new Size(1303, 445);
             Controls.Add(btnGuardar);
+            Controls.Add(dgvReporte);
             Controls.Add(dtpFinal);
             Controls.Add(dtpInicio);
             Controls.Add(lblHasta);
             Controls.Add(lblDesde);
+            Margin = new Padding(2);
             Name = "frmReportesP";
             Text = "Reporte periodico";
             ((System.ComponentModel.ISupportInitialize)dgvReporte).EndInit();
