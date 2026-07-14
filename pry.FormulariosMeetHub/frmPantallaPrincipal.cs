@@ -13,6 +13,7 @@ namespace pry.FormulariosMeetHub
     public partial class frmPrincipal : Form
     {
         clsPrincipal principal;
+        //Llamamos al formulario principal
         public frmPrincipal()
         {
             InitializeComponent();
