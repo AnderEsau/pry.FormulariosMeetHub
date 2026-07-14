@@ -15,7 +15,9 @@ namespace pry.FormulariosMeetHub
             {
                 if (login.ShowDialog() == DialogResult.OK)
                 {
-                    Application.Run(new frmPrincipal());
+                    string usuario = login.UsuarioLogueado; //Se saca el nombre del usuario antes de iniciar el formulario
+
+                    Application.Run(new frmPrincipal(usuario)); //Arranca de nuevo el formulario pero ya metiendo el nombre del usuario
                 }
             }
         }
