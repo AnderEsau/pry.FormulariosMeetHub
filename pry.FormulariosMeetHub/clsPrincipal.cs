@@ -25,7 +25,7 @@ namespace pry.FormulariosMeetHub
             panel.Controls.Clear();
 
             formulario.TopLevel = false; //Esto indica que el formulario no es independiente
-            formulario.FormBorderStyle = FormBorderStyle.Sizable;
+            formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;//Esto indica que el formulario va a ocupar todo el espacio
 
             panel.Controls.Add(formulario);

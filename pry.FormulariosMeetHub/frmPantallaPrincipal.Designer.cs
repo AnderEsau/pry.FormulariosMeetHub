@@ -32,19 +32,23 @@
             pcbTiraInferior = new PictureBox();
             pcbLogotipo = new PictureBox();
             pnlContenedor = new Panel();
-            lblUsuario = new Label();
             lblMeetHub = new Label();
             btnReservaciones = new Button();
-            panel1 = new Panel();
+            pnlMenu = new Panel();
             btnSalir = new Button();
             btnReporteP = new Button();
             btnCancelaciones = new Button();
             btnReservasPnds = new Button();
-            panel2 = new Panel();
+            lblModulo = new Label();
+            lblNombreModulo = new Label();
+            lblNombreUser = new Label();
+            lblUsuario = new Label();
+            btnResponsables = new Button();
+            btnSalas = new Button();
+            btnUsuarios = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlMenu.SuspendLayout();
             SuspendLayout();
             // 
             // pcbTiraInferior
@@ -61,7 +65,7 @@
             // 
             pcbLogotipo.BackColor = Color.Transparent;
             pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
-            pcbLogotipo.Location = new Point(1262, 3);
+            pcbLogotipo.Location = new Point(39, 12);
             pcbLogotipo.Name = "pcbLogotipo";
             pcbLogotipo.Size = new Size(103, 99);
             pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -71,31 +75,18 @@
             // pnlContenedor
             // 
             pnlContenedor.BackColor = Color.FromArgb(240, 236, 230);
-            pnlContenedor.BorderStyle = BorderStyle.Fixed3D;
-            pnlContenedor.Location = new Point(24, 171);
+            pnlContenedor.Location = new Point(203, 42);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(1319, 484);
+            pnlContenedor.Size = new Size(1135, 595);
             pnlContenedor.TabIndex = 23;
-            // 
-            // lblUsuario
-            // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.BackColor = Color.White;
-            lblUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsuario.ForeColor = Color.FromArgb(43, 62, 80);
-            lblUsuario.Location = new Point(1271, 8);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(83, 30);
-            lblUsuario.TabIndex = 24;
-            lblUsuario.Text = "Usuario";
             // 
             // lblMeetHub
             // 
             lblMeetHub.AutoSize = true;
-            lblMeetHub.BackColor = Color.White;
+            lblMeetHub.BackColor = Color.Transparent;
             lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMeetHub.ForeColor = Color.FromArgb(43, 62, 80);
-            lblMeetHub.Location = new Point(12, 8);
+            lblMeetHub.Location = new Point(39, 114);
             lblMeetHub.Name = "lblMeetHub";
             lblMeetHub.Size = new Size(100, 30);
             lblMeetHub.TabIndex = 25;
@@ -113,27 +104,31 @@
             btnReservaciones.FlatStyle = FlatStyle.Flat;
             btnReservaciones.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReservaciones.ImageAlign = ContentAlignment.TopCenter;
-            btnReservaciones.Location = new Point(24, 12);
+            btnReservaciones.Location = new Point(25, 167);
             btnReservaciones.Name = "btnReservaciones";
-            btnReservaciones.Size = new Size(100, 84);
+            btnReservaciones.Size = new Size(128, 44);
             btnReservaciones.TabIndex = 0;
             btnReservaciones.TextAlign = ContentAlignment.BottomCenter;
             btnReservaciones.UseVisualStyleBackColor = false;
             btnReservaciones.Click += btnReservaciones_Click;
             // 
-            // panel1
+            // pnlMenu
             // 
-            panel1.BackColor = Color.FromArgb(210, 195, 175);
-            panel1.Controls.Add(btnSalir);
-            panel1.Controls.Add(btnReporteP);
-            panel1.Controls.Add(btnCancelaciones);
-            panel1.Controls.Add(pcbLogotipo);
-            panel1.Controls.Add(btnReservasPnds);
-            panel1.Controls.Add(btnReservaciones);
-            panel1.Location = new Point(0, 45);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1366, 106);
-            panel1.TabIndex = 31;
+            pnlMenu.BackColor = Color.FromArgb(210, 195, 175);
+            pnlMenu.Controls.Add(btnUsuarios);
+            pnlMenu.Controls.Add(btnSalas);
+            pnlMenu.Controls.Add(btnResponsables);
+            pnlMenu.Controls.Add(lblMeetHub);
+            pnlMenu.Controls.Add(btnSalir);
+            pnlMenu.Controls.Add(btnReporteP);
+            pnlMenu.Controls.Add(btnCancelaciones);
+            pnlMenu.Controls.Add(pcbLogotipo);
+            pnlMenu.Controls.Add(btnReservasPnds);
+            pnlMenu.Controls.Add(btnReservaciones);
+            pnlMenu.Location = new Point(0, 0);
+            pnlMenu.Name = "pnlMenu";
+            pnlMenu.Size = new Size(180, 672);
+            pnlMenu.TabIndex = 31;
             // 
             // btnSalir
             // 
@@ -147,9 +142,9 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalir.ImageAlign = ContentAlignment.TopCenter;
-            btnSalir.Location = new Point(1137, 12);
+            btnSalir.Location = new Point(25, 613);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(100, 84);
+            btnSalir.Size = new Size(128, 44);
             btnSalir.TabIndex = 34;
             btnSalir.TextAlign = ContentAlignment.BottomCenter;
             btnSalir.UseVisualStyleBackColor = false;
@@ -167,9 +162,9 @@
             btnReporteP.FlatStyle = FlatStyle.Flat;
             btnReporteP.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReporteP.ImageAlign = ContentAlignment.TopCenter;
-            btnReporteP.Location = new Point(476, 12);
+            btnReporteP.Location = new Point(25, 531);
             btnReporteP.Name = "btnReporteP";
-            btnReporteP.Size = new Size(100, 84);
+            btnReporteP.Size = new Size(128, 44);
             btnReporteP.TabIndex = 33;
             btnReporteP.TextAlign = ContentAlignment.BottomCenter;
             btnReporteP.UseVisualStyleBackColor = false;
@@ -187,9 +182,9 @@
             btnCancelaciones.FlatStyle = FlatStyle.Flat;
             btnCancelaciones.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancelaciones.ImageAlign = ContentAlignment.TopCenter;
-            btnCancelaciones.Location = new Point(324, 12);
+            btnCancelaciones.Location = new Point(25, 226);
             btnCancelaciones.Name = "btnCancelaciones";
-            btnCancelaciones.Size = new Size(100, 84);
+            btnCancelaciones.Size = new Size(128, 44);
             btnCancelaciones.TabIndex = 32;
             btnCancelaciones.TextAlign = ContentAlignment.BottomCenter;
             btnCancelaciones.UseVisualStyleBackColor = false;
@@ -207,23 +202,118 @@
             btnReservasPnds.FlatStyle = FlatStyle.Flat;
             btnReservasPnds.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReservasPnds.ImageAlign = ContentAlignment.TopCenter;
-            btnReservasPnds.Location = new Point(172, 12);
+            btnReservasPnds.Location = new Point(25, 470);
             btnReservasPnds.Name = "btnReservasPnds";
-            btnReservasPnds.Size = new Size(100, 84);
+            btnReservasPnds.Size = new Size(128, 44);
             btnReservasPnds.TabIndex = 31;
             btnReservasPnds.TextAlign = ContentAlignment.BottomCenter;
             btnReservasPnds.UseVisualStyleBackColor = false;
             btnReservasPnds.Click += btnReservasPnds_Click;
             // 
-            // panel2
+            // lblModulo
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblMeetHub);
-            panel2.Controls.Add(lblUsuario);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1366, 45);
-            panel2.TabIndex = 32;
+            lblModulo.AutoSize = true;
+            lblModulo.BackColor = Color.Transparent;
+            lblModulo.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblModulo.ForeColor = Color.White;
+            lblModulo.Location = new Point(203, 9);
+            lblModulo.Name = "lblModulo";
+            lblModulo.Size = new Size(97, 30);
+            lblModulo.TabIndex = 35;
+            lblModulo.Text = "Modulo:";
+            // 
+            // lblNombreModulo
+            // 
+            lblNombreModulo.AutoSize = true;
+            lblNombreModulo.BackColor = Color.Transparent;
+            lblNombreModulo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombreModulo.ForeColor = Color.White;
+            lblNombreModulo.Location = new Point(300, 9);
+            lblNombreModulo.Name = "lblNombreModulo";
+            lblNombreModulo.Size = new Size(85, 30);
+            lblNombreModulo.TabIndex = 36;
+            lblNombreModulo.Text = "Modulo";
+            // 
+            // lblNombreUser
+            // 
+            lblNombreUser.AutoSize = true;
+            lblNombreUser.BackColor = Color.Transparent;
+            lblNombreUser.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombreUser.ForeColor = Color.White;
+            lblNombreUser.Location = new Point(1189, 9);
+            lblNombreUser.Name = "lblNombreUser";
+            lblNombreUser.Size = new Size(83, 30);
+            lblNombreUser.TabIndex = 37;
+            lblNombreUser.Text = "Usuario";
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.BackColor = Color.Transparent;
+            lblUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.White;
+            lblUsuario.Location = new Point(1080, 9);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(94, 30);
+            lblUsuario.TabIndex = 38;
+            lblUsuario.Text = "Usuario:";
+            // 
+            // btnResponsables
+            // 
+            btnResponsables.BackColor = Color.Transparent;
+            btnResponsables.BackgroundImage = (Image)resources.GetObject("btnResponsables.BackgroundImage");
+            btnResponsables.BackgroundImageLayout = ImageLayout.Stretch;
+            btnResponsables.Cursor = Cursors.Hand;
+            btnResponsables.FlatAppearance.BorderSize = 0;
+            btnResponsables.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnResponsables.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnResponsables.FlatStyle = FlatStyle.Flat;
+            btnResponsables.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnResponsables.ImageAlign = ContentAlignment.TopCenter;
+            btnResponsables.Location = new Point(25, 288);
+            btnResponsables.Name = "btnResponsables";
+            btnResponsables.Size = new Size(128, 44);
+            btnResponsables.TabIndex = 35;
+            btnResponsables.TextAlign = ContentAlignment.BottomCenter;
+            btnResponsables.UseVisualStyleBackColor = false;
+            // 
+            // btnSalas
+            // 
+            btnSalas.BackColor = Color.Transparent;
+            btnSalas.BackgroundImage = (Image)resources.GetObject("btnSalas.BackgroundImage");
+            btnSalas.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSalas.Cursor = Cursors.Hand;
+            btnSalas.FlatAppearance.BorderSize = 0;
+            btnSalas.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSalas.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSalas.FlatStyle = FlatStyle.Flat;
+            btnSalas.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalas.ImageAlign = ContentAlignment.TopCenter;
+            btnSalas.Location = new Point(25, 349);
+            btnSalas.Name = "btnSalas";
+            btnSalas.Size = new Size(128, 44);
+            btnSalas.TabIndex = 36;
+            btnSalas.TextAlign = ContentAlignment.BottomCenter;
+            btnSalas.UseVisualStyleBackColor = false;
+            // 
+            // btnUsuarios
+            // 
+            btnUsuarios.BackColor = Color.Transparent;
+            btnUsuarios.BackgroundImage = (Image)resources.GetObject("btnUsuarios.BackgroundImage");
+            btnUsuarios.BackgroundImageLayout = ImageLayout.Stretch;
+            btnUsuarios.Cursor = Cursors.Hand;
+            btnUsuarios.FlatAppearance.BorderSize = 0;
+            btnUsuarios.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnUsuarios.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnUsuarios.FlatStyle = FlatStyle.Flat;
+            btnUsuarios.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUsuarios.ImageAlign = ContentAlignment.TopCenter;
+            btnUsuarios.Location = new Point(25, 409);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Size = new Size(128, 44);
+            btnUsuarios.TabIndex = 37;
+            btnUsuarios.TextAlign = ContentAlignment.BottomCenter;
+            btnUsuarios.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
@@ -231,8 +321,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 62, 80);
             ClientSize = new Size(1366, 705);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(lblUsuario);
+            Controls.Add(lblNombreUser);
+            Controls.Add(lblNombreModulo);
+            Controls.Add(lblModulo);
+            Controls.Add(pnlMenu);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbTiraInferior);
             Name = "frmPrincipal";
@@ -240,10 +333,10 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            pnlMenu.ResumeLayout(false);
+            pnlMenu.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -252,14 +345,19 @@
         private PictureBox pcbTiraSuperior1;
         private PictureBox pcbLogotipo;
         private Panel pnlContenedor;
-        private Label lblUsuario;
         private Label lblMeetHub;
         private Button btnReservaciones;
-        private Panel panel1;
+        private Panel pnlMenu;
         private Button btnReservasPnds;
         private Button btnCancelaciones;
         private Button btnReporteP;
         private Button btnSalir;
-        private Panel panel2;
+        private Label lblModulo;
+        private Label lblNombreModulo;
+        private Label lblNombreUser;
+        private Label lblUsuario;
+        private Button btnUsuarios;
+        private Button btnSalas;
+        private Button btnResponsables;
     }
 }
