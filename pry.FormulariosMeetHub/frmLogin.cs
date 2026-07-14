@@ -12,7 +12,7 @@ namespace pry.FormulariosMeetHub
             {
                 clsLogin login = new clsLogin();
                 login.Usuario = txtUsuario.Text;
-                login.Passwd = txtPassword.Text;
+                login.Password = txtPassword.Text;
 
                 bool resp = login.ValidarAcceso();
                 if (resp == true)
