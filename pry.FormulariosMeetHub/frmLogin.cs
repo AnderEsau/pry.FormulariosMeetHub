@@ -6,22 +6,25 @@ namespace pry.FormulariosMeetHub
         {
             InitializeComponent();
         }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            // Creamos la ventana principal
-            frmPrincipal ventanaPrincipal = new frmPrincipal();
+            try
+            {
+                clsLogin login = new clsLogin();
+                login.Usuario = txtUsuario.Text;
+                login.Passwd = txtPassword.Text;
 
-            // Ocultamos el login momentáneamente
-            this.Hide();
-
-            // Mostramos la principal como un diálogo flotante absoluto
-            ventanaPrincipal.ShowDialog();
-
-            // Cuando el usuario por fin cierre la ventana principal, regresará aquí y cerrará el login (y la app)
-            this.Close();
-
-
+                bool resp = login.ValidarAcceso();
+                if (resp == true)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close(); // cierra el login y abre el formulario principal
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
