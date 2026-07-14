@@ -2,6 +2,7 @@ namespace pry.FormulariosMeetHub
 {
     public partial class frmLogin : Form
     {
+        public string UsuarioLogueado { get; set; } // Es como una caja que va a almacenar el nombre del usuario 
         public frmLogin()
         {
             InitializeComponent();
@@ -17,6 +18,8 @@ namespace pry.FormulariosMeetHub
                 bool resp = login.ValidarAcceso();
                 if (resp == true)
                 {
+                    this.UsuarioLogueado = txtUsuario.Text; //Se guarda el nombre en la "caja"
+
                     this.DialogResult = DialogResult.OK;
                     this.Close(); // cierra el login y abre el formulario principal
                 }
