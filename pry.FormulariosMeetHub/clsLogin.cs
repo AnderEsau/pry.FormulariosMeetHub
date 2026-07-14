@@ -10,10 +10,10 @@ namespace pry.FormulariosMeetHub
     internal class clsLogin
     {
         private string usuario;
-        private string passwd;
+        private string password;
 
         public string Usuario { get => usuario; set => usuario = value; }
-        public string Passwd { get => passwd; set => passwd = value; }
+        public string Password { get => password; set => password = value; }
 
         //Atributo estático
         private static string tipo;
@@ -57,7 +57,7 @@ namespace pry.FormulariosMeetHub
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
                         consulta.Parameters.AddWithValue("@usuario", usuario);
-                        consulta.Parameters.AddWithValue("@password", passwd);
+                        consulta.Parameters.AddWithValue("@password", password);
 
                         using (var resultado = consulta.ExecuteReader())
                         {
