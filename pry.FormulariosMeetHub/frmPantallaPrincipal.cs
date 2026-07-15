@@ -71,10 +71,45 @@ namespace pry.FormulariosMeetHub
             //Actualiza el título
             lblNombreModulo.Text = "Reporte Periódico";
         }
+        //Evento click del boton de responsables que trae el formulario al panel contenedor
+        private void btnResponsables_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmResponsables(), pnlContenedor);
+
+            //Actualiza el título
+            lblNombreModulo.Text = "Responsables";
+        }
+        //Evento click del boton de salas y equipamiento que trae el formulario al panel contenedor
+        private void btnSalas_Equip_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmSalasEquipamiento(), pnlContenedor);
+
+            //Actualiza el título
+            lblNombreModulo.Text = "Salas y Equipamiento";
+        }
+        //Evento click del boton de áreas o departamentos que trae el formulario al panel contenedor
+        private void btnAreasDpto_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmAreaDpto(), pnlContenedor);
+        }
         //Evento click del boton de salir que cierra la aplicación
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmUsuarios(), pnlContenedor);
+
+            //Actualiza el título
+            lblNombreModulo.Text = "Usuarios";
+        }
+
+        
     }
 }

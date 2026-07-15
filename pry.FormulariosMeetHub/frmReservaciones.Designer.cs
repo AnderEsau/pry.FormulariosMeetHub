@@ -33,7 +33,6 @@
             pnlNota = new Panel();
             pcbNota = new PictureBox();
             lblNota = new Label();
-            btnCancelar = new Button();
             btnAceptar = new Button();
             dtpFormalizacion = new DateTimePicker();
             pcbDepartamentos = new PictureBox();
@@ -64,7 +63,6 @@
             // pnlReservaciones
             // 
             pnlReservaciones.Controls.Add(pnlNota);
-            pnlReservaciones.Controls.Add(btnCancelar);
             pnlReservaciones.Controls.Add(btnAceptar);
             pnlReservaciones.Controls.Add(dtpFormalizacion);
             pnlReservaciones.Controls.Add(pcbDepartamentos);
@@ -84,9 +82,9 @@
             pnlReservaciones.Controls.Add(cmbSala);
             pnlReservaciones.Controls.Add(txtResponsable);
             pnlReservaciones.Dock = DockStyle.Bottom;
-            pnlReservaciones.Location = new Point(0, 70);
+            pnlReservaciones.Location = new Point(0, 59);
             pnlReservaciones.Name = "pnlReservaciones";
-            pnlReservaciones.Size = new Size(1119, 486);
+            pnlReservaciones.Size = new Size(1119, 497);
             pnlReservaciones.TabIndex = 1;
             // 
             // pnlNota
@@ -95,7 +93,7 @@
             pnlNota.Controls.Add(lblNota);
             pnlNota.Location = new Point(460, 155);
             pnlNota.Name = "pnlNota";
-            pnlNota.Size = new Size(299, 214);
+            pnlNota.Size = new Size(328, 155);
             pnlNota.TabIndex = 72;
             // 
             // pcbNota
@@ -115,26 +113,9 @@
             lblNota.ForeColor = Color.FromArgb(43, 62, 80);
             lblNota.Location = new Point(76, 9);
             lblNota.Name = "lblNota";
-            lblNota.Size = new Size(50, 21);
+            lblNota.Size = new Size(244, 126);
             lblNota.TabIndex = 17;
-            lblNota.Text = "Nota:";
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.FromArgb(210, 195, 175);
-            btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.FromArgb(42, 36, 33);
-            btnCancelar.Location = new Point(697, 423);
-            btnCancelar.Margin = new Padding(1);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 33);
-            btnCancelar.TabIndex = 71;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
+            lblNota.Text = "Nota: \r\nLa adecuación de los\r\nespacios debe ser solicitada\r\npor la persona interesada\r\na la Dirección de Administración\r\ny Finanzas";
             // 
             // btnAceptar
             // 
@@ -144,10 +125,10 @@
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(408, 423);
+            btnAceptar.Location = new Point(461, 400);
             btnAceptar.Margin = new Padding(1);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(112, 33);
+            btnAceptar.Size = new Size(217, 33);
             btnAceptar.TabIndex = 70;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
@@ -386,7 +367,6 @@
         private Panel pnlNota;
         private PictureBox pcbNota;
         internal Label lblNota;
-        private Button btnCancelar;
         private Button btnAceptar;
         internal DateTimePicker dtpFormalizacion;
         private PictureBox pcbDepartamentos;
