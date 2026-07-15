@@ -51,7 +51,7 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT tipo FROM bibliotecario " +
+                    string sql = "SELECT tipo FROM tblbibliotecario " +
                                  "WHERE usuarios = @usuario AND psw = MD5(@password);";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
