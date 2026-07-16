@@ -39,7 +39,7 @@ namespace pry.FormulariosMeetHub
                                  "R.estado_reserva " +
                                  "FROM tblreserva R " +
                                  "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
-                                 "WHERE R.estado_reserva = 'Activa';";
+                                 "WHERE R.estado_reserva = 'Pendiente';";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);

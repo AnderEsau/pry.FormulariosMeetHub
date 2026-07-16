@@ -20,6 +20,25 @@ namespace pry.FormulariosMeetHub
 
             lblNombreUser.Text = nombreUsuario; // inserta el nombre del usuario en el label
         }
+
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            //Verificando permisos
+            //Si es administrador o bibliotecario podra ver los siguientes botones
+            btnReservaciones.Visible = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnCancelaciones.Visible = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnResponsables.Visible = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            btnAreasDpto.Visible = clsLogin.EsAdministrador || clsLogin.EsBibliotecario;
+            //Unicamente si es administrador se le van a mostrar los siguientes botones
+            btnUsuarios.Visible = clsLogin.EsAdministrador;
+            btnReservasPnds.Visible = clsLogin.EsAdministrador;
+            btnReporteP.Visible = clsLogin.EsAdministrador;
+            btnSalas_Equip.Visible = clsLogin.EsAdministrador;
+        }
+        
+
+
         //Evento que al mantener el click presionado hace que se mueva el btn seleccionado 3 pixeles hacia abajo y a la derecha
         private void btnGeneral_MouseDown(object mibotonSeleccionado, MouseEventArgs e)
         {

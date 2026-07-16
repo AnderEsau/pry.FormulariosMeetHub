@@ -33,7 +33,7 @@
             lblTitulo = new Label();
             pnlReservacionesP = new Panel();
             btnCancelar = new Button();
-            btnAceptar = new Button();
+            btnAutorizar = new Button();
             grpDetalles = new GroupBox();
             txtMotivo = new TextBox();
             txtDescripcion = new TextBox();
@@ -53,24 +53,22 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.FromArgb(43, 62, 80);
-            lblTitulo.Location = new Point(30, 15);
-            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Location = new Point(21, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(537, 71);
+            lblTitulo.Size = new Size(353, 47);
             lblTitulo.TabIndex = 74;
             lblTitulo.Text = "Reservas Pendientes";
             // 
             // pnlReservacionesP
             // 
             pnlReservacionesP.Controls.Add(btnCancelar);
-            pnlReservacionesP.Controls.Add(btnAceptar);
+            pnlReservacionesP.Controls.Add(btnAutorizar);
             pnlReservacionesP.Controls.Add(grpDetalles);
             pnlReservacionesP.Controls.Add(dgvReservasPendientes);
             pnlReservacionesP.Dock = DockStyle.Bottom;
-            pnlReservacionesP.Location = new Point(0, 99);
-            pnlReservacionesP.Margin = new Padding(4, 5, 4, 5);
+            pnlReservacionesP.Location = new Point(0, 74);
             pnlReservacionesP.Name = "pnlReservacionesP";
-            pnlReservacionesP.Size = new Size(1599, 828);
+            pnlReservacionesP.Size = new Size(1103, 443);
             pnlReservacionesP.TabIndex = 75;
             // 
             // btnCancelar
@@ -81,29 +79,29 @@
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.FromArgb(42, 36, 33);
-            btnCancelar.Location = new Point(919, 718);
-            btnCancelar.Margin = new Padding(1, 2, 1, 2);
+            btnCancelar.Location = new Point(640, 400);
+            btnCancelar.Margin = new Padding(1);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(160, 55);
+            btnCancelar.Size = new Size(112, 33);
             btnCancelar.TabIndex = 37;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnAceptar
+            // btnAutorizar
             // 
-            btnAceptar.BackColor = Color.FromArgb(43, 62, 80);
-            btnAceptar.Cursor = Cursors.Hand;
-            btnAceptar.FlatAppearance.BorderSize = 0;
-            btnAceptar.FlatStyle = FlatStyle.Flat;
-            btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(640, 718);
-            btnAceptar.Margin = new Padding(1, 2, 1, 2);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(160, 55);
-            btnAceptar.TabIndex = 36;
-            btnAceptar.Text = "Autorizar";
-            btnAceptar.UseVisualStyleBackColor = false;
+            btnAutorizar.BackColor = Color.FromArgb(43, 62, 80);
+            btnAutorizar.Cursor = Cursors.Hand;
+            btnAutorizar.FlatAppearance.BorderSize = 0;
+            btnAutorizar.FlatStyle = FlatStyle.Flat;
+            btnAutorizar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAutorizar.ForeColor = Color.White;
+            btnAutorizar.Location = new Point(445, 400);
+            btnAutorizar.Margin = new Padding(1);
+            btnAutorizar.Name = "btnAutorizar";
+            btnAutorizar.Size = new Size(112, 33);
+            btnAutorizar.TabIndex = 36;
+            btnAutorizar.Text = "Autorizar";
+            btnAutorizar.UseVisualStyleBackColor = false;
             // 
             // grpDetalles
             // 
@@ -116,9 +114,11 @@
             grpDetalles.Controls.Add(txtHoraInicio);
             grpDetalles.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpDetalles.ForeColor = Color.FromArgb(63, 95, 132);
-            grpDetalles.Location = new Point(976, 25);
+            grpDetalles.Location = new Point(683, 15);
+            grpDetalles.Margin = new Padding(2);
             grpDetalles.Name = "grpDetalles";
-            grpDetalles.Size = new Size(523, 593);
+            grpDetalles.Padding = new Padding(2);
+            grpDetalles.Size = new Size(366, 356);
             grpDetalles.TabIndex = 35;
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Detalles de la Reserva:";
@@ -126,57 +126,69 @@
             // txtMotivo
             // 
             txtMotivo.BackColor = SystemColors.ControlLight;
-            txtMotivo.Location = new Point(30, 322);
+            txtMotivo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtMotivo.Location = new Point(21, 193);
+            txtMotivo.Margin = new Padding(2);
             txtMotivo.Multiline = true;
             txtMotivo.Name = "txtMotivo";
             txtMotivo.ReadOnly = true;
-            txtMotivo.Size = new Size(462, 49);
+            txtMotivo.Size = new Size(325, 31);
             txtMotivo.TabIndex = 5;
             // 
             // txtDescripcion
             // 
             txtDescripcion.BackColor = SystemColors.ControlLight;
-            txtDescripcion.Location = new Point(30, 241);
+            txtDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtDescripcion.Location = new Point(21, 145);
+            txtDescripcion.Margin = new Padding(2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.ReadOnly = true;
-            txtDescripcion.Size = new Size(462, 49);
+            txtDescripcion.Size = new Size(325, 31);
             txtDescripcion.TabIndex = 4;
             // 
             // txtTotalAsistentes
             // 
             txtTotalAsistentes.BackColor = SystemColors.ControlLight;
-            txtTotalAsistentes.Location = new Point(303, 153);
+            txtTotalAsistentes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtTotalAsistentes.Location = new Point(212, 92);
+            txtTotalAsistentes.Margin = new Padding(2);
             txtTotalAsistentes.Name = "txtTotalAsistentes";
             txtTotalAsistentes.ReadOnly = true;
-            txtTotalAsistentes.Size = new Size(189, 49);
+            txtTotalAsistentes.Size = new Size(134, 29);
             txtTotalAsistentes.TabIndex = 3;
             // 
             // txtTipoEvento
             // 
             txtTipoEvento.BackColor = SystemColors.ControlLight;
-            txtTipoEvento.Location = new Point(30, 153);
+            txtTipoEvento.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtTipoEvento.Location = new Point(21, 92);
+            txtTipoEvento.Margin = new Padding(2);
             txtTipoEvento.Name = "txtTipoEvento";
             txtTipoEvento.ReadOnly = true;
-            txtTipoEvento.Size = new Size(187, 49);
+            txtTipoEvento.Size = new Size(132, 29);
             txtTipoEvento.TabIndex = 2;
             // 
             // txtHoraFin
             // 
             txtHoraFin.BackColor = SystemColors.ControlLight;
-            txtHoraFin.Location = new Point(342, 65);
+            txtHoraFin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtHoraFin.Location = new Point(239, 39);
+            txtHoraFin.Margin = new Padding(2);
             txtHoraFin.Name = "txtHoraFin";
             txtHoraFin.ReadOnly = true;
-            txtHoraFin.Size = new Size(150, 49);
+            txtHoraFin.Size = new Size(106, 29);
             txtHoraFin.TabIndex = 1;
             // 
             // txtHoraInicio
             // 
             txtHoraInicio.BackColor = SystemColors.ControlLight;
-            txtHoraInicio.Location = new Point(30, 65);
+            txtHoraInicio.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtHoraInicio.Location = new Point(21, 39);
+            txtHoraInicio.Margin = new Padding(2);
             txtHoraInicio.Name = "txtHoraInicio";
             txtHoraInicio.ReadOnly = true;
-            txtHoraInicio.Size = new Size(150, 49);
+            txtHoraInicio.Size = new Size(106, 29);
             txtHoraInicio.TabIndex = 0;
             // 
             // dgvReservasPendientes
@@ -192,7 +204,8 @@
             dgvReservasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvReservasPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReservasPendientes.EnableHeadersVisualStyles = false;
-            dgvReservasPendientes.Location = new Point(54, 25);
+            dgvReservasPendientes.Location = new Point(38, 15);
+            dgvReservasPendientes.Margin = new Padding(2);
             dgvReservasPendientes.Name = "dgvReservasPendientes";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
@@ -203,18 +216,20 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvReservasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvReservasPendientes.RowHeadersWidth = 62;
-            dgvReservasPendientes.Size = new Size(737, 593);
+            dgvReservasPendientes.Size = new Size(516, 356);
             dgvReservasPendientes.TabIndex = 34;
             dgvReservasPendientes.SelectionChanged += dgvReservasPendientes_SelectionChanged;
             // 
             // frmReservasPendientes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
-            ClientSize = new Size(1599, 927);
+            ClientSize = new Size(1103, 517);
             Controls.Add(pnlReservacionesP);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "frmReservasPendientes";
             Text = "Reservas Pendientes";
             pnlReservacionesP.ResumeLayout(false);
@@ -229,7 +244,7 @@
         private Label lblTitulo;
         private Panel pnlReservacionesP;
         private Button btnCancelar;
-        private Button btnAceptar;
+        private Button btnAutorizar;
         private GroupBox grpDetalles;
         private DataGridView dgvReservasPendientes;
         private TextBox txtHoraFin;
