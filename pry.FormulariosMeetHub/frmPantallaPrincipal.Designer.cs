@@ -372,6 +372,7 @@
             Name = "frmPrincipal";
             Text = "Inicio";
             WindowState = FormWindowState.Maximized;
+            Load += frmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pcbTiraInferior).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogotipo).EndInit();
             pnlMenu.ResumeLayout(false);
