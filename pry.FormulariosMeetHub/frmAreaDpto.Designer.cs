@@ -130,6 +130,7 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvAreaDpto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvAreaDpto.RowHeadersVisible = false;
             dgvAreaDpto.RowHeadersWidth = 62;
             dgvAreaDpto.Size = new Size(729, 372);
             dgvAreaDpto.TabIndex = 101;
