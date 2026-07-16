@@ -108,7 +108,7 @@
             btnReservaciones.Location = new Point(25, 147);
             btnReservaciones.Name = "btnReservaciones";
             btnReservaciones.Size = new Size(128, 44);
-            btnReservaciones.TabIndex = 0;
+            btnReservaciones.TabIndex = 32;
             btnReservaciones.TextAlign = ContentAlignment.BottomCenter;
             btnReservaciones.UseVisualStyleBackColor = false;
             btnReservaciones.Click += btnReservaciones_Click;
