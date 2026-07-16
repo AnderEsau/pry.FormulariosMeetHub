@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlReservacionesP = new Panel();
             btnCancelar = new Button();
@@ -117,37 +117,37 @@
             // dgvReservasPendientes
             // 
             dgvReservasPendientes.BackgroundColor = Color.FromArgb(231, 238, 246);
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(63, 95, 132);
-            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(43, 62, 80);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvReservasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
+            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(43, 62, 80);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvReservasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvReservasPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReservasPendientes.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dgvReservasPendientes.EnableHeadersVisualStyles = false;
             dgvReservasPendientes.Location = new Point(57, 15);
             dgvReservasPendientes.Margin = new Padding(2);
             dgvReservasPendientes.Name = "dgvReservasPendientes";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvReservasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvReservasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvReservasPendientes.RowHeadersWidth = 62;
             dgvReservasPendientes.Size = new Size(516, 356);
             dgvReservasPendientes.TabIndex = 34;
             // 
             // Column1
             // 
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(43, 62, 80);
-            Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(43, 62, 80);
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
             Column1.HeaderText = "text1";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
@@ -175,6 +175,7 @@
             ClientSize = new Size(1119, 556);
             Controls.Add(pnlReservacionesP);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "frmReservasPendientes";
             Text = "Reservas Pendientes";

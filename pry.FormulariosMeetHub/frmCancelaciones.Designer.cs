@@ -217,6 +217,7 @@
             ClientSize = new Size(1119, 556);
             Controls.Add(pnlCancelaciones);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmCancelaciones";
             Text = "Cancelaciones";
             pnlCancelaciones.ResumeLayout(false);
