@@ -51,7 +51,7 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT tipo FROM tblbibliotecario " +
+                    string sql = "SELECT tipo, activo FROM tblbibliotecario " +
                                  "WHERE usuarios = @usuario AND psw = MD5(@password);";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
@@ -63,6 +63,15 @@ namespace pry.FormulariosMeetHub
                         {
                             if (resultado.Read())
                             {
+                                // Se verifica el estado(activo) del usuario
+                                int esActivo = resultado.GetInt32("activo");
+
+                                // Si es 0 (o cualquier cosa que no sea 1), no funcionara el login y marcara error
+                                if (esActivo != 1)
+                                {
+                                    throw new Exception("Su usuario se encuentra INACTIVO. Comuníquese con el administrador.");
+                                }
+                                //Verifica el tipo de usuario y asigna los permisos correspondientes
                                 tipo = resultado.GetString("tipo");
                                 AsignarPermisos();
                                 if (!esAdministrador && !esBibliotecario)

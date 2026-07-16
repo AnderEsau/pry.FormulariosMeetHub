@@ -50,10 +50,9 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.FromArgb(43, 62, 80);
-            lblTitulo.Location = new Point(30, 15);
-            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Location = new Point(21, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(616, 71);
+            lblTitulo.Size = new Size(407, 47);
             lblTitulo.TabIndex = 77;
             lblTitulo.Text = "Áreas y Departamentos";
             // 
@@ -62,11 +61,11 @@
             txtNombreArea.BackColor = Color.White;
             txtNombreArea.BorderStyle = BorderStyle.FixedSingle;
             txtNombreArea.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreArea.Location = new Point(833, 187);
-            txtNombreArea.Margin = new Padding(1, 2, 1, 2);
+            txtNombreArea.Location = new Point(455, 112);
+            txtNombreArea.Margin = new Padding(1);
             txtNombreArea.Name = "txtNombreArea";
             txtNombreArea.PlaceholderText = "Buscar Área/Departamento";
-            txtNombreArea.Size = new Size(311, 39);
+            txtNombreArea.Size = new Size(218, 29);
             txtNombreArea.TabIndex = 103;
             txtNombreArea.TextChanged += txtNombreArea_TextChanged;
             // 
@@ -76,10 +75,9 @@
             pnlAreaDpto.BorderStyle = BorderStyle.FixedSingle;
             pnlAreaDpto.Controls.Add(txtDescripcion);
             pnlAreaDpto.Controls.Add(txtArea);
-            pnlAreaDpto.Location = new Point(91, 240);
-            pnlAreaDpto.Margin = new Padding(4, 5, 4, 5);
+            pnlAreaDpto.Location = new Point(64, 144);
             pnlAreaDpto.Name = "pnlAreaDpto";
-            pnlAreaDpto.Size = new Size(458, 207);
+            pnlAreaDpto.Size = new Size(321, 125);
             pnlAreaDpto.TabIndex = 102;
             // 
             // txtDescripcion
@@ -87,11 +85,11 @@
             txtDescripcion.BackColor = Color.White;
             txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
             txtDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDescripcion.Location = new Point(30, 120);
-            txtDescripcion.Margin = new Padding(1, 2, 1, 2);
+            txtDescripcion.Location = new Point(21, 72);
+            txtDescripcion.Margin = new Padding(1);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Descripción";
-            txtDescripcion.Size = new Size(388, 39);
+            txtDescripcion.Size = new Size(272, 29);
             txtDescripcion.TabIndex = 95;
             // 
             // txtArea
@@ -99,11 +97,11 @@
             txtArea.BackColor = Color.White;
             txtArea.BorderStyle = BorderStyle.FixedSingle;
             txtArea.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtArea.Location = new Point(30, 38);
-            txtArea.Margin = new Padding(1, 2, 1, 2);
+            txtArea.Location = new Point(21, 23);
+            txtArea.Margin = new Padding(1);
             txtArea.Name = "txtArea";
             txtArea.PlaceholderText = "Nombre del Área/Departamento";
-            txtArea.Size = new Size(388, 39);
+            txtArea.Size = new Size(272, 29);
             txtArea.TabIndex = 94;
             // 
             // dgvAreaDpto
@@ -120,7 +118,8 @@
             dgvAreaDpto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAreaDpto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAreaDpto.EnableHeadersVisualStyles = false;
-            dgvAreaDpto.Location = new Point(833, 240);
+            dgvAreaDpto.Location = new Point(455, 144);
+            dgvAreaDpto.Margin = new Padding(2);
             dgvAreaDpto.Name = "dgvAreaDpto";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
@@ -130,9 +129,8 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvAreaDpto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvAreaDpto.RowHeadersVisible = false;
             dgvAreaDpto.RowHeadersWidth = 62;
-            dgvAreaDpto.Size = new Size(729, 372);
+            dgvAreaDpto.Size = new Size(638, 296);
             dgvAreaDpto.TabIndex = 101;
             dgvAreaDpto.SelectionChanged += dgvAreaDpto_SelectionChanged;
             // 
@@ -143,10 +141,9 @@
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Location = new Point(407, 473);
-            btnEliminar.Margin = new Padding(4, 5, 4, 5);
+            btnEliminar.Location = new Point(285, 284);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(144, 80);
+            btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 106;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click_1;
@@ -158,10 +155,9 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Location = new Point(249, 473);
-            btnGuardar.Margin = new Padding(4, 5, 4, 5);
+            btnGuardar.Location = new Point(174, 284);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(144, 80);
+            btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 105;
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -173,20 +169,19 @@
             btnNuevo.Cursor = Cursors.Hand;
             btnNuevo.FlatAppearance.BorderSize = 0;
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Location = new Point(90, 473);
-            btnNuevo.Margin = new Padding(4, 5, 4, 5);
+            btnNuevo.Location = new Point(63, 284);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(144, 80);
+            btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 104;
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click_1;
             // 
             // frmAreaDpto
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
-            ClientSize = new Size(1621, 992);
+            ClientSize = new Size(1135, 595);
             Controls.Add(btnEliminar);
             Controls.Add(btnGuardar);
             Controls.Add(btnNuevo);
@@ -195,7 +190,6 @@
             Controls.Add(dgvAreaDpto);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "frmAreaDpto";
             Text = "Áreas y Departamentos";
             pnlAreaDpto.ResumeLayout(false);
