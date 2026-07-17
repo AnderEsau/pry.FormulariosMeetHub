@@ -93,6 +93,7 @@
             txtDescripcion.PlaceholderText = "Descripción";
             txtDescripcion.Size = new Size(388, 39);
             txtDescripcion.TabIndex = 95;
+            txtDescripcion.Text = " ";
             // 
             // txtArea
             // 

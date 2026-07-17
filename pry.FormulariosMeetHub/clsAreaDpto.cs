@@ -11,7 +11,7 @@ namespace pry.FormulariosMeetHub
     internal class clsAreaDpto
     {
         private string nombreArea;
-        private string descripcion;
+        private string nombreDescripcion;
         private int idArea;//Este atributo es para referencia en update y delete
 
         //usamos un adaptador
@@ -24,7 +24,7 @@ namespace pry.FormulariosMeetHub
         //propiedad para los atributos
         public int IdArea { get => idArea; set => idArea = value; }
         public string NombreArea { get => nombreArea; set => nombreArea = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string NombreDescripcion { get => nombreDescripcion; set => nombreDescripcion = value; }
 
         //Metodo para cargar datos en el DataGrid
         public DataTable CargarDataGrid()
@@ -94,7 +94,7 @@ namespace pry.FormulariosMeetHub
                             using (comando = new MySqlCommand(sqlN, conexion))
                             {
                                 comando.Parameters.AddWithValue("@nombre", nombreArea);
-                                comando.Parameters.AddWithValue("@descripcion", descripcion);
+                                comando.Parameters.AddWithValue("@descripcion", NombreDescripcion);
 
                                 int filasAfectadas = comando.ExecuteNonQuery();
                                 if (filasAfectadas > 0)
@@ -107,14 +107,14 @@ namespace pry.FormulariosMeetHub
                                 }
                             }//Libera la operacion de inserción
                             break;
-                        case 1://Actualizar old
+                        case 1://Actualizar
                             string sqlA = "UPDATE tblarea_depto SET nombre_area = @nombre, descripcion = @descripcion WHERE id_area = @id;";
                             using (comando = new MySqlCommand(sqlA, conexion))
                             {
-                                comando.Parameters.AddWithValue("@nombre", nombreArea);
-                                comando.Parameters.AddWithValue("@descripcion", descripcion);
                                 comando.Parameters.AddWithValue("@id", idArea);
-
+                                comando.Parameters.AddWithValue("@nombre", nombreArea);
+                                comando.Parameters.AddWithValue("@descripcion", NombreDescripcion);
+                                
                                 int filasAfectadas = comando.ExecuteNonQuery();
                                 if (filasAfectadas > 0)
                                 {
@@ -131,7 +131,7 @@ namespace pry.FormulariosMeetHub
             }
             catch (Exception ex)
             {
-                throw new Exception("Error" + ex.Message);
+                throw new Exception("Error: No se pudo registrar. Asegúrate de llenar todos los campos. " + ex.Message);
             }
             return msg;
         }
