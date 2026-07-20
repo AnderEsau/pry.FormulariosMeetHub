@@ -51,18 +51,18 @@
             lblLogin.BackColor = Color.White;
             lblLogin.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(43, 62, 80);
-            lblLogin.Location = new Point(82, 185);
+            lblLogin.Location = new Point(78, 197);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(301, 50);
             lblLogin.TabIndex = 0;
-            lblLogin.Text = "INICIAR SESION";
+            lblLogin.Text = "INICIAR SESIÓN";
             // 
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.White;
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(117, 284);
+            txtUsuario.Location = new Point(115, 275);
             txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
@@ -74,7 +74,7 @@
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(117, 345);
+            txtPassword.Location = new Point(115, 336);
             txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
@@ -90,7 +90,7 @@
             btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIngresar.ForeColor = Color.White;
-            btnIngresar.Location = new Point(145, 390);
+            btnIngresar.Location = new Point(143, 390);
             btnIngresar.Margin = new Padding(1);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(175, 33);
@@ -107,7 +107,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.FromArgb(42, 36, 33);
-            btnSalir.Location = new Point(145, 439);
+            btnSalir.Location = new Point(143, 439);
             btnSalir.Margin = new Padding(1);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(175, 33);
@@ -122,7 +122,7 @@
             lblMeetHub.BackColor = Color.White;
             lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMeetHub.ForeColor = Color.FromArgb(179, 138, 88);
-            lblMeetHub.Location = new Point(182, 155);
+            lblMeetHub.Location = new Point(180, 155);
             lblMeetHub.Name = "lblMeetHub";
             lblMeetHub.Size = new Size(100, 30);
             lblMeetHub.TabIndex = 18;
@@ -143,7 +143,7 @@
             // 
             pcbPasswordIcono.BackColor = Color.White;
             pcbPasswordIcono.Image = Properties.Resources.IconoContraseña_removebg_preview;
-            pcbPasswordIcono.Location = new Point(73, 337);
+            pcbPasswordIcono.Location = new Point(71, 328);
             pcbPasswordIcono.Name = "pcbPasswordIcono";
             pcbPasswordIcono.Size = new Size(40, 40);
             pcbPasswordIcono.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -154,7 +154,7 @@
             // 
             pcbLogotipo.BackColor = Color.White;
             pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
-            pcbLogotipo.Location = new Point(182, 42);
+            pcbLogotipo.Location = new Point(180, 42);
             pcbLogotipo.Name = "pcbLogotipo";
             pcbLogotipo.Size = new Size(102, 104);
             pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@
             // 
             pcbUsuarioIcono.BackColor = Color.White;
             pcbUsuarioIcono.Image = (Image)resources.GetObject("pcbUsuarioIcono.Image");
-            pcbUsuarioIcono.Location = new Point(73, 277);
+            pcbUsuarioIcono.Location = new Point(71, 268);
             pcbUsuarioIcono.Name = "pcbUsuarioIcono";
             pcbUsuarioIcono.Size = new Size(40, 40);
             pcbUsuarioIcono.SizeMode = PictureBoxSizeMode.StretchImage;
