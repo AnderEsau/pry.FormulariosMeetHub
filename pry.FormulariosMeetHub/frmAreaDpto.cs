@@ -75,8 +75,8 @@ namespace pry.FormulariosMeetHub
             {
                 int tipoOperacion = idArea == 0 ? 0 : 1;
                 area.IdArea = idArea;
-                area.NombreArea = txtArea.Text;
-                area.Descripcion = txtDescripcion.Text;
+                area.NombreArea = string.IsNullOrEmpty(txtArea.Text) ? null : txtArea.Text;
+                area.NombreDescripcion = string.IsNullOrEmpty(txtDescripcion.Text) ? null:txtDescripcion.Text;
                 string msg = "";
                 if (tipoOperacion != 0)
                 {

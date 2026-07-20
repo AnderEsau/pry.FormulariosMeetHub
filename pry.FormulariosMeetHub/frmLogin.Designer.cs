@@ -66,7 +66,7 @@
             txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
-            txtUsuario.Size = new Size(250, 29);
+            txtUsuario.Size = new Size(242, 29);
             txtUsuario.TabIndex = 11;
             // 
             // txtPassword
@@ -78,7 +78,7 @@
             txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
-            txtPassword.Size = new Size(250, 29);
+            txtPassword.Size = new Size(242, 29);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
