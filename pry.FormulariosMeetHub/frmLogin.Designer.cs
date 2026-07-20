@@ -49,13 +49,13 @@
             // 
             lblLogin.AutoSize = true;
             lblLogin.BackColor = Color.White;
-            lblLogin.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLogin.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(43, 62, 80);
-            lblLogin.Location = new Point(145, 185);
+            lblLogin.Location = new Point(82, 185);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(175, 65);
+            lblLogin.Size = new Size(301, 50);
             lblLogin.TabIndex = 0;
-            lblLogin.Text = "LOGIN";
+            lblLogin.Text = "INICIAR SESION";
             // 
             // txtUsuario
             // 
@@ -66,7 +66,7 @@
             txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
-            txtUsuario.Size = new Size(250, 29);
+            txtUsuario.Size = new Size(242, 29);
             txtUsuario.TabIndex = 11;
             // 
             // txtPassword
@@ -78,7 +78,7 @@
             txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
-            txtPassword.Size = new Size(250, 29);
+            txtPassword.Size = new Size(242, 29);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
