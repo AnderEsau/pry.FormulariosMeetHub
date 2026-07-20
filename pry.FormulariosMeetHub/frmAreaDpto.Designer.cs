@@ -198,7 +198,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmAreaDpto";
-            Text = "Áreas y Departamentos";
+            Text = " ";
             pnlAreaDpto.ResumeLayout(false);
             pnlAreaDpto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAreaDpto).EndInit();

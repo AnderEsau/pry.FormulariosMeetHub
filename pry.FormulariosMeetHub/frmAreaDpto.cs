@@ -32,11 +32,6 @@ namespace pry.FormulariosMeetHub
                 //Asignamos la tabla virtual de la clase directamente al control visual
                 dgvAreaDpto.DataSource = area.CargarDataGrid();
 
-                dgvAreaDpto.Columns["Clave"].Visible = true;
-                dgvAreaDpto.Columns["Nombre"].Visible = true;
-                dgvAreaDpto.Columns["Descripcion"].Visible = true;
-                //dgvUsuarios.Columns["Responsable"].Visible = false;
-
             }
             catch (Exception ex)
             {
