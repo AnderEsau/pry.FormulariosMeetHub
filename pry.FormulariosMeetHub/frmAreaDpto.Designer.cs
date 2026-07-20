@@ -192,7 +192,7 @@
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAreaDpto";
-            Text = "Áreas y Departamentos";
+            Text = " ";
             pnlAreaDpto.ResumeLayout(false);
             pnlAreaDpto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAreaDpto).EndInit();
