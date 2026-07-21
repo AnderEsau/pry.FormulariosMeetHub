@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEquipamiento));
             lblTitulo = new Label();
             dgvEquipamiento = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             txtNombreEquipamiento = new TextBox();
             pnlEquipamiento = new Panel();
             cmbSala = new ComboBox();
@@ -64,6 +60,7 @@
             // 
             // dgvEquipamiento
             // 
+            dgvEquipamiento.AllowUserToAddRows = false;
             dgvEquipamiento.BackgroundColor = Color.FromArgb(231, 238, 246);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
@@ -74,51 +71,24 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvEquipamiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvEquipamiento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEquipamiento.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3 });
             dgvEquipamiento.EnableHeadersVisualStyles = false;
             dgvEquipamiento.Location = new Point(407, 138);
             dgvEquipamiento.Margin = new Padding(2);
             dgvEquipamiento.Name = "dgvEquipamiento";
             dgvEquipamiento.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvEquipamiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvEquipamiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvEquipamiento.RowHeadersVisible = false;
             dgvEquipamiento.RowHeadersWidth = 62;
             dgvEquipamiento.Size = new Size(689, 312);
             dgvEquipamiento.TabIndex = 117;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(43, 62, 80);
-            dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewTextBoxColumn1.HeaderText = "text1";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "text2";
-            dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "text3";
-            dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            dataGridViewTextBoxColumn3.Width = 150;
+            dgvEquipamiento.SelectionChanged += dgvEquipamiento_SelectionChanged;
             // 
             // txtNombreEquipamiento
             // 
@@ -131,6 +101,7 @@
             txtNombreEquipamiento.PlaceholderText = "Buscar equipamiento";
             txtNombreEquipamiento.Size = new Size(218, 29);
             txtNombreEquipamiento.TabIndex = 116;
+            txtNombreEquipamiento.TextChanged += txtNombreEquipamiento_TextChanged;
             // 
             // pnlEquipamiento
             // 
@@ -203,6 +174,7 @@
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 120;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -216,6 +188,7 @@
             btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 119;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnNuevo
             // 
@@ -229,6 +202,7 @@
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 118;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // frmEquipamiento
             // 
@@ -257,9 +231,6 @@
 
         private Label lblTitulo;
         private DataGridView dgvEquipamiento;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private TextBox txtNombreEquipamiento;
         private Panel pnlEquipamiento;
         private ComboBox cmbSala;
