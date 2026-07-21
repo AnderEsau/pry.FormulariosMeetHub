@@ -69,5 +69,10 @@ namespace pry.FormulariosMeetHub
                 MessageBox.Show("Error al cargar los detalles: " + ex.Message);
             }
         }
+
+        private void btnAutorizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
