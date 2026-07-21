@@ -12,148 +12,231 @@ namespace pry.FormulariosMeetHub
 {
     public partial class frmUsuarios : Form
     {
-
-
-        // Instancia de la clase de negocio
-        clsUsuario objetoUsuario = new clsUsuario();
-
-        // 0 = Insertar, 1 = Modificar
-        int operacion = 0;
+        clsUsuario usuario;
+        int idBibliotecario = 0;
 
         public frmUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void frmUsuarios_Load(object sender, EventArgs e)
-        {
+            LlenarComboPerfiles();
             CargarGrid();
-            ConfigurarComboPerfil();
         }
 
-        private void CargarGrid()
+        private void LlenarComboPerfiles()
         {
             try
             {
-                dgvUsuarios.DataSource = objetoUsuario.CargarDataGrid();
+                DataTable dtPerfiles = new DataTable();
+                dtPerfiles.Columns.Add("id", typeof(int));
+                dtPerfiles.Columns.Add("perfil", typeof(string));
+
+
+                dtPerfiles.Rows.Add(0, "-- Selecciona un Perfil --");
+
+
+                dtPerfiles.Rows.Add(1, "Administrador");
+                dtPerfiles.Rows.Add(2, "Bibliotecario");
+
+
+
+                cmbTipo.DataSource = dtPerfiles;
+                cmbTipo.DisplayMember = "perfil";
+                cmbTipo.ValueMember = "id";
+                cmbTipo.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar los perfiles: " + ex.Message);
             }
         }
 
-        private void ConfigurarComboPerfil()
+        // Método para cargar datos en el DataGridView
+        public void CargarGrid()
         {
-            cmbTipo.Items.Clear();
-            cmbTipo.Items.Add("Administrador");
-            cmbTipo.Items.Add("Bibliotecario");
-            cmbTipo.SelectedIndex = -1;
+            usuario = new clsUsuario();
+            dgvUsuarios.DataSource = null;
+
+            // Oculta el encabezado de filas y ajusta columnas
+            dgvUsuarios.RowHeadersVisible = false;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            try
+            {
+                dgvUsuarios.DataSource = usuario.CargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        // BOTÓN: Nuevo
+
+        private void dgvUsuario_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                // Validamos que exista una fila seleccionada y que la celda ID no esté vacía
+                if (dgvUsuarios.CurrentRow != null && dgvUsuarios.CurrentRow.Cells["ID"].Value != DBNull.Value)
+                {
+                    // 1. Guardamos el ID del usuario seleccionado
+                    idBibliotecario = int.Parse(dgvUsuarios.CurrentRow.Cells["ID"].Value.ToString());
+
+                    // 2. Pasamos los datos a los TextBox correspondientes
+                    txtMatricula.Text = dgvUsuarios.CurrentRow.Cells["Matrícula del trabajador"].Value?.ToString();
+                    txtUsuario.Text = dgvUsuarios.CurrentRow.Cells["Usuario"].Value?.ToString();
+                    txtPassword.Text = dgvUsuarios.CurrentRow.Cells["Password"].Value?.ToString();
+
+                    // 3. Seleccionamos la opción correcta en el ComboBox de Perfil
+                    string perfilSeleccionado = dgvUsuarios.CurrentRow.Cells["Perfil"].Value?.ToString();
+
+                    if (!string.IsNullOrEmpty(perfilSeleccionado))
+                    {
+                        // Busca coincidencia de texto dentro de las opciones del ComboBox
+                        cmbTipo.SelectedIndex = cmbTipo.FindStringExact(perfilSeleccionado);
+                    }
+                    else
+                    {
+                        cmbTipo.SelectedIndex = 0; // Vuelve al placeholder '-- Selecciona un Perfil --'
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar el registro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
+
+        // Botón Nuevo
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            operacion = 0;
-            objetoUsuario.LimpiarPanel(pnlUsuarios); // Ajusta pnlDatos al nombre de tu Panel/GroupBox
+            idBibliotecario = 0;
+            usuario.LimpiarPanel(pnlUsuarios);
             txtMatricula.Focus();
         }
 
-        // BOTÓN: Guardar
-        private void btnGuardar_Click(object sender, EventArgs e)
+        // Búsqueda en tiempo real
+        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
         {
-            // Validaciones básicas utilizando los nombres de tus controles
-            if (string.IsNullOrEmpty(txtMatricula.Text) || string.IsNullOrEmpty(txtUsuario.Text) || cmbTipo.SelectedIndex == -1)
+            if (string.IsNullOrEmpty(txtNombreUsuario.Text))
             {
-                MessageBox.Show("Por favor, rellene todos los campos obligatorios del formulario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CargarGrid();
                 return;
             }
+
+            usuario = new clsUsuario();
+            dgvUsuarios.DataSource = null;
+            dgvUsuarios.RowHeadersVisible = false;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             try
             {
-                // Mapeo desde tus nombres de controles
-                objetoUsuario.Matricula = Convert.ToInt32(txtMatricula.Text);
-                objetoUsuario.Usuarios = txtUsuario.Text;
-                objetoUsuario.Psw = txtPassword.Text;
-                objetoUsuario.Tipo = cmbTipo.SelectedItem.ToString();
-
-                string respuesta = objetoUsuario.GuardarActualizar(operacion);
-
-                MessageBox.Show(respuesta, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                objetoUsuario.LimpiarPanel(pnlUsuarios);
-                CargarGrid();
-                operacion = 0;
+                usuario.Usuarios = txtNombreUsuario.Text;
+                dgvUsuarios.DataSource = usuario.Consultar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error al Guardar/Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Requiere asignar datos ", ex.Message);
             }
         }
 
-        // BOTÓN: Eliminar
+        // Botón Guardar 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Determinamos el tipo de operación
+                int tipoOperacion = idBibliotecario == 0 ? 0 : 1;
+
+                usuario = new clsUsuario();
+
+                // Llenamos las propiedades del objeto usuario
+                usuario.IdBibliotecario = idBibliotecario;
+                usuario.Matricula = Convert.ToInt32(txtMatricula.Text);
+                usuario.Usuarios = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text.Trim();
+                usuario.Psw = string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text.Trim();
+                usuario.Tipo = cmbTipo.Text;
+
+                string msg = "";
+
+                // Si es una modificación (tipoOperacion = 1), pedimos confirmación
+                if (tipoOperacion == 1)
+                {
+                    var resp = MessageBox.Show("¿Confirmar que deseas actualizar los datos de este usuario?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        msg = usuario.GuardarActualizar(tipoOperacion);
+                        MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        usuario.LimpiarPanel(pnlUsuarios);
+                        idBibliotecario = 0;
+                        CargarGrid(); // Refrescamos la tabla del formulario
+                    }
+                }
+                else // Si es nuevo (tipoOperacion = 0), se guarda directo
+                {
+                    msg = usuario.GuardarActualizar(tipoOperacion);
+                    MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    usuario.LimpiarPanel(pnlUsuarios);
+                    idBibliotecario = 0;
+                    CargarGrid(); // Refrescamos la tabla del formulario
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron guardar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Botón Eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (objetoUsuario.IdBibliotecario == 0)
+            if (idBibliotecario == 0)
             {
-                MessageBox.Show("Por favor, seleccione un usuario de la tabla para proceder a eliminarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un registro del catálogo para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult confirmacion = MessageBox.Show("¿Está completamente seguro de eliminar este usuario del sistema?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var respuesta = MessageBox.Show($"¿Estás completamente seguro de eliminar permanentemente el usuario con Clave :{idBibliotecario}?",
+                                            "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 
-            if (confirmacion == DialogResult.Yes)
+            if (respuesta == DialogResult.Yes)
             {
                 try
                 {
-                    string respuesta = objetoUsuario.Eliminar();
-                    MessageBox.Show(respuesta, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    objetoUsuario.LimpiarPanel(pnlUsuarios);
+                    usuario = new clsUsuario();
+
+                    usuario.IdBibliotecario = idBibliotecario;
+
+                    string resultado = usuario.Eliminar();
+
+                    MessageBox.Show(resultado, "Registro Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    usuario.LimpiarPanel(pnlUsuarios);
+                    idBibliotecario = 0;
                     CargarGrid();
-                    objetoUsuario.IdBibliotecario = 0;
-                    operacion = 0;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error al Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ocurrió un error al intentar eliminar el registro: " + ex.Message,
+                                    "Error Operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+
+
         }
 
-        // EVENTO CELLCLICK: Al seleccionar una fila en dgvUsuario
-        private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
 
-                // Guardar ID
-                objetoUsuario.IdBibliotecario = Convert.ToInt32(fila.Cells["ID"].Value);
 
-                // Asignar datos a los controles específicos
-                txtMatricula.Text = fila.Cells["Matrícula del trabajador"].Value.ToString();
-                txtUsuario.Text = fila.Cells["Usuario"].Value.ToString();
-                txtPassword.Text = fila.Cells["Password"].Value.ToString();
-                cmbTipo.SelectedItem = fila.Cells["Perfil"].Value.ToString();
 
-                operacion = 1; // Cambia a modo actualización
-            }
-        }
 
-        // EVENTO TEXTCHANGED: Cajas de texto de búsqueda en tiempo real
-        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                objetoUsuario.Usuarios = txtNombreUsuario.Text;
-                dgvUsuarios.DataSource = objetoUsuario.Consultar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error de filtrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+
     }
 
-   
+
 }
 
