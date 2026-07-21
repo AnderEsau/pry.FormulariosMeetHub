@@ -27,7 +27,7 @@ namespace pry.FormulariosMeetHub
                 {
                     string sql = "SELECT R.id_reserva, " + // Agarra el id de la tabla reservas
                                  "S.nombre_sala AS Sala, " +
-                                 "R.matricula AS Responsable, " +
+                                 "COALESCE(R.id_alumno, R.matricula, R.id_externo) AS Responsable, " + // COALESCE sirve para tomar cualquiera de los 3 tipos de usuarios (tomar el primer valor que no sea null)
                                  "R.fecha_reserva AS 'Fecha de Reserva', " +
                                  "R.fecha_solicitud AS 'Fecha de Formalización', " + // nombro la fecha de solicitud como lo requerido
                                  "R.hora_inicio, " +

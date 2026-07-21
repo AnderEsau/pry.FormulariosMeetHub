@@ -35,6 +35,12 @@
             btnRechazar = new Button();
             btnAutorizar = new Button();
             grpDetalles = new GroupBox();
+            lblMotivo = new Label();
+            lblDescripcion = new Label();
+            lblTotalAsistentes = new Label();
+            lblTipoEvento = new Label();
+            lblHoraFin = new Label();
+            lblHoraInicio = new Label();
             txtMotivo = new TextBox();
             txtDescripcion = new TextBox();
             txtTotalAsistentes = new TextBox();
@@ -42,12 +48,6 @@
             txtHoraFin = new TextBox();
             txtHoraInicio = new TextBox();
             dgvReservasPendientes = new DataGridView();
-            lblHoraInicio = new Label();
-            lblHoraFin = new Label();
-            lblTipoEvento = new Label();
-            lblTotalAsistentes = new Label();
-            lblDescripcion = new Label();
-            lblMotivo = new Label();
             pnlReservacionesP.SuspendLayout();
             grpDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReservasPendientes).BeginInit();
@@ -94,6 +94,7 @@
             btnRechazar.TabIndex = 37;
             btnRechazar.Text = "Rechazar";
             btnRechazar.UseVisualStyleBackColor = false;
+            btnRechazar.Click += btnRechazar_Click;
             // 
             // btnAutorizar
             // 
@@ -110,6 +111,7 @@
             btnAutorizar.TabIndex = 36;
             btnAutorizar.Text = "Autorizar";
             btnAutorizar.UseVisualStyleBackColor = false;
+            btnAutorizar.Click += btnAutorizar_Click;
             // 
             // grpDetalles
             // 
@@ -134,6 +136,66 @@
             grpDetalles.TabIndex = 35;
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Detalles de la Reserva:";
+            // 
+            // lblMotivo
+            // 
+            lblMotivo.AutoSize = true;
+            lblMotivo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMotivo.Location = new Point(30, 483);
+            lblMotivo.Name = "lblMotivo";
+            lblMotivo.Size = new Size(218, 32);
+            lblMotivo.TabIndex = 11;
+            lblMotivo.Text = "Motivo del Evento:";
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(30, 330);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(266, 32);
+            lblDescripcion.TabIndex = 10;
+            lblDescripcion.Text = "Descripción del Evento:";
+            // 
+            // lblTotalAsistentes
+            // 
+            lblTotalAsistentes.AutoSize = true;
+            lblTotalAsistentes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalAsistentes.Location = new Point(30, 241);
+            lblTotalAsistentes.Name = "lblTotalAsistentes";
+            lblTotalAsistentes.Size = new Size(224, 32);
+            lblTotalAsistentes.TabIndex = 9;
+            lblTotalAsistentes.Text = "Total de Asistentes:";
+            // 
+            // lblTipoEvento
+            // 
+            lblTipoEvento.AutoSize = true;
+            lblTipoEvento.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoEvento.Location = new Point(30, 154);
+            lblTipoEvento.Name = "lblTipoEvento";
+            lblTipoEvento.Size = new Size(182, 32);
+            lblTipoEvento.TabIndex = 8;
+            lblTipoEvento.Text = "Tipo de Evento:";
+            // 
+            // lblHoraFin
+            // 
+            lblHoraFin.AutoSize = true;
+            lblHoraFin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHoraFin.Location = new Point(320, 61);
+            lblHoraFin.Name = "lblHoraFin";
+            lblHoraFin.Size = new Size(113, 32);
+            lblHoraFin.TabIndex = 7;
+            lblHoraFin.Text = "Hora Fin:";
+            // 
+            // lblHoraInicio
+            // 
+            lblHoraInicio.AutoSize = true;
+            lblHoraInicio.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHoraInicio.Location = new Point(30, 61);
+            lblHoraInicio.Name = "lblHoraInicio";
+            lblHoraInicio.Size = new Size(173, 32);
+            lblHoraInicio.TabIndex = 6;
+            lblHoraInicio.Text = "Hora de Inicio:";
             // 
             // txtMotivo
             // 
@@ -226,66 +288,6 @@
             dgvReservasPendientes.Size = new Size(737, 593);
             dgvReservasPendientes.TabIndex = 34;
             dgvReservasPendientes.SelectionChanged += dgvReservasPendientes_SelectionChanged;
-            // 
-            // lblHoraInicio
-            // 
-            lblHoraInicio.AutoSize = true;
-            lblHoraInicio.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHoraInicio.Location = new Point(30, 61);
-            lblHoraInicio.Name = "lblHoraInicio";
-            lblHoraInicio.Size = new Size(173, 32);
-            lblHoraInicio.TabIndex = 6;
-            lblHoraInicio.Text = "Hora de Inicio:";
-            // 
-            // lblHoraFin
-            // 
-            lblHoraFin.AutoSize = true;
-            lblHoraFin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHoraFin.Location = new Point(320, 61);
-            lblHoraFin.Name = "lblHoraFin";
-            lblHoraFin.Size = new Size(113, 32);
-            lblHoraFin.TabIndex = 7;
-            lblHoraFin.Text = "Hora Fin:";
-            // 
-            // lblTipoEvento
-            // 
-            lblTipoEvento.AutoSize = true;
-            lblTipoEvento.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTipoEvento.Location = new Point(30, 154);
-            lblTipoEvento.Name = "lblTipoEvento";
-            lblTipoEvento.Size = new Size(182, 32);
-            lblTipoEvento.TabIndex = 8;
-            lblTipoEvento.Text = "Tipo de Evento:";
-            // 
-            // lblTotalAsistentes
-            // 
-            lblTotalAsistentes.AutoSize = true;
-            lblTotalAsistentes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalAsistentes.Location = new Point(30, 241);
-            lblTotalAsistentes.Name = "lblTotalAsistentes";
-            lblTotalAsistentes.Size = new Size(224, 32);
-            lblTotalAsistentes.TabIndex = 9;
-            lblTotalAsistentes.Text = "Total de Asistentes:";
-            // 
-            // lblDescripcion
-            // 
-            lblDescripcion.AutoSize = true;
-            lblDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescripcion.Location = new Point(30, 330);
-            lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(266, 32);
-            lblDescripcion.TabIndex = 10;
-            lblDescripcion.Text = "Descripción del Evento:";
-            // 
-            // lblMotivo
-            // 
-            lblMotivo.AutoSize = true;
-            lblMotivo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMotivo.Location = new Point(30, 483);
-            lblMotivo.Name = "lblMotivo";
-            lblMotivo.Size = new Size(218, 32);
-            lblMotivo.TabIndex = 11;
-            lblMotivo.Text = "Motivo del Evento:";
             // 
             // frmReservasPendientes
             // 
