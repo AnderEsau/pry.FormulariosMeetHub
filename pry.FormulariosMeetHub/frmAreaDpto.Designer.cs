@@ -77,7 +77,7 @@
             pnlAreaDpto.Controls.Add(txtArea);
             pnlAreaDpto.Location = new Point(34, 144);
             pnlAreaDpto.Name = "pnlAreaDpto";
-            pnlAreaDpto.Size = new Size(321, 166);
+            pnlAreaDpto.Size = new Size(323, 166);
             pnlAreaDpto.TabIndex = 102;
             // 
             // txtDescripcion
@@ -145,7 +145,7 @@
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Location = new Point(254, 316);
+            btnEliminar.Location = new Point(256, 316);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 106;
@@ -159,7 +159,7 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Location = new Point(143, 316);
+            btnGuardar.Location = new Point(145, 316);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 105;
@@ -173,7 +173,7 @@
             btnNuevo.Cursor = Cursors.Hand;
             btnNuevo.FlatAppearance.BorderSize = 0;
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Location = new Point(32, 316);
+            btnNuevo.Location = new Point(34, 316);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 104;

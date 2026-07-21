@@ -36,7 +36,7 @@ namespace pry.FormulariosMeetHub
             btnReporteP.Visible = clsLogin.EsAdministrador;
             btnSalas.Visible = clsLogin.EsAdministrador;
         }
-        
+
 
 
         //Evento que al mantener el click presionado hace que se mueva el btn seleccionado 3 pixeles hacia abajo y a la derecha
@@ -132,6 +132,13 @@ namespace pry.FormulariosMeetHub
             lblNombreModulo.Text = "Usuarios";
         }
 
-        
+        private void btnEquipamiento_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmEquipamiento(), pnlContenedor);
+
+            //Actualiza el título
+            lblNombreModulo.Text = "Equipamiento";
+        }
     }
 }
