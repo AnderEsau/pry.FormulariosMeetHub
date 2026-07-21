@@ -32,9 +32,15 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlReservacionesP = new Panel();
-            btnCancelar = new Button();
-            btnAceptar = new Button();
+            btnRechazar = new Button();
+            btnAutorizar = new Button();
             grpDetalles = new GroupBox();
+            lblMotivo = new Label();
+            lblDescripcion = new Label();
+            lblTotalAsistentes = new Label();
+            lblTipoEvento = new Label();
+            lblHoraFin = new Label();
+            lblFechaInicio = new Label();
             txtMotivo = new TextBox();
             txtDescripcion = new TextBox();
             txtTotalAsistentes = new TextBox();
@@ -62,8 +68,8 @@
             // 
             // pnlReservacionesP
             // 
-            pnlReservacionesP.Controls.Add(btnCancelar);
-            pnlReservacionesP.Controls.Add(btnAceptar);
+            pnlReservacionesP.Controls.Add(btnRechazar);
+            pnlReservacionesP.Controls.Add(btnAutorizar);
             pnlReservacionesP.Controls.Add(grpDetalles);
             pnlReservacionesP.Controls.Add(dgvReservasPendientes);
             pnlReservacionesP.Dock = DockStyle.Bottom;
@@ -73,41 +79,49 @@
             pnlReservacionesP.Size = new Size(1599, 828);
             pnlReservacionesP.TabIndex = 75;
             // 
-            // btnCancelar
+            // btnRechazar
             // 
-            btnCancelar.BackColor = Color.FromArgb(210, 195, 175);
-            btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.FromArgb(42, 36, 33);
-            btnCancelar.Location = new Point(919, 718);
-            btnCancelar.Margin = new Padding(1, 2, 1, 2);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(160, 55);
-            btnCancelar.TabIndex = 37;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
+            btnRechazar.BackColor = Color.FromArgb(210, 195, 175);
+            btnRechazar.Cursor = Cursors.Hand;
+            btnRechazar.FlatAppearance.BorderSize = 0;
+            btnRechazar.FlatStyle = FlatStyle.Flat;
+            btnRechazar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRechazar.ForeColor = Color.FromArgb(42, 36, 33);
+            btnRechazar.Location = new Point(919, 718);
+            btnRechazar.Margin = new Padding(1, 2, 1, 2);
+            btnRechazar.Name = "btnRechazar";
+            btnRechazar.Size = new Size(160, 55);
+            btnRechazar.TabIndex = 37;
+            btnRechazar.Text = "Rechazar";
+            btnRechazar.UseVisualStyleBackColor = false;
+            btnRechazar.Click += btnRechazar_Click;
             // 
-            // btnAceptar
+            // btnAutorizar
             // 
-            btnAceptar.BackColor = Color.FromArgb(43, 62, 80);
-            btnAceptar.Cursor = Cursors.Hand;
-            btnAceptar.FlatAppearance.BorderSize = 0;
-            btnAceptar.FlatStyle = FlatStyle.Flat;
-            btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(640, 718);
-            btnAceptar.Margin = new Padding(1, 2, 1, 2);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(160, 55);
-            btnAceptar.TabIndex = 36;
-            btnAceptar.Text = "Autorizar";
-            btnAceptar.UseVisualStyleBackColor = false;
+            btnAutorizar.BackColor = Color.FromArgb(43, 62, 80);
+            btnAutorizar.Cursor = Cursors.Hand;
+            btnAutorizar.FlatAppearance.BorderSize = 0;
+            btnAutorizar.FlatStyle = FlatStyle.Flat;
+            btnAutorizar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAutorizar.ForeColor = Color.White;
+            btnAutorizar.Location = new Point(640, 718);
+            btnAutorizar.Margin = new Padding(1, 2, 1, 2);
+            btnAutorizar.Name = "btnAutorizar";
+            btnAutorizar.Size = new Size(160, 55);
+            btnAutorizar.TabIndex = 36;
+            btnAutorizar.Text = "Autorizar";
+            btnAutorizar.UseVisualStyleBackColor = false;
+            btnAutorizar.Click += btnAutorizar_Click;
             // 
             // grpDetalles
             // 
             grpDetalles.BackColor = Color.FromArgb(231, 238, 246);
+            grpDetalles.Controls.Add(lblMotivo);
+            grpDetalles.Controls.Add(lblDescripcion);
+            grpDetalles.Controls.Add(lblTotalAsistentes);
+            grpDetalles.Controls.Add(lblTipoEvento);
+            grpDetalles.Controls.Add(lblHoraFin);
+            grpDetalles.Controls.Add(lblFechaInicio);
             grpDetalles.Controls.Add(txtMotivo);
             grpDetalles.Controls.Add(txtDescripcion);
             grpDetalles.Controls.Add(txtTotalAsistentes);
@@ -123,10 +137,70 @@
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Detalles de la Reserva:";
             // 
+            // lblMotivo
+            // 
+            lblMotivo.AutoSize = true;
+            lblMotivo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMotivo.Location = new Point(30, 480);
+            lblMotivo.Name = "lblMotivo";
+            lblMotivo.Size = new Size(218, 32);
+            lblMotivo.TabIndex = 11;
+            lblMotivo.Text = "Motivo del Evento:";
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(30, 383);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(266, 32);
+            lblDescripcion.TabIndex = 10;
+            lblDescripcion.Text = "Descripción del Evento:";
+            // 
+            // lblTotalAsistentes
+            // 
+            lblTotalAsistentes.AutoSize = true;
+            lblTotalAsistentes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalAsistentes.Location = new Point(30, 276);
+            lblTotalAsistentes.Name = "lblTotalAsistentes";
+            lblTotalAsistentes.Size = new Size(224, 32);
+            lblTotalAsistentes.TabIndex = 9;
+            lblTotalAsistentes.Text = "Total de Asistentes:";
+            // 
+            // lblTipoEvento
+            // 
+            lblTipoEvento.AutoSize = true;
+            lblTipoEvento.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoEvento.Location = new Point(30, 173);
+            lblTipoEvento.Name = "lblTipoEvento";
+            lblTipoEvento.Size = new Size(182, 32);
+            lblTipoEvento.TabIndex = 8;
+            lblTipoEvento.Text = "Tipo de Evento:";
+            // 
+            // lblHoraFin
+            // 
+            lblHoraFin.AutoSize = true;
+            lblHoraFin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHoraFin.Location = new Point(310, 69);
+            lblHoraFin.Name = "lblHoraFin";
+            lblHoraFin.Size = new Size(147, 32);
+            lblHoraFin.TabIndex = 7;
+            lblHoraFin.Text = "Hora de Fin:";
+            // 
+            // lblFechaInicio
+            // 
+            lblFechaInicio.AutoSize = true;
+            lblFechaInicio.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFechaInicio.Location = new Point(30, 69);
+            lblFechaInicio.Name = "lblFechaInicio";
+            lblFechaInicio.Size = new Size(182, 32);
+            lblFechaInicio.TabIndex = 6;
+            lblFechaInicio.Text = "Fecha de Inicio:";
+            // 
             // txtMotivo
             // 
             txtMotivo.BackColor = SystemColors.ControlLight;
-            txtMotivo.Location = new Point(30, 322);
+            txtMotivo.Location = new Point(30, 515);
             txtMotivo.Multiline = true;
             txtMotivo.Name = "txtMotivo";
             txtMotivo.ReadOnly = true;
@@ -136,7 +210,7 @@
             // txtDescripcion
             // 
             txtDescripcion.BackColor = SystemColors.ControlLight;
-            txtDescripcion.Location = new Point(30, 241);
+            txtDescripcion.Location = new Point(30, 418);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.ReadOnly = true;
@@ -146,41 +220,42 @@
             // txtTotalAsistentes
             // 
             txtTotalAsistentes.BackColor = SystemColors.ControlLight;
-            txtTotalAsistentes.Location = new Point(303, 153);
+            txtTotalAsistentes.Location = new Point(30, 311);
             txtTotalAsistentes.Name = "txtTotalAsistentes";
             txtTotalAsistentes.ReadOnly = true;
-            txtTotalAsistentes.Size = new Size(189, 49);
+            txtTotalAsistentes.Size = new Size(462, 49);
             txtTotalAsistentes.TabIndex = 3;
             // 
             // txtTipoEvento
             // 
             txtTipoEvento.BackColor = SystemColors.ControlLight;
-            txtTipoEvento.Location = new Point(30, 153);
+            txtTipoEvento.Location = new Point(30, 208);
             txtTipoEvento.Name = "txtTipoEvento";
             txtTipoEvento.ReadOnly = true;
-            txtTipoEvento.Size = new Size(187, 49);
+            txtTipoEvento.Size = new Size(462, 49);
             txtTipoEvento.TabIndex = 2;
             // 
             // txtHoraFin
             // 
             txtHoraFin.BackColor = SystemColors.ControlLight;
-            txtHoraFin.Location = new Point(342, 65);
+            txtHoraFin.Location = new Point(310, 104);
             txtHoraFin.Name = "txtHoraFin";
             txtHoraFin.ReadOnly = true;
-            txtHoraFin.Size = new Size(150, 49);
+            txtHoraFin.Size = new Size(182, 49);
             txtHoraFin.TabIndex = 1;
             // 
             // txtHoraInicio
             // 
             txtHoraInicio.BackColor = SystemColors.ControlLight;
-            txtHoraInicio.Location = new Point(30, 65);
+            txtHoraInicio.Location = new Point(30, 104);
             txtHoraInicio.Name = "txtHoraInicio";
             txtHoraInicio.ReadOnly = true;
-            txtHoraInicio.Size = new Size(150, 49);
+            txtHoraInicio.Size = new Size(182, 49);
             txtHoraInicio.TabIndex = 0;
             // 
             // dgvReservasPendientes
             // 
+            dgvReservasPendientes.AllowUserToAddRows = false;
             dgvReservasPendientes.BackgroundColor = Color.FromArgb(231, 238, 246);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
@@ -202,6 +277,7 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvReservasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvReservasPendientes.RowHeadersVisible = false;
             dgvReservasPendientes.RowHeadersWidth = 62;
             dgvReservasPendientes.Size = new Size(737, 593);
             dgvReservasPendientes.TabIndex = 34;
@@ -228,8 +304,8 @@
         #endregion
         private Label lblTitulo;
         private Panel pnlReservacionesP;
-        private Button btnCancelar;
-        private Button btnAceptar;
+        private Button btnRechazar;
+        private Button btnAutorizar;
         private GroupBox grpDetalles;
         private DataGridView dgvReservasPendientes;
         private TextBox txtHoraFin;
@@ -238,5 +314,11 @@
         private TextBox txtTipoEvento;
         private TextBox txtMotivo;
         private TextBox txtDescripcion;
+        private Label lblFechaInicio;
+        private Label lblMotivo;
+        private Label lblDescripcion;
+        private Label lblTotalAsistentes;
+        private Label lblTipoEvento;
+        private Label lblHoraFin;
     }
 }
