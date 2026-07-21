@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             lblTitulo = new Label();
             dgvUsuarios = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             pnlUsuarios = new Panel();
             cmbTipo = new ComboBox();
             txtPassword = new TextBox();
@@ -64,6 +60,7 @@
             // 
             // dgvUsuarios
             // 
+            dgvUsuarios.AllowUserToAddRows = false;
             dgvUsuarios.BackgroundColor = Color.FromArgb(231, 238, 246);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
@@ -74,46 +71,22 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dgvUsuarios.EnableHeadersVisualStyles = false;
-            dgvUsuarios.Location = new Point(561, 151);
+            dgvUsuarios.Location = new Point(463, 119);
             dgvUsuarios.Margin = new Padding(2);
             dgvUsuarios.Name = "dgvUsuarios";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvUsuarios.RowHeadersWidth = 62;
-            dgvUsuarios.Size = new Size(514, 401);
+            dgvUsuarios.Size = new Size(612, 267);
             dgvUsuarios.TabIndex = 78;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(43, 62, 80);
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            Column1.HeaderText = "text1";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "text2";
-            Column2.MinimumWidth = 8;
-            Column2.Name = "Column2";
-            Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "text3";
-            Column3.MinimumWidth = 8;
-            Column3.Name = "Column3";
-            Column3.Width = 150;
+            dgvUsuarios.SelectionChanged += dgvUsuario_SelectionChanged;
             // 
             // pnlUsuarios
             // 
@@ -148,6 +121,7 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(218, 29);
             txtPassword.TabIndex = 96;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -178,12 +152,13 @@
             txtNombreUsuario.BackColor = Color.White;
             txtNombreUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtNombreUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreUsuario.Location = new Point(561, 119);
+            txtNombreUsuario.Location = new Point(463, 89);
             txtNombreUsuario.Margin = new Padding(1);
             txtNombreUsuario.Name = "txtNombreUsuario";
             txtNombreUsuario.PlaceholderText = "Buscar usuario";
             txtNombreUsuario.Size = new Size(218, 29);
             txtNombreUsuario.TabIndex = 96;
+            txtNombreUsuario.TextChanged += txtNombreUsuario_TextChanged;
             // 
             // btnEliminar
             // 
@@ -197,6 +172,7 @@
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 100;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -210,6 +186,7 @@
             btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 99;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnNuevo
             // 
@@ -223,6 +200,7 @@
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 98;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // frmUsuarios
             // 
@@ -251,9 +229,6 @@
 
         private Label lblTitulo;
         private DataGridView dgvUsuarios;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private Panel pnlUsuarios;
         private TextBox txtPassword;
         private TextBox txtUsuario;

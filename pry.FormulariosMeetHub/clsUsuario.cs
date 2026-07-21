@@ -91,7 +91,7 @@ namespace pry.FormulariosMeetHub
             return tabla;
         }
 
-        // Método para Guardar o Actualizar SIN transacciones ni chismoso
+        // Método para Guardar 
         public string GuardarActualizar(int tipoOperacion)
         {
             string msg = "";
@@ -185,6 +185,7 @@ namespace pry.FormulariosMeetHub
                     ((ComboBox)control).SelectedIndex = -1;
                 }
             }
+
         }
     }
 }
