@@ -110,7 +110,7 @@ namespace pry.FormulariosMeetHub
                     if (resp == DialogResult.Yes)
                     {
                         msg = salas.GuardarActualizar(tipoOperacion);
-                        MessageBox.Show(msg);
+                        MessageBox.Show(msg, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                     }
                 }
                 else
