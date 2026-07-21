@@ -103,7 +103,7 @@ namespace pry.FormulariosMeetHub
         private void btnSalas_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
-            principal.agregarAlContenedor(new frmSalasEquipamiento(), pnlContenedor);
+            principal.agregarAlContenedor(new frmSalas(), pnlContenedor);
 
             //Actualiza el título
             lblNombreModulo.Text = "Salas";
