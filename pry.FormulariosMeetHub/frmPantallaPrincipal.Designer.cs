@@ -35,10 +35,11 @@
             lblMeetHub = new Label();
             btnReservaciones = new Button();
             pnlMenu = new Panel();
+            btnResponsables = new Button();
+            btnEquipamiento = new Button();
             btnAreasDpto = new Button();
             btnUsuarios = new Button();
-            btnSalas_Equip = new Button();
-            btnResponsables = new Button();
+            btnSalas = new Button();
             btnSalir = new Button();
             btnReporteP = new Button();
             btnCancelaciones = new Button();
@@ -55,9 +56,9 @@
             // pcbTiraInferior
             // 
             pcbTiraInferior.Image = (Image)resources.GetObject("pcbTiraInferior.Image");
-            pcbTiraInferior.Location = new Point(0, 672);
+            pcbTiraInferior.Location = new Point(0, 683);
             pcbTiraInferior.Name = "pcbTiraInferior";
-            pcbTiraInferior.Size = new Size(1365, 33);
+            pcbTiraInferior.Size = new Size(1365, 22);
             pcbTiraInferior.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbTiraInferior.TabIndex = 0;
             pcbTiraInferior.TabStop = false;
@@ -66,7 +67,7 @@
             // 
             pcbLogotipo.BackColor = Color.Transparent;
             pcbLogotipo.Image = (Image)resources.GetObject("pcbLogotipo.Image");
-            pcbLogotipo.Location = new Point(36, 3);
+            pcbLogotipo.Location = new Point(37, 3);
             pcbLogotipo.Name = "pcbLogotipo";
             pcbLogotipo.Size = new Size(103, 99);
             pcbLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -76,7 +77,7 @@
             // pnlContenedor
             // 
             pnlContenedor.BackColor = Color.FromArgb(240, 236, 230);
-            pnlContenedor.Location = new Point(203, 42);
+            pnlContenedor.Location = new Point(203, 57);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(1135, 595);
             pnlContenedor.TabIndex = 23;
@@ -87,7 +88,7 @@
             lblMeetHub.BackColor = Color.Transparent;
             lblMeetHub.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMeetHub.ForeColor = Color.FromArgb(43, 62, 80);
-            lblMeetHub.Location = new Point(39, 110);
+            lblMeetHub.Location = new Point(39, 107);
             lblMeetHub.Name = "lblMeetHub";
             lblMeetHub.Size = new Size(100, 30);
             lblMeetHub.TabIndex = 25;
@@ -105,7 +106,7 @@
             btnReservaciones.FlatStyle = FlatStyle.Flat;
             btnReservaciones.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReservaciones.ImageAlign = ContentAlignment.TopCenter;
-            btnReservaciones.Location = new Point(25, 147);
+            btnReservaciones.Location = new Point(25, 145);
             btnReservaciones.Name = "btnReservaciones";
             btnReservaciones.Size = new Size(128, 44);
             btnReservaciones.TabIndex = 32;
@@ -118,10 +119,11 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(210, 195, 175);
+            pnlMenu.Controls.Add(btnResponsables);
+            pnlMenu.Controls.Add(btnEquipamiento);
             pnlMenu.Controls.Add(btnAreasDpto);
             pnlMenu.Controls.Add(btnUsuarios);
-            pnlMenu.Controls.Add(btnSalas_Equip);
-            pnlMenu.Controls.Add(btnResponsables);
+            pnlMenu.Controls.Add(btnSalas);
             pnlMenu.Controls.Add(lblMeetHub);
             pnlMenu.Controls.Add(btnSalir);
             pnlMenu.Controls.Add(btnReporteP);
@@ -131,8 +133,49 @@
             pnlMenu.Controls.Add(btnReservaciones);
             pnlMenu.Location = new Point(0, 0);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(180, 677);
+            pnlMenu.Size = new Size(180, 705);
             pnlMenu.TabIndex = 31;
+            // 
+            // btnResponsables
+            // 
+            btnResponsables.BackColor = Color.Transparent;
+            btnResponsables.BackgroundImage = (Image)resources.GetObject("btnResponsables.BackgroundImage");
+            btnResponsables.BackgroundImageLayout = ImageLayout.Stretch;
+            btnResponsables.Cursor = Cursors.Hand;
+            btnResponsables.FlatAppearance.BorderSize = 0;
+            btnResponsables.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnResponsables.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnResponsables.FlatStyle = FlatStyle.Flat;
+            btnResponsables.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnResponsables.ImageAlign = ContentAlignment.TopCenter;
+            btnResponsables.Location = new Point(62, 683);
+            btnResponsables.Name = "btnResponsables";
+            btnResponsables.Size = new Size(50, 19);
+            btnResponsables.TabIndex = 35;
+            btnResponsables.TextAlign = ContentAlignment.BottomCenter;
+            btnResponsables.UseVisualStyleBackColor = false;
+            btnResponsables.Click += btnResponsables_Click;
+            btnResponsables.MouseDown += btnGeneral_MouseDown;
+            btnResponsables.MouseUp += btnGeneral_MouseUp;
+            // 
+            // btnEquipamiento
+            // 
+            btnEquipamiento.BackColor = Color.Transparent;
+            btnEquipamiento.BackgroundImage = (Image)resources.GetObject("btnEquipamiento.BackgroundImage");
+            btnEquipamiento.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEquipamiento.Cursor = Cursors.Hand;
+            btnEquipamiento.FlatAppearance.BorderSize = 0;
+            btnEquipamiento.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEquipamiento.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnEquipamiento.FlatStyle = FlatStyle.Flat;
+            btnEquipamiento.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEquipamiento.ImageAlign = ContentAlignment.TopCenter;
+            btnEquipamiento.Location = new Point(25, 267);
+            btnEquipamiento.Name = "btnEquipamiento";
+            btnEquipamiento.Size = new Size(128, 44);
+            btnEquipamiento.TabIndex = 39;
+            btnEquipamiento.TextAlign = ContentAlignment.BottomCenter;
+            btnEquipamiento.UseVisualStyleBackColor = false;
             // 
             // btnAreasDpto
             // 
@@ -176,49 +219,27 @@
             btnUsuarios.MouseDown += btnGeneral_MouseDown;
             btnUsuarios.MouseUp += btnGeneral_MouseUp;
             // 
-            // btnSalas_Equip
+            // btnSalas
             // 
-            btnSalas_Equip.BackColor = Color.Transparent;
-            btnSalas_Equip.BackgroundImage = (Image)resources.GetObject("btnSalas_Equip.BackgroundImage");
-            btnSalas_Equip.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSalas_Equip.Cursor = Cursors.Hand;
-            btnSalas_Equip.FlatAppearance.BorderSize = 0;
-            btnSalas_Equip.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnSalas_Equip.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnSalas_Equip.FlatStyle = FlatStyle.Flat;
-            btnSalas_Equip.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalas_Equip.ImageAlign = ContentAlignment.TopCenter;
-            btnSalas_Equip.Location = new Point(25, 570);
-            btnSalas_Equip.Name = "btnSalas_Equip";
-            btnSalas_Equip.Size = new Size(128, 44);
-            btnSalas_Equip.TabIndex = 36;
-            btnSalas_Equip.TextAlign = ContentAlignment.BottomCenter;
-            btnSalas_Equip.UseVisualStyleBackColor = false;
-            btnSalas_Equip.Click += btnSalas_Equip_Click;
-            btnSalas_Equip.MouseDown += btnGeneral_MouseDown;
-            btnSalas_Equip.MouseUp += btnGeneral_MouseUp;
-            // 
-            // btnResponsables
-            // 
-            btnResponsables.BackColor = Color.Transparent;
-            btnResponsables.BackgroundImage = (Image)resources.GetObject("btnResponsables.BackgroundImage");
-            btnResponsables.BackgroundImageLayout = ImageLayout.Stretch;
-            btnResponsables.Cursor = Cursors.Hand;
-            btnResponsables.FlatAppearance.BorderSize = 0;
-            btnResponsables.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnResponsables.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnResponsables.FlatStyle = FlatStyle.Flat;
-            btnResponsables.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnResponsables.ImageAlign = ContentAlignment.TopCenter;
-            btnResponsables.Location = new Point(25, 268);
-            btnResponsables.Name = "btnResponsables";
-            btnResponsables.Size = new Size(128, 44);
-            btnResponsables.TabIndex = 35;
-            btnResponsables.TextAlign = ContentAlignment.BottomCenter;
-            btnResponsables.UseVisualStyleBackColor = false;
-            btnResponsables.Click += btnResponsables_Click;
-            btnResponsables.MouseDown += btnGeneral_MouseDown;
-            btnResponsables.MouseUp += btnGeneral_MouseUp;
+            btnSalas.BackColor = Color.Transparent;
+            btnSalas.BackgroundImage = (Image)resources.GetObject("btnSalas.BackgroundImage");
+            btnSalas.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSalas.Cursor = Cursors.Hand;
+            btnSalas.FlatAppearance.BorderSize = 0;
+            btnSalas.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSalas.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSalas.FlatStyle = FlatStyle.Flat;
+            btnSalas.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalas.ImageAlign = ContentAlignment.TopCenter;
+            btnSalas.Location = new Point(25, 572);
+            btnSalas.Name = "btnSalas";
+            btnSalas.Size = new Size(128, 44);
+            btnSalas.TabIndex = 36;
+            btnSalas.TextAlign = ContentAlignment.BottomCenter;
+            btnSalas.UseVisualStyleBackColor = false;
+            btnSalas.Click += btnSalas_Click;
+            btnSalas.MouseDown += btnGeneral_MouseDown;
+            btnSalas.MouseUp += btnGeneral_MouseUp;
             // 
             // btnSalir
             // 
@@ -232,7 +253,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalir.ImageAlign = ContentAlignment.TopCenter;
-            btnSalir.Location = new Point(25, 628);
+            btnSalir.Location = new Point(25, 633);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(128, 44);
             btnSalir.TabIndex = 34;
@@ -399,8 +420,9 @@
         private Label lblNombreUser;
         private Label lblUsuario;
         private Button btnUsuarios;
-        private Button btnSalas_Equip;
+        private Button btnSalas;
         private Button btnResponsables;
         private Button btnAreasDpto;
+        private Button btnEquipamiento;
     }
 }

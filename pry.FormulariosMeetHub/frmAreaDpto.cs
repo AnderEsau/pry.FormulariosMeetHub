@@ -123,10 +123,5 @@ namespace pry.FormulariosMeetHub
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void frmAreaDpto_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
