@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pry.FormulariosMeetHub
 {
-    public partial class PantallaAdmin : Form
+    public partial class frmExternos : Form
     {
-        public PantallaAdmin()
+        public frmExternos()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

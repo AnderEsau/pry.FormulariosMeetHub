@@ -30,64 +30,71 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservaciones));
             pnlReservaciones = new Panel();
+            cmbTipoResponsable = new ComboBox();
             pnlNota = new Panel();
             pcbNota = new PictureBox();
             lblNota = new Label();
-            btnCancelar = new Button();
             btnAceptar = new Button();
-            dtpFormalizacion = new DateTimePicker();
-            pcbDepartamentos = new PictureBox();
             pcbSala = new PictureBox();
             pcbResponsable = new PictureBox();
             txtDetalles = new TextBox();
-            cmbAsistentes = new ComboBox();
             txtDescripcion = new TextBox();
             cmbEvento = new ComboBox();
             cmbHoraTermino = new ComboBox();
             cmbHoraInicio = new ComboBox();
-            lblFechaF = new Label();
-            dtpReserva = new DateTimePicker();
+            lblFechaS = new Label();
             lblFechaR = new Label();
-            cmbDepartamentos = new ComboBox();
             lblDetalles = new Label();
             cmbSala = new ComboBox();
             txtResponsable = new TextBox();
             lblTitulo = new Label();
+            dtpSolicitud = new DateTimePicker();
+            dtpFechaR = new DateTimePicker();
             pnlReservaciones.SuspendLayout();
             pnlNota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbNota).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbDepartamentos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbSala).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbResponsable).BeginInit();
             SuspendLayout();
             // 
             // pnlReservaciones
             // 
+            pnlReservaciones.Controls.Add(dtpFechaR);
+            pnlReservaciones.Controls.Add(dtpSolicitud);
+            pnlReservaciones.Controls.Add(cmbTipoResponsable);
             pnlReservaciones.Controls.Add(pnlNota);
-            pnlReservaciones.Controls.Add(btnCancelar);
             pnlReservaciones.Controls.Add(btnAceptar);
-            pnlReservaciones.Controls.Add(dtpFormalizacion);
-            pnlReservaciones.Controls.Add(pcbDepartamentos);
             pnlReservaciones.Controls.Add(pcbSala);
             pnlReservaciones.Controls.Add(pcbResponsable);
             pnlReservaciones.Controls.Add(txtDetalles);
-            pnlReservaciones.Controls.Add(cmbAsistentes);
             pnlReservaciones.Controls.Add(txtDescripcion);
             pnlReservaciones.Controls.Add(cmbEvento);
             pnlReservaciones.Controls.Add(cmbHoraTermino);
             pnlReservaciones.Controls.Add(cmbHoraInicio);
-            pnlReservaciones.Controls.Add(lblFechaF);
-            pnlReservaciones.Controls.Add(dtpReserva);
+            pnlReservaciones.Controls.Add(lblFechaS);
             pnlReservaciones.Controls.Add(lblFechaR);
-            pnlReservaciones.Controls.Add(cmbDepartamentos);
             pnlReservaciones.Controls.Add(lblDetalles);
             pnlReservaciones.Controls.Add(cmbSala);
             pnlReservaciones.Controls.Add(txtResponsable);
             pnlReservaciones.Dock = DockStyle.Bottom;
-            pnlReservaciones.Location = new Point(0, 70);
+            pnlReservaciones.Location = new Point(0, 59);
             pnlReservaciones.Name = "pnlReservaciones";
-            pnlReservaciones.Size = new Size(1119, 486);
+            pnlReservaciones.Size = new Size(1119, 497);
             pnlReservaciones.TabIndex = 1;
+            // 
+            // cmbTipoResponsable
+            // 
+            cmbTipoResponsable.BackColor = Color.White;
+            cmbTipoResponsable.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoResponsable.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbTipoResponsable.ForeColor = SystemColors.WindowText;
+            cmbTipoResponsable.FormattingEnabled = true;
+            cmbTipoResponsable.ItemHeight = 21;
+            cmbTipoResponsable.Items.AddRange(new object[] { "--Seleccione el tipo de responsable--", "Externo", "Alumno", "Trabajador" });
+            cmbTipoResponsable.Location = new Point(85, 18);
+            cmbTipoResponsable.Name = "cmbTipoResponsable";
+            cmbTipoResponsable.Size = new Size(299, 29);
+            cmbTipoResponsable.TabIndex = 73;
             // 
             // pnlNota
             // 
@@ -95,7 +102,7 @@
             pnlNota.Controls.Add(lblNota);
             pnlNota.Location = new Point(460, 155);
             pnlNota.Name = "pnlNota";
-            pnlNota.Size = new Size(299, 214);
+            pnlNota.Size = new Size(328, 155);
             pnlNota.TabIndex = 72;
             // 
             // pcbNota
@@ -115,26 +122,9 @@
             lblNota.ForeColor = Color.FromArgb(43, 62, 80);
             lblNota.Location = new Point(76, 9);
             lblNota.Name = "lblNota";
-            lblNota.Size = new Size(50, 21);
+            lblNota.Size = new Size(244, 126);
             lblNota.TabIndex = 17;
-            lblNota.Text = "Nota:";
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.FromArgb(210, 195, 175);
-            btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.FromArgb(42, 36, 33);
-            btnCancelar.Location = new Point(697, 423);
-            btnCancelar.Margin = new Padding(1);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 33);
-            btnCancelar.TabIndex = 71;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
+            lblNota.Text = "Nota: \r\nLa adecuación de los\r\nespacios debe ser solicitada\r\npor la persona interesada\r\na la Dirección de Administración\r\ny Finanzas";
             // 
             // btnAceptar
             // 
@@ -144,39 +134,18 @@
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(408, 423);
+            btnAceptar.Location = new Point(461, 400);
             btnAceptar.Margin = new Padding(1);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(112, 33);
+            btnAceptar.Size = new Size(217, 33);
             btnAceptar.TabIndex = 70;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
             // 
-            // dtpFormalizacion
-            // 
-            dtpFormalizacion.CalendarFont = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtpFormalizacion.CalendarForeColor = Color.FromArgb(63, 95, 132);
-            dtpFormalizacion.CalendarTitleBackColor = Color.FromArgb(231, 238, 246);
-            dtpFormalizacion.Font = new Font("Segoe UI", 12F);
-            dtpFormalizacion.Location = new Point(460, 90);
-            dtpFormalizacion.Name = "dtpFormalizacion";
-            dtpFormalizacion.Size = new Size(299, 29);
-            dtpFormalizacion.TabIndex = 69;
-            // 
-            // pcbDepartamentos
-            // 
-            pcbDepartamentos.Image = (Image)resources.GetObject("pcbDepartamentos.Image");
-            pcbDepartamentos.Location = new Point(39, 270);
-            pcbDepartamentos.Name = "pcbDepartamentos";
-            pcbDepartamentos.Size = new Size(40, 40);
-            pcbDepartamentos.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbDepartamentos.TabIndex = 68;
-            pcbDepartamentos.TabStop = false;
-            // 
             // pcbSala
             // 
             pcbSala.Image = (Image)resources.GetObject("pcbSala.Image");
-            pcbSala.Location = new Point(39, 96);
+            pcbSala.Location = new Point(39, 135);
             pcbSala.Name = "pcbSala";
             pcbSala.Size = new Size(40, 40);
             pcbSala.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -186,7 +155,7 @@
             // pcbResponsable
             // 
             pcbResponsable.Image = (Image)resources.GetObject("pcbResponsable.Image");
-            pcbResponsable.Location = new Point(39, 21);
+            pcbResponsable.Location = new Point(39, 67);
             pcbResponsable.Name = "pcbResponsable";
             pcbResponsable.Size = new Size(40, 40);
             pcbResponsable.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -198,39 +167,30 @@
             txtDetalles.BackColor = Color.White;
             txtDetalles.Font = new Font("Segoe UI", 12F);
             txtDetalles.ForeColor = SystemColors.WindowText;
-            txtDetalles.Location = new Point(85, 193);
+            txtDetalles.Location = new Point(85, 232);
+            txtDetalles.Multiline = true;
             txtDetalles.Name = "txtDetalles";
-            txtDetalles.Size = new Size(299, 29);
+            txtDetalles.ReadOnly = true;
+            txtDetalles.ScrollBars = ScrollBars.Vertical;
+            txtDetalles.Size = new Size(299, 23);
             txtDetalles.TabIndex = 65;
-            // 
-            // cmbAsistentes
-            // 
-            cmbAsistentes.BackColor = Color.White;
-            cmbAsistentes.Font = new Font("Segoe UI", 12F);
-            cmbAsistentes.ForeColor = Color.Gray;
-            cmbAsistentes.FormattingEnabled = true;
-            cmbAsistentes.Location = new Point(834, 276);
-            cmbAsistentes.Name = "cmbAsistentes";
-            cmbAsistentes.Size = new Size(250, 29);
-            cmbAsistentes.TabIndex = 64;
-            cmbAsistentes.Text = "Total de Asistentes:";
             // 
             // txtDescripcion
             // 
             txtDescripcion.BackColor = Color.White;
-            txtDescripcion.Font = new Font("Segoe UI", 12F);
-            txtDescripcion.ForeColor = Color.Gray;
+            txtDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtDescripcion.ForeColor = SystemColors.WindowText;
             txtDescripcion.Location = new Point(834, 215);
             txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Descripción del evento";
             txtDescripcion.Size = new Size(250, 29);
             txtDescripcion.TabIndex = 63;
-            txtDescripcion.Text = "Descripción del evento";
             // 
             // cmbEvento
             // 
             cmbEvento.BackColor = Color.White;
-            cmbEvento.Font = new Font("Segoe UI", 12F);
-            cmbEvento.ForeColor = Color.Gray;
+            cmbEvento.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            cmbEvento.ForeColor = SystemColors.WindowText;
             cmbEvento.FormattingEnabled = true;
             cmbEvento.Items.AddRange(new object[] { "Escolar", "Guvernamental", "Externo" });
             cmbEvento.Location = new Point(834, 155);
@@ -243,8 +203,8 @@
             // cmbHoraTermino
             // 
             cmbHoraTermino.BackColor = Color.White;
-            cmbHoraTermino.Font = new Font("Segoe UI", 12F);
-            cmbHoraTermino.ForeColor = Color.Gray;
+            cmbHoraTermino.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            cmbHoraTermino.ForeColor = SystemColors.WindowText;
             cmbHoraTermino.FormattingEnabled = true;
             cmbHoraTermino.Location = new Point(834, 90);
             cmbHoraTermino.Name = "cmbHoraTermino";
@@ -255,8 +215,8 @@
             // cmbHoraInicio
             // 
             cmbHoraInicio.BackColor = Color.White;
-            cmbHoraInicio.Font = new Font("Segoe UI", 12F);
-            cmbHoraInicio.ForeColor = Color.Gray;
+            cmbHoraInicio.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            cmbHoraInicio.ForeColor = SystemColors.WindowText;
             cmbHoraInicio.FormattingEnabled = true;
             cmbHoraInicio.Location = new Point(834, 30);
             cmbHoraInicio.Name = "cmbHoraInicio";
@@ -264,83 +224,59 @@
             cmbHoraInicio.TabIndex = 60;
             cmbHoraInicio.Text = "Hora Inicio:";
             // 
-            // lblFechaF
+            // lblFechaS
             // 
-            lblFechaF.AutoSize = true;
-            lblFechaF.Font = new Font("Segoe UI", 12F);
-            lblFechaF.ForeColor = Color.FromArgb(43, 62, 80);
-            lblFechaF.Location = new Point(460, 66);
-            lblFechaF.Name = "lblFechaF";
-            lblFechaF.Size = new Size(174, 21);
-            lblFechaF.TabIndex = 59;
-            lblFechaF.Text = "Fecha De Formalización";
-            // 
-            // dtpReserva
-            // 
-            dtpReserva.CalendarFont = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtpReserva.CalendarForeColor = Color.FromArgb(63, 95, 132);
-            dtpReserva.CalendarTitleBackColor = Color.FromArgb(231, 238, 246);
-            dtpReserva.Font = new Font("Segoe UI", 12F);
-            dtpReserva.Location = new Point(460, 32);
-            dtpReserva.Name = "dtpReserva";
-            dtpReserva.Size = new Size(299, 29);
-            dtpReserva.TabIndex = 58;
+            lblFechaS.AutoSize = true;
+            lblFechaS.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblFechaS.ForeColor = Color.FromArgb(43, 62, 80);
+            lblFechaS.Location = new Point(461, 10);
+            lblFechaS.Name = "lblFechaS";
+            lblFechaS.Size = new Size(141, 21);
+            lblFechaS.TabIndex = 59;
+            lblFechaS.Text = "Fecha de solicitud";
             // 
             // lblFechaR
             // 
             lblFechaR.AutoSize = true;
-            lblFechaR.Font = new Font("Segoe UI", 12F);
+            lblFechaR.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblFechaR.ForeColor = Color.FromArgb(43, 62, 80);
-            lblFechaR.Location = new Point(460, 9);
+            lblFechaR.Location = new Point(461, 78);
             lblFechaR.Name = "lblFechaR";
-            lblFechaR.Size = new Size(132, 21);
+            lblFechaR.Size = new Size(133, 21);
             lblFechaR.TabIndex = 57;
-            lblFechaR.Text = "Fecha De Reserva";
-            // 
-            // cmbDepartamentos
-            // 
-            cmbDepartamentos.BackColor = Color.White;
-            cmbDepartamentos.Font = new Font("Segoe UI", 12F);
-            cmbDepartamentos.ForeColor = Color.Gray;
-            cmbDepartamentos.FormattingEnabled = true;
-            cmbDepartamentos.Items.AddRange(new object[] { "Contabilidad", "Administracion", "Ingenieria Civil", "Agrobiotecnologia", "Mecatronica", "Mecanica", "Ingenieria en Desarrollo de Software Multiplataforma" });
-            cmbDepartamentos.Location = new Point(85, 276);
-            cmbDepartamentos.Name = "cmbDepartamentos";
-            cmbDepartamentos.Size = new Size(299, 29);
-            cmbDepartamentos.TabIndex = 56;
-            cmbDepartamentos.Text = "Área Academica/Departamento";
+            lblFechaR.Text = "Fecha de reserva";
             // 
             // lblDetalles
             // 
             lblDetalles.AutoSize = true;
-            lblDetalles.Font = new Font("Segoe UI", 12F);
+            lblDetalles.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblDetalles.ForeColor = Color.FromArgb(43, 62, 80);
-            lblDetalles.Location = new Point(85, 164);
+            lblDetalles.Location = new Point(85, 203);
             lblDetalles.Name = "lblDetalles";
-            lblDetalles.Size = new Size(99, 21);
+            lblDetalles.Size = new Size(103, 21);
             lblDetalles.TabIndex = 55;
             lblDetalles.Text = "Detalles sala:";
             // 
             // cmbSala
             // 
             cmbSala.BackColor = Color.White;
-            cmbSala.Font = new Font("Segoe UI", 12F);
-            cmbSala.ForeColor = Color.Gray;
+            cmbSala.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSala.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbSala.ForeColor = SystemColors.WindowText;
             cmbSala.FormattingEnabled = true;
             cmbSala.ItemHeight = 21;
-            cmbSala.Items.AddRange(new object[] { "Sala 1", "Sala 2", "Sala 3" });
-            cmbSala.Location = new Point(85, 103);
+            cmbSala.Items.AddRange(new object[] { "--Seleccione la sala--", "Sala 1", "Sala 2", "Sala 3" });
+            cmbSala.Location = new Point(85, 142);
             cmbSala.Name = "cmbSala";
             cmbSala.Size = new Size(299, 29);
             cmbSala.TabIndex = 54;
-            cmbSala.Text = "Sala:";
             // 
             // txtResponsable
             // 
             txtResponsable.BackColor = Color.White;
             txtResponsable.Font = new Font("Segoe UI", 12F);
             txtResponsable.ForeColor = SystemColors.WindowText;
-            txtResponsable.Location = new Point(85, 30);
+            txtResponsable.Location = new Point(85, 78);
             txtResponsable.Name = "txtResponsable";
             txtResponsable.PlaceholderText = "Responsable de la Reserva";
             txtResponsable.Size = new Size(299, 29);
@@ -358,6 +294,28 @@
             lblTitulo.TabIndex = 73;
             lblTitulo.Text = "Reservaciones";
             // 
+            // dtpSolicitud
+            // 
+            dtpSolicitud.CalendarFont = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtpSolicitud.CalendarForeColor = Color.FromArgb(63, 95, 132);
+            dtpSolicitud.CalendarTitleBackColor = Color.FromArgb(231, 238, 246);
+            dtpSolicitud.Font = new Font("Segoe UI", 12F);
+            dtpSolicitud.Location = new Point(460, 34);
+            dtpSolicitud.Name = "dtpSolicitud";
+            dtpSolicitud.Size = new Size(299, 29);
+            dtpSolicitud.TabIndex = 74;
+            // 
+            // dtpFechaR
+            // 
+            dtpFechaR.CalendarFont = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtpFechaR.CalendarForeColor = Color.FromArgb(63, 95, 132);
+            dtpFechaR.CalendarTitleBackColor = Color.FromArgb(231, 238, 246);
+            dtpFechaR.Font = new Font("Segoe UI", 12F);
+            dtpFechaR.Location = new Point(460, 111);
+            dtpFechaR.Name = "dtpFechaR";
+            dtpFechaR.Size = new Size(299, 29);
+            dtpFechaR.TabIndex = 75;
+            // 
             // frmReservaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -367,6 +325,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(pnlReservaciones);
             ForeColor = Color.Gray;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmReservaciones";
             Text = "Reservaciones";
             pnlReservaciones.ResumeLayout(false);
@@ -374,7 +333,6 @@
             pnlNota.ResumeLayout(false);
             pnlNota.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbNota).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbDepartamentos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbSala).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbResponsable).EndInit();
             ResumeLayout(false);
@@ -386,25 +344,26 @@
         private Panel pnlNota;
         private PictureBox pcbNota;
         internal Label lblNota;
-        private Button btnCancelar;
         private Button btnAceptar;
         internal DateTimePicker dtpFormalizacion;
+        internal DateTimePicker dtpReserva;
         private PictureBox pcbDepartamentos;
         private PictureBox pcbSala;
         private PictureBox pcbResponsable;
         internal TextBox txtDetalles;
-        internal ComboBox cmbAsistentes;
         internal TextBox txtDescripcion;
         internal ComboBox cmbEvento;
         internal ComboBox cmbHoraTermino;
         internal ComboBox cmbHoraInicio;
-        internal Label lblFechaF;
-        internal DateTimePicker dtpReserva;
+        internal Label lblFechaS;
         internal Label lblFechaR;
         internal ComboBox cmbDepartamentos;
         internal Label lblDetalles;
         internal ComboBox cmbSala;
         internal TextBox txtResponsable;
         private Label lblTitulo;
+        internal ComboBox cmbTipoResponsable;
+        internal DateTimePicker dtpSolicitud;
+        internal DateTimePicker dtpFechaR;
     }
 }

@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             lblTitulo = new Label();
-            panel1 = new Panel();
-            btnCancelar = new Button();
+            pnlCancelaciones = new Panel();
             btnAceptar = new Button();
             txtFormalizacion = new TextBox();
             lblFormalizacion = new Label();
@@ -44,7 +43,7 @@
             lblFolio = new Label();
             txtMotivo = new TextBox();
             lblMotivo = new Label();
-            panel1.SuspendLayout();
+            pnlCancelaciones.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitulo
@@ -59,43 +58,26 @@
             lblTitulo.TabIndex = 74;
             lblTitulo.Text = "Cancelaciones";
             // 
-            // panel1
+            // pnlCancelaciones
             // 
-            panel1.Controls.Add(btnCancelar);
-            panel1.Controls.Add(btnAceptar);
-            panel1.Controls.Add(txtFormalizacion);
-            panel1.Controls.Add(lblFormalizacion);
-            panel1.Controls.Add(txtFecha);
-            panel1.Controls.Add(lblFecha);
-            panel1.Controls.Add(txtSala);
-            panel1.Controls.Add(lblSala);
-            panel1.Controls.Add(txtResponsable);
-            panel1.Controls.Add(lblResponsable);
-            panel1.Controls.Add(txtFolio);
-            panel1.Controls.Add(lblFolio);
-            panel1.Controls.Add(txtMotivo);
-            panel1.Controls.Add(lblMotivo);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 59);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1119, 497);
-            panel1.TabIndex = 75;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.FromArgb(210, 195, 175);
-            btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.FromArgb(42, 36, 33);
-            btnCancelar.Location = new Point(636, 390);
-            btnCancelar.Margin = new Padding(1);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 33);
-            btnCancelar.TabIndex = 47;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
+            pnlCancelaciones.Controls.Add(btnAceptar);
+            pnlCancelaciones.Controls.Add(txtFormalizacion);
+            pnlCancelaciones.Controls.Add(lblFormalizacion);
+            pnlCancelaciones.Controls.Add(txtFecha);
+            pnlCancelaciones.Controls.Add(lblFecha);
+            pnlCancelaciones.Controls.Add(txtSala);
+            pnlCancelaciones.Controls.Add(lblSala);
+            pnlCancelaciones.Controls.Add(txtResponsable);
+            pnlCancelaciones.Controls.Add(lblResponsable);
+            pnlCancelaciones.Controls.Add(txtFolio);
+            pnlCancelaciones.Controls.Add(lblFolio);
+            pnlCancelaciones.Controls.Add(txtMotivo);
+            pnlCancelaciones.Controls.Add(lblMotivo);
+            pnlCancelaciones.Dock = DockStyle.Bottom;
+            pnlCancelaciones.Location = new Point(0, 59);
+            pnlCancelaciones.Name = "pnlCancelaciones";
+            pnlCancelaciones.Size = new Size(1119, 497);
+            pnlCancelaciones.TabIndex = 75;
             // 
             // btnAceptar
             // 
@@ -105,10 +87,10 @@
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(441, 390);
+            btnAceptar.Location = new Point(461, 400);
             btnAceptar.Margin = new Padding(1);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(112, 33);
+            btnAceptar.Size = new Size(217, 33);
             btnAceptar.TabIndex = 46;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
@@ -233,20 +215,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
             ClientSize = new Size(1119, 556);
-            Controls.Add(panel1);
+            Controls.Add(pnlCancelaciones);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmCancelaciones";
             Text = "Cancelaciones";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlCancelaciones.ResumeLayout(false);
+            pnlCancelaciones.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label lblTitulo;
-        private Panel panel1;
-        private Button btnCancelar;
+        private Panel pnlCancelaciones;
         private Button btnAceptar;
         private TextBox txtFormalizacion;
         private Label lblFormalizacion;
