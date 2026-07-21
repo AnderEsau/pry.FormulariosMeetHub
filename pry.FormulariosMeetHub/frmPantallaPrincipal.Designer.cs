@@ -176,6 +176,7 @@
             btnEquipamiento.TabIndex = 39;
             btnEquipamiento.TextAlign = ContentAlignment.BottomCenter;
             btnEquipamiento.UseVisualStyleBackColor = false;
+            btnEquipamiento.Click += btnEquipamiento_Click;
             // 
             // btnAreasDpto
             // 
