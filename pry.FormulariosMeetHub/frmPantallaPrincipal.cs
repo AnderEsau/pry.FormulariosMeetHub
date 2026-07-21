@@ -34,7 +34,7 @@ namespace pry.FormulariosMeetHub
             btnUsuarios.Visible = clsLogin.EsAdministrador;
             btnReservasPnds.Visible = clsLogin.EsAdministrador;
             btnReporteP.Visible = clsLogin.EsAdministrador;
-            btnSalas_Equip.Visible = clsLogin.EsAdministrador;
+            btnSalas.Visible = clsLogin.EsAdministrador;
         }
         
 
@@ -100,19 +100,22 @@ namespace pry.FormulariosMeetHub
             lblNombreModulo.Text = "Responsables";
         }
         //Evento click del boton de salas y equipamiento que trae el formulario al panel contenedor
-        private void btnSalas_Equip_Click(object sender, EventArgs e)
+        private void btnSalas_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmSalasEquipamiento(), pnlContenedor);
 
             //Actualiza el título
-            lblNombreModulo.Text = "Salas y Equipamiento";
+            lblNombreModulo.Text = "Salas";
         }
         //Evento click del boton de áreas o departamentos que trae el formulario al panel contenedor
         private void btnAreasDpto_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmAreaDpto(), pnlContenedor);
+
+            //Actualiza el titulo
+            lblNombreModulo.Text = "Áreas o Departamentos";
         }
         //Evento click del boton de salir que cierra la aplicación
         private void btnSalir_Click(object sender, EventArgs e)

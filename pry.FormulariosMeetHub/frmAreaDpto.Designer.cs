@@ -52,16 +52,16 @@
             lblTitulo.ForeColor = Color.FromArgb(43, 62, 80);
             lblTitulo.Location = new Point(21, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(407, 47);
+            lblTitulo.Size = new Size(409, 47);
             lblTitulo.TabIndex = 77;
-            lblTitulo.Text = "Áreas y Departamentos";
+            lblTitulo.Text = "Áreas o Departamentos";
             // 
             // txtNombreArea
             // 
             txtNombreArea.BackColor = Color.White;
             txtNombreArea.BorderStyle = BorderStyle.FixedSingle;
             txtNombreArea.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreArea.Location = new Point(455, 112);
+            txtNombreArea.Location = new Point(411, 112);
             txtNombreArea.Margin = new Padding(1);
             txtNombreArea.Name = "txtNombreArea";
             txtNombreArea.PlaceholderText = "Buscar Área/Departamento";
@@ -75,9 +75,9 @@
             pnlAreaDpto.BorderStyle = BorderStyle.FixedSingle;
             pnlAreaDpto.Controls.Add(txtDescripcion);
             pnlAreaDpto.Controls.Add(txtArea);
-            pnlAreaDpto.Location = new Point(64, 144);
+            pnlAreaDpto.Location = new Point(34, 144);
             pnlAreaDpto.Name = "pnlAreaDpto";
-            pnlAreaDpto.Size = new Size(321, 125);
+            pnlAreaDpto.Size = new Size(321, 166);
             pnlAreaDpto.TabIndex = 102;
             // 
             // txtDescripcion
@@ -87,9 +87,10 @@
             txtDescripcion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDescripcion.Location = new Point(21, 72);
             txtDescripcion.Margin = new Padding(1);
+            txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Descripción";
-            txtDescripcion.Size = new Size(272, 29);
+            txtDescripcion.Size = new Size(272, 78);
             txtDescripcion.TabIndex = 95;
             txtDescripcion.Text = " ";
             // 
@@ -119,9 +120,10 @@
             dgvAreaDpto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAreaDpto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAreaDpto.EnableHeadersVisualStyles = false;
-            dgvAreaDpto.Location = new Point(455, 144);
+            dgvAreaDpto.Location = new Point(411, 144);
             dgvAreaDpto.Margin = new Padding(2);
             dgvAreaDpto.Name = "dgvAreaDpto";
+            dgvAreaDpto.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -130,8 +132,9 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(235, 197, 153);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvAreaDpto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvAreaDpto.RowHeadersVisible = false;
             dgvAreaDpto.RowHeadersWidth = 62;
-            dgvAreaDpto.Size = new Size(638, 296);
+            dgvAreaDpto.Size = new Size(682, 296);
             dgvAreaDpto.TabIndex = 101;
             dgvAreaDpto.SelectionChanged += dgvAreaDpto_SelectionChanged;
             // 
@@ -142,7 +145,7 @@
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Location = new Point(285, 284);
+            btnEliminar.Location = new Point(254, 316);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 106;
@@ -156,7 +159,7 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Location = new Point(174, 284);
+            btnGuardar.Location = new Point(143, 316);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 105;
@@ -170,7 +173,7 @@
             btnNuevo.Cursor = Cursors.Hand;
             btnNuevo.FlatAppearance.BorderSize = 0;
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Location = new Point(63, 284);
+            btnNuevo.Location = new Point(32, 316);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 104;
