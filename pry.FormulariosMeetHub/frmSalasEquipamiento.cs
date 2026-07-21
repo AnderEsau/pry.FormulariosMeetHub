@@ -151,6 +151,11 @@ namespace pry.FormulariosMeetHub
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnGuardarS_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

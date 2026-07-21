@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalasEquipamiento));
             lblTitulo = new Label();
             pnlSalas = new Panel();
@@ -210,6 +210,7 @@
             txtNombreSala.PlaceholderText = "Buscar sala";
             txtNombreSala.Size = new Size(218, 29);
             txtNombreSala.TabIndex = 103;
+            txtNombreSala.TextChanged += txtNombreSala_TextChanged;
             // 
             // txtNombreEquipamiento
             // 
@@ -225,9 +226,9 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(43, 62, 80);
-            Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(43, 62, 80);
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
             Column1.HeaderText = "text1";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
@@ -259,6 +260,7 @@
             btnEliminarS.Size = new Size(101, 48);
             btnEliminarS.TabIndex = 110;
             btnEliminarS.UseVisualStyleBackColor = true;
+            btnEliminarS.Click += btnEliminarS_Click;
             // 
             // btnGuardarS
             // 
@@ -272,6 +274,7 @@
             btnGuardarS.Size = new Size(101, 48);
             btnGuardarS.TabIndex = 109;
             btnGuardarS.UseVisualStyleBackColor = true;
+            btnGuardarS.Click += btnGuardarS_Click_1;
             // 
             // btnEliminarE
             // 
@@ -324,6 +327,7 @@
             btnNuevoS.Size = new Size(101, 48);
             btnNuevoS.TabIndex = 114;
             btnNuevoS.UseVisualStyleBackColor = true;
+            btnNuevoS.Click += btnNuevoS_Click;
             // 
             // dgvSalas
             // 
@@ -332,6 +336,7 @@
             dgvSalas.Name = "dgvSalas";
             dgvSalas.Size = new Size(393, 187);
             dgvSalas.TabIndex = 115;
+            dgvSalas.SelectionChanged += dgvSalas_SelectionChanged;
             // 
             // dataGridView2
             // 
