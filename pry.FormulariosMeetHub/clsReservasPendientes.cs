@@ -86,36 +86,36 @@ namespace pry.FormulariosMeetHub
         }
 
         public string RechazarReserva(int idReserva)
+        {
+            string msg = "";
+            try
             {
-                string msg = "";
-                try
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
                 {
-                    clsConexion conexionBD = new clsConexion();
-                    using (var conexion = conexionBD.AbrirConexion())
+                    string sql = "UPDATE tblreserva SET estado_reserva = 'Rechazada' WHERE id_reserva = @id;";
+                    using (var comando = new MySqlCommand(sql, conexion))
                     {
-                        string sql = "UPDATE tblreserva SET estado_reserva = 'Rechazada' WHERE id_reserva = @id;";
-                        using (var comando = new MySqlCommand(sql, conexion))
-                        {
-                            comando.Parameters.AddWithValue("@id", idReserva);
-                            int filasAfectadas = comando.ExecuteNonQuery();
+                        comando.Parameters.AddWithValue("@id", idReserva);
+                        int filasAfectadas = comando.ExecuteNonQuery();
 
-                            if (filasAfectadas > 0)
-                            {
-                                msg = "La reserva ha sido rechazada correctamente.";
-                            }
-                            else
-                            {
-                                msg = "No se pudo rechazar la reserva.";
-                            }
+                        if (filasAfectadas > 0)
+                        {
+                            msg = "La reserva ha sido rechazada correctamente.";
+                        }
+                        else
+                        {
+                            msg = "No se pudo rechazar la reserva.";
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    throw new Exception("Error al rechazar: " + ex.Message);
-                }
-                return msg;
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al rechazar: " + ex.Message);
+            }
+            return msg;
+        }
     } // Fin de la clase
 }
 
