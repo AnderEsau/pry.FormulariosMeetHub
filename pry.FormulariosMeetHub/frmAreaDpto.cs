@@ -71,7 +71,7 @@ namespace pry.FormulariosMeetHub
                 int tipoOperacion = idArea == 0 ? 0 : 1;
                 area.IdArea = idArea;
                 area.NombreArea = string.IsNullOrEmpty(txtArea.Text) ? null : txtArea.Text;
-                area.NombreDescripcion = string.IsNullOrEmpty(txtDescripcion.Text) ? null:txtDescripcion.Text;
+                area.NombreDescripcion = string.IsNullOrEmpty(txtDescripcion.Text) ? null : txtDescripcion.Text;
                 string msg = "";
                 if (tipoOperacion != 0)
                 {
@@ -92,7 +92,7 @@ namespace pry.FormulariosMeetHub
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -124,5 +124,9 @@ namespace pry.FormulariosMeetHub
             }
         }
 
+        private void frmAreaDpto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
