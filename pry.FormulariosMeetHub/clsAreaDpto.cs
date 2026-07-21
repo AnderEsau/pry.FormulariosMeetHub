@@ -36,7 +36,7 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "select id_area AS Clave,nombre_area AS Nombre,descripcion AS Descripcion from tblarea_depto;";
+                    string sql = "select id_area AS Clave,nombre_area AS Nombre,descripcion AS Descripción from tblarea_depto;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -60,7 +60,7 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT id_area AS Clave, nombre_area AS Nombre, descripcion AS Descripcion FROM tblarea_depto WHERE nombre_area LIKE @area;";
+                    string sql = "SELECT id_area AS Clave, nombre_area AS Nombre, descripcion AS Descripción FROM tblarea_depto WHERE nombre_area LIKE @area;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@area", "%" + nombreArea + "%");

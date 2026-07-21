@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pry.FormulariosMeetHub
 {
-    public partial class frmSalasEquipamiento : Form
+    public partial class frmSalas : Form
     {
-        public frmSalasEquipamiento()
+        public frmSalas()
         {
             InitializeComponent();
         }

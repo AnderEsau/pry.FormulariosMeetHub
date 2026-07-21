@@ -1,6 +1,6 @@
 ﻿namespace pry.FormulariosMeetHub
 {
-    partial class frmSalasEquipamiento
+    partial class frmSalas
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalasEquipamiento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalas));
             lblTitulo = new Label();
             pnlSalas = new Panel();
             txtAforo = new TextBox();
