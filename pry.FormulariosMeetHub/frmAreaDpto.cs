@@ -79,13 +79,13 @@ namespace pry.FormulariosMeetHub
                     if (resp == DialogResult.Yes)
                     {
                         msg = area.GuardarActualizar(tipoOperacion);
-                        MessageBox.Show(msg);
+                        MessageBox.Show(msg, "Registro Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
                     msg = area.GuardarActualizar(tipoOperacion);
-                    MessageBox.Show(msg);
+                    MessageBox.Show(msg, "Registro Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 CargarGrid();
 
@@ -96,7 +96,7 @@ namespace pry.FormulariosMeetHub
             }
         }
 
-        private void btnNuevo_Click_1(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
             idArea = 0;
             txtArea.Clear();
@@ -104,7 +104,7 @@ namespace pry.FormulariosMeetHub
             txtArea.Focus();
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace pry.FormulariosMeetHub
                 if (resp == DialogResult.Yes)
                 {
                     string msg = area.Eliminar();
-                    MessageBox.Show(msg);
+                    MessageBox.Show(msg, "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarGrid();
                 }
 

@@ -150,7 +150,7 @@
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 106;
             btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click_1;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -178,7 +178,7 @@
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 104;
             btnNuevo.UseVisualStyleBackColor = true;
-            btnNuevo.Click += btnNuevo_Click_1;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // frmAreaDpto
             // 
