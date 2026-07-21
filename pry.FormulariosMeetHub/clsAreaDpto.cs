@@ -99,7 +99,7 @@ namespace pry.FormulariosMeetHub
                                 int filasAfectadas = comando.ExecuteNonQuery();
                                 if (filasAfectadas > 0)
                                 {
-                                    msg = "EL registro se guardo correctamente";
+                                    msg = "El registro se guardo correctamente";
                                 }
                                 else
                                 {
@@ -118,7 +118,7 @@ namespace pry.FormulariosMeetHub
                                 int filasAfectadas = comando.ExecuteNonQuery();
                                 if (filasAfectadas > 0)
                                 {
-                                    msg = "EL registro se guardo correctamente";
+                                    msg = "El registro se guardo correctamente";
                                 }
                                 else
                                 {
