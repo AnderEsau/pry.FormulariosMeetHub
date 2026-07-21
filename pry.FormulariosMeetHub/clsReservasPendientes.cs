@@ -52,6 +52,69 @@ namespace pry.FormulariosMeetHub
             }
             return tabla;
 
-        }       
-    }
+        }
+        public string AutorizarReserva(int idReserva)
+        {
+            string msg = "";
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "UPDATE tblreserva SET estado_reserva = 'Autorizada' WHERE id_reserva = @id;";
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", idReserva);
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            msg = "La reserva ha sido autorizada correctamente.";
+                        }
+                        else
+                        {
+                            msg = "No se pudo autorizar la reserva.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al autorizar: " + ex.Message);
+            }
+            return msg;
+        }
+
+        public string RechazarReserva(int idReserva)
+        {
+            string msg = "";
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "UPDATE tblreserva SET estado_reserva = 'Rechazada' WHERE id_reserva = @id;";
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", idReserva);
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            msg = "La reserva ha sido rechazada correctamente.";
+                        }
+                        else
+                        {
+                            msg = "No se pudo rechazar la reserva.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al rechazar: " + ex.Message);
+            }
+            return msg;
+        }
+    } // Fin de la clase
 }

@@ -47,6 +47,19 @@ namespace pry.FormulariosMeetHub
             }
         }
 
+        public void LimpiarCampos()
+        {
+            idReservaSeleccionada = 0; // Reiniciamos la variable
+
+            // Vaciamos las cajas de texto de la derecha
+            txtHoraInicio.Clear(); // O .Text = "" si usas Label
+            txtHoraFin.Clear();
+            txtTipoEvento.Clear();
+            txtTotalAsistentes.Clear();
+            txtDescripcion.Clear();
+            txtMotivo.Clear();
+        }
+
         private void dgvReservasPendientes_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -72,7 +85,52 @@ namespace pry.FormulariosMeetHub
 
         private void btnAutorizar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Confirmación de autorizar
+                var resp = MessageBox.Show("¿Confirmas que deseas autorizar la reserva seleccionada?", "Confirmar Autorización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (resp == DialogResult.Yes)
+                {
+                    string msg = reservas.AutorizarReserva(idReservaSeleccionada);
+
+                    // Mensaje de que si funcionó
+                    MessageBox.Show(msg, "Se Realizó con Éxito la Autorización ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiamos los campos y recargamos el grid para actualizar la lista
+                    LimpiarCampos();
+                    CargarGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "No se Pudo Autorizar la Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Confirmación de autorizar
+                var resp = MessageBox.Show("¿Confirmas que deseas rechazar la reserva seleccionada?", "Confirmar rechazo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resp == DialogResult.Yes)
+                {
+                    string msg = reservas.RechazarReserva(idReservaSeleccionada);
+
+                    // Mensaje de que si se rechazó
+                    MessageBox.Show(msg, "Se Realizó con Exito el Rechazo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiamos los campos y recargamos el grid para actualizar la lista
+                    LimpiarCampos();
+                    CargarGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "No se Pudo Recahzar la Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
