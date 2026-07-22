@@ -38,6 +38,26 @@ namespace pry.FormulariosMeetHub
             }
         }
 
+        private void rdbOpcion3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbOpcion3.Checked == true)
+            {
+                // Al marcar la opción de rango personalizado, mostrara el calendario
+                dtpInicio.Visible = true;
+                dtpFinal.Visible = true;
+                lblDesde.Visible = true;
+                lblHasta.Visible = true;
+            }
+            else
+            {
+                // Si se marca semanal o mensual, oculta el calendario
+                dtpInicio.Visible = false;
+                dtpFinal.Visible = false;
+                lblDesde.Visible = false;
+                lblHasta.Visible = false;
+            }
+        }
+
         public void CargarGridReporteSemanal()
         {
             reportes = new clsReportesP();
@@ -50,7 +70,7 @@ namespace pry.FormulariosMeetHub
             catch (Exception ex)    
             {
                 MessageBox.Show(ex.Message);
-            }
+            }   
         }
         public void CargarGridReporteMensual()
         {

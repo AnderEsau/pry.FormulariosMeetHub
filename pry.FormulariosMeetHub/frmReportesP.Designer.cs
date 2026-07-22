@@ -140,6 +140,7 @@
             dtpFinal.Name = "dtpFinal";
             dtpFinal.Size = new Size(238, 33);
             dtpFinal.TabIndex = 39;
+            dtpFinal.Visible = false;
             // 
             // dtpInicio
             // 
@@ -151,6 +152,7 @@
             dtpInicio.Name = "dtpInicio";
             dtpInicio.Size = new Size(214, 33);
             dtpInicio.TabIndex = 38;
+            dtpInicio.Visible = false;
             // 
             // lblHasta
             // 
@@ -162,6 +164,7 @@
             lblHasta.Size = new Size(83, 32);
             lblHasta.TabIndex = 37;
             lblHasta.Text = "Hasta:";
+            lblHasta.Visible = false;
             // 
             // lblDesde
             // 
@@ -173,6 +176,7 @@
             lblDesde.Size = new Size(87, 32);
             lblDesde.TabIndex = 36;
             lblDesde.Text = "Desde:";
+            lblDesde.Visible = false;
             // 
             // gbpOpciones
             // 
@@ -201,6 +205,7 @@
             rdbOpcion3.TabStop = true;
             rdbOpcion3.Text = "Rango de fechas personalizado";
             rdbOpcion3.UseVisualStyleBackColor = true;
+            rdbOpcion3.CheckedChanged += rdbOpcion3_CheckedChanged;
             // 
             // rdbOpcion2
             // 
