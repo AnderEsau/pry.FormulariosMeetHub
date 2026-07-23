@@ -105,5 +105,21 @@ namespace pry.FormulariosMeetHub
                 MessageBox.Show(ex.Message);
             }
         }
+        private void btnGenerarPdf_Click(object sender, EventArgs e)
+        {
+            reportes = new clsReportesP();
+            if (rdbOpcion1.Checked == true)
+            {
+                reportes.ExportarPDF(tabla, "reporte semanal de reservaciones", "ReporteSemanal.pdf");
+            }
+            else if (rdbOpcion2.Checked == true)
+            {
+                reportes.ExportarPDF(tabla, "reporte mensual de reservaciones", "ReporteMensual.pdf");
+            }
+            else if (rdbOpcion3.Checked == true)
+            {
+                reportes.ExportarPDF(tabla, "reporte de reservaciones por rango de fechas específico", "ReporteRangoFechas.pdf");
+            }
+        }
     }
 }
