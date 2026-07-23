@@ -193,5 +193,131 @@ namespace pry.FormulariosMeetHub
             }
             return tabla;
         }
+        public void ExportarPDF(DataTable tabla, string titulOReporte, string nombreArchivoSugerido)
+        {
+            if (tabla == null || tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("no hay datos para convertir a PDF", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // abre la ventana para guardar el archivo PDF 
+            SaveFileDialog guardarArchivo = new SaveFileDialog();
+            guardarArchivo.FileName = nombreArchivoSugerido;
+            guardarArchivo.Filter = "Archivos PDF (*.pdf)|*.pdf";
+
+            if (guardarArchivo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Document.Create(container =>
+                    {
+                        container.Page(page =>
+                        {
+                            page.Size(PageSizes.Letter.Landscape());
+                            page.Margin(1.5f, Unit.Centimetre);
+                            page.PageColor(Colors.White);
+                            page.DefaultTextStyle(x => x.FontFamily(Fonts.Arial));
+                            // Esto es para poner un título al reporte
+                            page.Header().Row(row =>
+                            {
+                                row.RelativeItem().AlignLeft().AlignMiddle().Column(col =>
+                                {
+                                    col.Item().Text("MEETHUB")
+                                     .FontSize(18)
+                                     .Bold()
+                                     .FontColor("#10407A");
+
+                                    col.Item().PaddingTop(5).LineHorizontal(1).LineColor(Colors.Grey.Lighten2);
+
+                                });
+
+                                if (Properties.Resources.MEETHUB != null)
+                                {
+                                    byte[] byteslogo = Properties.Resources.MEETHUB;
+                                    row.ConstantItem(90).AlignRight().AlignMiddle().Image(byteslogo);
+
+                                }
+
+                            });
+
+                            //----Parte 2: contenido central ----
+                            page.Content().PaddingTop(20).Column(column =>
+                            {
+
+                                //AQUI SE IMPRIME EL TITULO QUE LE PASES POR PARAMETRO 
+                                column.Item().PaddingBottom(15).Text(titulOReporte) // <--DINAMICO
+                                           .FontSize(12).Bold().FontColor(Colors.Black);
+
+                                //LA TABLA SE CONSTRUYE SOLA SUGUN LAS COLUMNAS QUE TRAIGA EL DATATABLE 
+                                column.Item().Table(table =>
+                                {
+                                    int totalcolumas = tabla.Columns.Count;
+
+                                    table.ColumnsDefinition(columns =>
+                                    {
+                                        for (int i = 0; i < totalcolumas; i++)
+                                        {
+                                            if (i > 0 && i < totalcolumas - 1)
+                                                columns.RelativeColumn(2f);
+                                            else
+                                                columns.RelativeColumn(1.2f);
+                                        }
+
+                                    });
+
+                                    //Nombres de las columnas en automatico de acuerdo a la tabla 
+                                    foreach (DataColumn columnaobjn in tabla.Columns)
+                                    {
+                                        table.Cell().Background("#4272CB").Padding(8).AlignLeft().AlignMiddle()
+                                        .Text(columnaobjn.ColumnName).FontSize(10).Bold().FontColor(Colors.White);
+                                    }
+                                    //filas automaticas 
+                                    bool alternarFila = true;
+                                    foreach (DataRow fila in tabla.Rows)
+                                    {
+                                        string colorFondo = alternarFila ? "#E6EBF5" : "#FFFFFFF";
+
+                                        for (int i = 0; i < totalcolumas; i++)
+                                        {
+                                            var celda = table.Cell().Background(colorFondo)
+                                                   .BorderBottom(1).BorderColor(Colors.Grey.Lighten3)
+                                                   .Padding(7).AlignMiddle();
+                                            if (i == 0 || i == (totalcolumas - 1))
+                                                celda.AlignCenter();
+                                            else
+                                                celda.AlignCenter();
+
+                                            celda.Text(fila[i].ToString()).FontSize(9).FontColor(Colors.Black);
+                                        }
+                                        alternarFila = !alternarFila;
+                                    }
+
+                                });
+
+                            });
+
+                            //este es el pie de  la pagina 
+                            page.Footer().AlignRight().Text(x =>
+                            {
+                                x.Span("pagina").FontSize(9).FontColor(Colors.Grey.Darken1);
+                                x.CurrentPageNumber().FontSize(9).Bold();
+                                x.Span("  de  ").FontSize(9).FontColor(Colors.Grey.Darken1);
+                                x.TotalPages().FontSize(9).Bold();
+                            });
+
+                        });
+
+                    }).GeneratePdf(guardarArchivo.FileName);
+
+                    MessageBox.Show("Reporte insititucional generado con exito.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al generar el PDF " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }//finaliza metodo de conversión
     }
 }
