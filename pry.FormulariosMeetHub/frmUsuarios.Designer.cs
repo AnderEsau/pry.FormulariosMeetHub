@@ -34,6 +34,7 @@
             lblTitulo = new Label();
             dgvUsuarios = new DataGridView();
             pnlUsuarios = new Panel();
+            cmbEstado = new ComboBox();
             cmbTipo = new ComboBox();
             txtPassword = new TextBox();
             txtUsuario = new TextBox();
@@ -84,7 +85,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvUsuarios.RowHeadersWidth = 62;
-            dgvUsuarios.Size = new Size(612, 267);
+            dgvUsuarios.Size = new Size(512, 267);
             dgvUsuarios.TabIndex = 78;
             dgvUsuarios.SelectionChanged += dgvUsuario_SelectionChanged;
             // 
@@ -92,20 +93,30 @@
             // 
             pnlUsuarios.BackColor = Color.White;
             pnlUsuarios.BorderStyle = BorderStyle.FixedSingle;
+            pnlUsuarios.Controls.Add(cmbEstado);
             pnlUsuarios.Controls.Add(cmbTipo);
             pnlUsuarios.Controls.Add(txtPassword);
             pnlUsuarios.Controls.Add(txtUsuario);
             pnlUsuarios.Controls.Add(txtMatricula);
-            pnlUsuarios.Location = new Point(76, 119);
+            pnlUsuarios.Location = new Point(96, 119);
             pnlUsuarios.Name = "pnlUsuarios";
-            pnlUsuarios.Size = new Size(323, 267);
+            pnlUsuarios.Size = new Size(323, 326);
             pnlUsuarios.TabIndex = 79;
+            // 
+            // cmbEstado
+            // 
+            cmbEstado.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbEstado.FormattingEnabled = true;
+            cmbEstado.Location = new Point(47, 265);
+            cmbEstado.Name = "cmbEstado";
+            cmbEstado.Size = new Size(218, 29);
+            cmbEstado.TabIndex = 101;
             // 
             // cmbTipo
             // 
             cmbTipo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Location = new Point(27, 207);
+            cmbTipo.Location = new Point(47, 207);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(218, 29);
             cmbTipo.TabIndex = 98;
@@ -115,7 +126,7 @@
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(27, 147);
+            txtPassword.Location = new Point(47, 147);
             txtPassword.Margin = new Padding(1);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Password";
@@ -128,7 +139,7 @@
             txtUsuario.BackColor = Color.White;
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(27, 85);
+            txtUsuario.Location = new Point(47, 85);
             txtUsuario.Margin = new Padding(1);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Usuario";
@@ -140,7 +151,7 @@
             txtMatricula.BackColor = Color.White;
             txtMatricula.BorderStyle = BorderStyle.FixedSingle;
             txtMatricula.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtMatricula.Location = new Point(27, 25);
+            txtMatricula.Location = new Point(47, 25);
             txtMatricula.Margin = new Padding(1);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.PlaceholderText = "Matrícula del trabajador";
@@ -167,7 +178,7 @@
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Location = new Point(298, 408);
+            btnEliminar.Location = new Point(318, 474);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(101, 48);
             btnEliminar.TabIndex = 100;
@@ -181,7 +192,7 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Location = new Point(187, 408);
+            btnGuardar.Location = new Point(211, 474);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(101, 48);
             btnGuardar.TabIndex = 99;
@@ -195,7 +206,7 @@
             btnNuevo.Cursor = Cursors.Hand;
             btnNuevo.FlatAppearance.BorderSize = 0;
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Location = new Point(76, 408);
+            btnNuevo.Location = new Point(96, 474);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(101, 48);
             btnNuevo.TabIndex = 98;
@@ -238,5 +249,6 @@
         private Button btnEliminar;
         private Button btnGuardar;
         private Button btnNuevo;
+        private ComboBox cmbEstado;
     }
 }

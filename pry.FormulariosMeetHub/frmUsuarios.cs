@@ -19,9 +19,11 @@ namespace pry.FormulariosMeetHub
         {
             InitializeComponent();
             LlenarComboPerfiles();
+            LlenarComboEstado(); // Carga de Estados al iniciar
             CargarGrid();
         }
 
+        // Método para llenar el ComboBox de Perfiles
         private void LlenarComboPerfiles()
         {
             try
@@ -30,14 +32,9 @@ namespace pry.FormulariosMeetHub
                 dtPerfiles.Columns.Add("id", typeof(int));
                 dtPerfiles.Columns.Add("perfil", typeof(string));
 
-
                 dtPerfiles.Rows.Add(0, "-- Selecciona un Perfil --");
-
-
                 dtPerfiles.Rows.Add(1, "Administrador");
                 dtPerfiles.Rows.Add(2, "Bibliotecario");
-
-
 
                 cmbTipo.DataSource = dtPerfiles;
                 cmbTipo.DisplayMember = "perfil";
@@ -47,6 +44,30 @@ namespace pry.FormulariosMeetHub
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar los perfiles: " + ex.Message);
+            }
+        }
+
+        // Método para llenar el ComboBox de Estado (1 = Activo, 0 = Inactivo)
+        private void LlenarComboEstado()
+        {
+            try
+            {
+                DataTable dtEstado = new DataTable();
+                dtEstado.Columns.Add("id", typeof(int));
+                dtEstado.Columns.Add("estado", typeof(string));
+
+                dtEstado.Rows.Add(-1, "-- Selecciona un Estado --");
+                dtEstado.Rows.Add(1, "Activo");
+                dtEstado.Rows.Add(0, "Inactivo");
+
+                cmbEstado.DataSource = dtEstado;
+                cmbEstado.DisplayMember = "estado";
+                cmbEstado.ValueMember = "id";
+                cmbEstado.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los estados: " + ex.Message);
             }
         }
 
@@ -63,6 +84,12 @@ namespace pry.FormulariosMeetHub
             try
             {
                 dgvUsuarios.DataSource = usuario.CargarDataGrid();
+
+                // Oculta la columna Password en el grid
+                if (dgvUsuarios.Columns.Contains("Password"))
+                {
+                    dgvUsuarios.Columns["Password"].Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -70,11 +97,9 @@ namespace pry.FormulariosMeetHub
             }
         }
 
-
+        // Evento al seleccionar un registro de la tabla
         private void dgvUsuario_SelectionChanged(object sender, EventArgs e)
         {
-
-
             try
             {
                 // Validamos que exista una fila seleccionada y que la celda ID no esté vacía
@@ -93,12 +118,23 @@ namespace pry.FormulariosMeetHub
 
                     if (!string.IsNullOrEmpty(perfilSeleccionado))
                     {
-                        // Busca coincidencia de texto dentro de las opciones del ComboBox
                         cmbTipo.SelectedIndex = cmbTipo.FindStringExact(perfilSeleccionado);
                     }
                     else
                     {
-                        cmbTipo.SelectedIndex = 0; // Vuelve al placeholder '-- Selecciona un Perfil --'
+                        cmbTipo.SelectedIndex = 0; 
+                    }
+
+                    // 4. Seleccionamos la opción correcta en el ComboBox de Estado ("Activo" o "Inactivo")
+                    string estadoSeleccionado = dgvUsuarios.CurrentRow.Cells["Estado"].Value?.ToString();
+
+                    if (!string.IsNullOrEmpty(estadoSeleccionado))
+                    {
+                        cmbEstado.SelectedIndex = cmbEstado.FindStringExact(estadoSeleccionado);
+                    }
+                    else
+                    {
+                        cmbEstado.SelectedIndex = 0; 
                     }
                 }
             }
@@ -106,9 +142,6 @@ namespace pry.FormulariosMeetHub
             {
                 MessageBox.Show("Error al seleccionar el registro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
         // Botón Nuevo
@@ -137,6 +170,11 @@ namespace pry.FormulariosMeetHub
             {
                 usuario.Usuarios = txtNombreUsuario.Text;
                 dgvUsuarios.DataSource = usuario.Consultar();
+
+                if (dgvUsuarios.Columns.Contains("Password"))
+                {
+                    dgvUsuarios.Columns["Password"].Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -147,9 +185,24 @@ namespace pry.FormulariosMeetHub
         // Botón Guardar 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Validación de selección de Perfil
+            if (cmbTipo.SelectedIndex <= 0)
+            {
+                MessageBox.Show("Por favor selecciona un perfil válido.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbTipo.Focus();
+                return;
+            }
+
+            // Validación de selección de Estado
+            if (cmbEstado.SelectedIndex <= 0)
+            {
+                MessageBox.Show("Por favor selecciona un estado válido.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbEstado.Focus();
+                return;
+            }
+
             try
             {
-                // Determinamos el tipo de operación
                 int tipoOperacion = idBibliotecario == 0 ? 0 : 1;
 
                 usuario = new clsUsuario();
@@ -160,10 +213,10 @@ namespace pry.FormulariosMeetHub
                 usuario.Usuarios = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text.Trim();
                 usuario.Psw = string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text.Trim();
                 usuario.Tipo = cmbTipo.Text;
-
+                usuario.Activo = Convert.ToInt32(cmbEstado.SelectedValue);
                 string msg = "";
 
-                // Si es una modificación (tipoOperacion = 1), pedimos confirmación
+               
                 if (tipoOperacion == 1)
                 {
                     var resp = MessageBox.Show("¿Confirmar que deseas actualizar los datos de este usuario?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -173,16 +226,16 @@ namespace pry.FormulariosMeetHub
                         MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         usuario.LimpiarPanel(pnlUsuarios);
                         idBibliotecario = 0;
-                        CargarGrid(); // Refrescamos la tabla del formulario
+                        CargarGrid();
                     }
                 }
-                else // Si es nuevo (tipoOperacion = 0), se guarda directo
+                else 
                 {
                     msg = usuario.GuardarActualizar(tipoOperacion);
                     MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     usuario.LimpiarPanel(pnlUsuarios);
                     idBibliotecario = 0;
-                    CargarGrid(); // Refrescamos la tabla del formulario
+                    CargarGrid();
                 }
             }
             catch (Exception ex)
@@ -208,7 +261,6 @@ namespace pry.FormulariosMeetHub
                 try
                 {
                     usuario = new clsUsuario();
-
                     usuario.IdBibliotecario = idBibliotecario;
 
                     string resultado = usuario.Eliminar();
@@ -225,18 +277,8 @@ namespace pry.FormulariosMeetHub
                                     "Error Operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
-
         }
 
 
-
-
-
-
     }
-
-
 }
-
