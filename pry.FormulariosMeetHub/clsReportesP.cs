@@ -60,7 +60,7 @@ namespace pry.FormulariosMeetHub
 
                         "ORDER BY `Fecha de Reserva` ASC;";
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))//CONDICION
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
                     }//se libera la consulta
@@ -82,7 +82,7 @@ namespace pry.FormulariosMeetHub
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql =
-                        // --- 1. BLOQUE DE ALUMNOS ---
+                        // ALUMNOS
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno) AS 'Nombre', " +
                         "'Alumno' AS Tipo, " +
@@ -95,7 +95,7 @@ namespace pry.FormulariosMeetHub
 
                         "UNION " +
 
-                        // --- 2. BLOQUE DE TRABAJADORES ---
+                        // TRABAJADORES
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno) AS 'Nombre', " +
                         "'Trabajador' AS Tipo, " +
@@ -108,7 +108,7 @@ namespace pry.FormulariosMeetHub
 
                         "UNION " +
 
-                        // --- 3. BLOQUE DE EXTERNOS ---
+                        // EXTERNOS
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(E.nombre, ' ', E.apellido_paterno, ' ', E.apellido_materno) AS 'Nombre', " +
                         "'Externo' AS Tipo, " +
@@ -142,7 +142,7 @@ namespace pry.FormulariosMeetHub
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql =
-                        // --- 1. BLOQUE DE ALUMNOS ---
+                        //  ALUMNOS
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno) AS 'Nombre', " +
                         "'Alumno' AS Tipo, " +
@@ -155,7 +155,7 @@ namespace pry.FormulariosMeetHub
 
                         "UNION " +
 
-                        // --- 2. BLOQUE DE TRABAJADORES ---
+                        // TRABAJADORES
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno) AS 'Nombre', " +
                         "'Trabajador' AS Tipo, " +
@@ -168,7 +168,7 @@ namespace pry.FormulariosMeetHub
 
                         "UNION " +
 
-                        // --- 3. BLOQUE DE EXTERNOS ---
+                        // EXTERNOS
                         "SELECT S.nombre_sala AS Sala, " +
                         "CONCAT(E.nombre, ' ', E.apellido_paterno, ' ', E.apellido_materno) AS 'Nombre', " +
                         "'Externo' AS Tipo, " +
@@ -181,7 +181,7 @@ namespace pry.FormulariosMeetHub
 
                         "ORDER BY `Fecha de Reserva` ASC;";
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))//CONDICION
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
                     }//se libera la consulta
