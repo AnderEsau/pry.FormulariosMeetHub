@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlReporte = new Panel();
             btnVer = new Button();
@@ -58,7 +58,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(479, 71);
             lblTitulo.TabIndex = 75;
-            lblTitulo.Text = "Reporte Periodico";
+            lblTitulo.Text = "Reporte Periódico";
             // 
             // pnlReporte
             // 
@@ -113,14 +113,14 @@
             // 
             dgvReporte.AllowUserToAddRows = false;
             dgvReporte.BackgroundColor = Color.FromArgb(231, 238, 246);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(43, 62, 80);
-            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvReporte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(43, 62, 80);
+            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvReporte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReporte.EnableHeadersVisualStyles = false;
             dgvReporte.Location = new Point(31, 132);
@@ -189,7 +189,7 @@
             gbpOpciones.Margin = new Padding(4, 5, 4, 5);
             gbpOpciones.Name = "gbpOpciones";
             gbpOpciones.Padding = new Padding(4, 5, 4, 5);
-            gbpOpciones.Size = new Size(464, 195);
+            gbpOpciones.Size = new Size(892, 195);
             gbpOpciones.TabIndex = 77;
             gbpOpciones.TabStop = false;
             gbpOpciones.Text = "Opciones";
@@ -200,10 +200,10 @@
             rdbOpcion3.Location = new Point(9, 150);
             rdbOpcion3.Margin = new Padding(4, 5, 4, 5);
             rdbOpcion3.Name = "rdbOpcion3";
-            rdbOpcion3.Size = new Size(377, 36);
+            rdbOpcion3.Size = new Size(653, 36);
             rdbOpcion3.TabIndex = 2;
             rdbOpcion3.TabStop = true;
-            rdbOpcion3.Text = "Rango de fechas personalizado";
+            rdbOpcion3.Text = "Reporte de reservaciones por rango de fechas específico";
             rdbOpcion3.UseVisualStyleBackColor = true;
             rdbOpcion3.CheckedChanged += rdbOpcion3_CheckedChanged;
             // 
@@ -213,10 +213,10 @@
             rdbOpcion2.Location = new Point(9, 98);
             rdbOpcion2.Margin = new Padding(4, 5, 4, 5);
             rdbOpcion2.Name = "rdbOpcion2";
-            rdbOpcion2.Size = new Size(354, 36);
+            rdbOpcion2.Size = new Size(413, 36);
             rdbOpcion2.TabIndex = 1;
             rdbOpcion2.TabStop = true;
-            rdbOpcion2.Text = "Mostrar un reporte mensual ";
+            rdbOpcion2.Text = "Reporte mensual de reservaciones";
             rdbOpcion2.UseVisualStyleBackColor = true;
             // 
             // rdbOpcion1
@@ -225,10 +225,10 @@
             rdbOpcion1.Location = new Point(9, 47);
             rdbOpcion1.Margin = new Padding(4, 5, 4, 5);
             rdbOpcion1.Name = "rdbOpcion1";
-            rdbOpcion1.Size = new Size(346, 36);
+            rdbOpcion1.Size = new Size(412, 36);
             rdbOpcion1.TabIndex = 0;
             rdbOpcion1.TabStop = true;
-            rdbOpcion1.Text = "Mostrar un reporte semanal";
+            rdbOpcion1.Text = "Reporte semanal de reservaciones";
             rdbOpcion1.UseVisualStyleBackColor = true;
             // 
             // frmReportesP

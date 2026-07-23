@@ -20,25 +20,55 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT S.nombre_sala AS Sala, " +
-                    "IFNULL(R.id_alumno, R.matricula) AS Responsable, " +
-                    "R.fecha_reserva AS 'Fecha de Reserva', " +
-                    "R.fecha_solicitud AS 'Fecha de Formalización' " +
-                    "FROM tblreserva R " +
-                    "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
-                    "WHERE YEARWEEK(R.fecha_reserva, 1) = YEARWEEK(CURDATE(), 1) " +
-                    "ORDER BY R.fecha_reserva ASC;";
+                    string sql =
+                        // ALUMNOS
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno) AS 'Nombre', " +
+                        "'Alumno' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblalumnos A ON R.id_alumno = A.id_alumno " +
+                        "WHERE YEARWEEK(R.fecha_reserva, 1) = YEARWEEK(CURDATE(), 1) " +
+
+                        "UNION " +
+
+                        // TRABAJADORES
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno) AS 'Nombre', " +
+                        "'Trabajador' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tbltrabajadores T ON R.matricula = T.matricula " +
+                        "WHERE YEARWEEK(R.fecha_reserva, 1) = YEARWEEK(CURDATE(), 1) " +
+
+                        "UNION " +
+
+                        // EXTERNOS
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(E.nombre, ' ', E.apellido_paterno, ' ', E.apellido_materno) AS 'Nombre', " +
+                        "'Externo' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblexterno E ON R.id_externo = E.id_externo " +
+                        "WHERE YEARWEEK(R.fecha_reserva, 1) = YEARWEEK(CURDATE(), 1) " +
+
+                        "ORDER BY `Fecha de Reserva` ASC;";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))//CONDICION
                     {
                         consulta.Fill(tabla);
                     }//se libera la consulta
-
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al consultar alumnos en riesgo:" + ex.Message);
+                throw new Exception("Error al consultar el reporte semanal:" + ex.Message);
             }
             return tabla;
         }
@@ -51,30 +81,58 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT S.nombre_sala AS Sala, " +
-                    "IFNULL(R.id_alumno, R.matricula) AS Responsable, " +
-                    "R.fecha_reserva AS 'Fecha de Reserva', " +
-                    "R.fecha_solicitud AS 'Fecha de Formalización' " +
-                    "FROM tblreserva R " +
-                    "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
-                    "WHERE MONTH(R.fecha_reserva) = MONTH(CURDATE()) " +
-                    "AND YEAR(R.fecha_reserva) = YEAR(CURDATE()) " +
-                    "ORDER BY R.fecha_reserva ASC;";    
+                    string sql =
+                        // --- 1. BLOQUE DE ALUMNOS ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno) AS 'Nombre', " +
+                        "'Alumno' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblalumnos A ON R.id_alumno = A.id_alumno " +
+                        "WHERE MONTH(R.fecha_reserva) = MONTH(CURDATE()) AND YEAR(R.fecha_reserva) = YEAR(CURDATE()) " +
 
-                    using (consulta = new MySqlDataAdapter(sql, conexion))//CONDICION
+                        "UNION " +
+
+                        // --- 2. BLOQUE DE TRABAJADORES ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno) AS 'Nombre', " +
+                        "'Trabajador' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tbltrabajadores T ON R.matricula = T.matricula " +
+                        "WHERE MONTH(R.fecha_reserva) = MONTH(CURDATE()) AND YEAR(R.fecha_reserva) = YEAR(CURDATE()) " +
+
+                        "UNION " +
+
+                        // --- 3. BLOQUE DE EXTERNOS ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(E.nombre, ' ', E.apellido_paterno, ' ', E.apellido_materno) AS 'Nombre', " +
+                        "'Externo' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblexterno E ON R.id_externo = E.id_externo " +
+                        "WHERE MONTH(R.fecha_reserva) = MONTH(CURDATE()) AND YEAR(R.fecha_reserva) = YEAR(CURDATE()) " +
+
+                        "ORDER BY `Fecha de Reserva` ASC;";
+
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
-                    }//se libera la consulta
-
+                    }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al consultar alumnos y tutores:" + ex.Message);
+                throw new Exception("Error al consultar el reporte mensual: " + ex.Message);
             }
             return tabla;
         }
-
         public DataTable consultarRangoFechas(string fechaInicio, string fechaFin)
         {
             tabla = new DataTable();
@@ -83,24 +141,55 @@ namespace pry.FormulariosMeetHub
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT S.nombre_sala AS Sala, " +
-                                 "IFNULL(R.id_alumno, R.matricula) AS Responsable, " +
-                                 "R.fecha_reserva AS 'Fecha de Reserva', " +
-                                 "R.fecha_solicitud AS 'Fecha de Formalización' " +
-                                 "FROM tblreserva R " +
-                                 "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
-                                 "WHERE R.fecha_reserva BETWEEN '" + fechaInicio + "' AND '" + fechaFin + "';";
+                    string sql =
+                        // --- 1. BLOQUE DE ALUMNOS ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(A.nombre, ' ', A.apellido_paterno, ' ', A.apellido_materno) AS 'Nombre', " +
+                        "'Alumno' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblalumnos A ON R.id_alumno = A.id_alumno " +
+                        "WHERE R.fecha_reserva BETWEEN '" + fechaInicio + "' AND '" + fechaFin + "' " +
+
+                        "UNION " +
+
+                        // --- 2. BLOQUE DE TRABAJADORES ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(T.nombre, ' ', T.apellido_paterno, ' ', T.apellido_materno) AS 'Nombre', " +
+                        "'Trabajador' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tbltrabajadores T ON R.matricula = T.matricula " +
+                        "WHERE R.fecha_reserva BETWEEN '" + fechaInicio + "' AND '" + fechaFin + "' " +
+
+                        "UNION " +
+
+                        // --- 3. BLOQUE DE EXTERNOS ---
+                        "SELECT S.nombre_sala AS Sala, " +
+                        "CONCAT(E.nombre, ' ', E.apellido_paterno, ' ', E.apellido_materno) AS 'Nombre', " +
+                        "'Externo' AS Tipo, " +
+                        "R.fecha_solicitud AS 'Fecha de Solicitud', R.fecha_reserva AS 'Fecha de Reserva', " +
+                        "R.tipo_evento AS 'Tipo de Evento', R.total_asistentes AS Asistentes, R.estado_reserva AS Estado " +
+                        "FROM tblreserva R " +
+                        "INNER JOIN tblsalas S ON R.id_sala = S.id_sala " +
+                        "INNER JOIN tblexterno E ON R.id_externo = E.id_externo " +
+                        "WHERE R.fecha_reserva BETWEEN '" + fechaInicio + "' AND '" + fechaFin + "' " +
+
+                        "ORDER BY `Fecha de Reserva` ASC;";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))//CONDICION
                     {
                         consulta.Fill(tabla);
                     }//se libera la consulta
-
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al consultar alumnos y tutores:" + ex.Message);
+                throw new Exception("Error al consultar los rangos de fecha:" + ex.Message);
             }
             return tabla;
         }
