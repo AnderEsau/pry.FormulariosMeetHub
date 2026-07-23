@@ -52,7 +52,7 @@ namespace pry.FormulariosMeetHub
             idReservaSeleccionada = 0; // Reiniciamos la variable
 
             // Vaciamos las cajas de texto de la derecha
-            txtHoraInicio.Clear(); // O .Text = "" si usas Label
+            txtHoraInicio.Clear();
             txtHoraFin.Clear();
             txtTipoEvento.Clear();
             txtTotalAsistentes.Clear();
