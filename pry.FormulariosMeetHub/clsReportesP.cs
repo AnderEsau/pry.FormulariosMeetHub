@@ -5,6 +5,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//agregar los using de la libreria QuestPDF
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 
 namespace pry.FormulariosMeetHub
 {
@@ -193,11 +197,11 @@ namespace pry.FormulariosMeetHub
             }
             return tabla;
         }
-        public void ExportarPDF(DataTable tabla, string titulOReporte, string nombreArchivoSugerido)
+        public void ExportarPDF(DataTable tabla, string tituloReporte, string nombreArchivoSugerido)
         {
             if (tabla == null || tabla.Rows.Count == 0)
             {
-                MessageBox.Show("no hay datos para convertir a PDF", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay datos para convertir a PDF", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // abre la ventana para guardar el archivo PDF 
@@ -245,7 +249,7 @@ namespace pry.FormulariosMeetHub
                             {
 
                                 //AQUI SE IMPRIME EL TITULO QUE LE PASES POR PARAMETRO 
-                                column.Item().PaddingBottom(15).Text(titulOReporte) // <--DINAMICO
+                                column.Item().PaddingBottom(15).Text(tituloReporte) // <--DINAMICO
                                            .FontSize(12).Bold().FontColor(Colors.Black);
 
                                 //LA TABLA SE CONSTRUYE SOLA SUGUN LAS COLUMNAS QUE TRAIGA EL DATATABLE 
@@ -275,7 +279,7 @@ namespace pry.FormulariosMeetHub
                                     bool alternarFila = true;
                                     foreach (DataRow fila in tabla.Rows)
                                     {
-                                        string colorFondo = alternarFila ? "#E6EBF5" : "#FFFFFFF";
+                                        string colorFondo = alternarFila ? "#E6EBF5" : "#FFFFFF";
 
                                         for (int i = 0; i < totalcolumas; i++)
                                         {
@@ -299,7 +303,7 @@ namespace pry.FormulariosMeetHub
                             //este es el pie de  la pagina 
                             page.Footer().AlignRight().Text(x =>
                             {
-                                x.Span("pagina").FontSize(9).FontColor(Colors.Grey.Darken1);
+                                x.Span("Pagina").FontSize(9).FontColor(Colors.Grey.Darken1);
                                 x.CurrentPageNumber().FontSize(9).Bold();
                                 x.Span("  de  ").FontSize(9).FontColor(Colors.Grey.Darken1);
                                 x.TotalPages().FontSize(9).Bold();
@@ -309,7 +313,7 @@ namespace pry.FormulariosMeetHub
 
                     }).GeneratePdf(guardarArchivo.FileName);
 
-                    MessageBox.Show("Reporte insititucional generado con exito.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Reporte institucional generado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {

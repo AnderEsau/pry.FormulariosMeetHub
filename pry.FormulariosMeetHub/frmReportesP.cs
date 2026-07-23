@@ -13,6 +13,7 @@ namespace pry.FormulariosMeetHub
     public partial class frmReportesP : Form
     {
         clsReportesP reportes;
+        DataTable tabla;
         public frmReportesP()
         {
             InitializeComponent();
@@ -25,16 +26,20 @@ namespace pry.FormulariosMeetHub
             if (rdbOpcion1.Checked == true)
             {
                 //llamar la consulta para cargar en el grid 
-                CargarGridReporteSemanal();
+                tabla = reportes.ConsultarReporteSemanal();
+                dgvReporte.DataSource = tabla;
             }
             else if (rdbOpcion2.Checked == true)
             {
                 //llamar la consulta para cargar en el grid 
-                CargarGridReporteMensual();
+                tabla = reportes.consultarReporteMensual();
+                dgvReporte.DataSource = tabla;
             }
             else if (rdbOpcion3.Checked == true)
             {
-                CargarGridRangoFechas();
+                //llamar la consulta para cargar en el grid
+                tabla = reportes.consultarRangoFechas(dtpInicio.Value.ToString("yyyy-MM-dd"), dtpFinal.Value.ToString("yyyy-MM-dd"));
+                dgvReporte.DataSource = tabla;
             }
         }
 
@@ -58,67 +63,21 @@ namespace pry.FormulariosMeetHub
             }
         }
 
-        public void CargarGridReporteSemanal()
-        {
-            reportes = new clsReportesP();
-            dgvReporte.DataSource = null;
-            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            try
-            {
-                dgvReporte.DataSource = reportes.ConsultarReporteSemanal();
-            }
-            catch (Exception ex)    
-            {
-                MessageBox.Show(ex.Message);
-            }   
-        }
-        public void CargarGridReporteMensual()
-        {
-            reportes = new clsReportesP();
-            dgvReporte.DataSource = null;
-            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            try
-            {
-                dgvReporte.DataSource = reportes.consultarReporteMensual();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        public void CargarGridRangoFechas()
-        {
-            reportes = new clsReportesP();
-            dgvReporte.DataSource = null;
-            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            try
-            {
-                string inicio = dtpInicio.Value.ToString("yyyy-MM-dd");
-                string fin = dtpFinal.Value.ToString("yyyy-MM-dd");
-                dgvReporte.DataSource = reportes.consultarRangoFechas(inicio, fin);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
         private void btnGenerarPdf_Click(object sender, EventArgs e)
         {
             reportes = new clsReportesP();
             if (rdbOpcion1.Checked == true)
             {
-                reportes.ExportarPDF(tabla, "reporte semanal de reservaciones", "ReporteSemanal.pdf");
+                reportes.ExportarPDF(tabla, "Reporte semanal de reservaciones", "ReporteSemanal.pdf");
             }
             else if (rdbOpcion2.Checked == true)
             {
-                reportes.ExportarPDF(tabla, "reporte mensual de reservaciones", "ReporteMensual.pdf");
+                reportes.ExportarPDF(tabla, "Reporte mensual de reservaciones", "ReporteMensual.pdf");
             }
             else if (rdbOpcion3.Checked == true)
             {
-                reportes.ExportarPDF(tabla, "reporte de reservaciones por rango de fechas específico", "ReporteRangoFechas.pdf");
+                reportes.ExportarPDF(tabla, "Reporte de reservaciones por rango de fechas específico", "ReporteRangoFechas.pdf");
             }
         }
     }
