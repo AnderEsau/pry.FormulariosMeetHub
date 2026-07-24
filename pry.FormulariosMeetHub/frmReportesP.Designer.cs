@@ -69,9 +69,9 @@
             pnlReporte.Controls.Add(lblHasta);
             pnlReporte.Controls.Add(lblDesde);
             pnlReporte.Dock = DockStyle.Bottom;
-            pnlReporte.Location = new Point(0, 176);
+            pnlReporte.Location = new Point(0, 182);
             pnlReporte.Name = "pnlReporte";
-            pnlReporte.Size = new Size(1119, 380);
+            pnlReporte.Size = new Size(1135, 413);
             pnlReporte.TabIndex = 76;
             // 
             // btnVer
@@ -123,7 +123,7 @@
             dgvReporte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReporte.EnableHeadersVisualStyles = false;
-            dgvReporte.Location = new Point(40, 79);
+            dgvReporte.Location = new Point(39, 79);
             dgvReporte.Margin = new Padding(2);
             dgvReporte.Name = "dgvReporte";
             dgvReporte.RowHeadersVisible = false;
@@ -236,7 +236,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
-            ClientSize = new Size(1119, 556);
+            ClientSize = new Size(1135, 595);
             Controls.Add(gbpOpciones);
             Controls.Add(pnlReporte);
             Controls.Add(lblTitulo);

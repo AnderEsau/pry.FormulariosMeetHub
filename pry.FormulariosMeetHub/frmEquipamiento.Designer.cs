@@ -61,6 +61,7 @@
             // dgvEquipamiento
             // 
             dgvEquipamiento.AllowUserToAddRows = false;
+            dgvEquipamiento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvEquipamiento.BackgroundColor = Color.FromArgb(231, 238, 246);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
@@ -209,7 +210,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
-            ClientSize = new Size(1119, 556);
+            ClientSize = new Size(1135, 595);
             Controls.Add(btnEliminar);
             Controls.Add(btnGuardar);
             Controls.Add(btnNuevo);
