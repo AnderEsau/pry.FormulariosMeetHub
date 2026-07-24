@@ -62,6 +62,7 @@
             // dgvUsuarios
             // 
             dgvUsuarios.AllowUserToAddRows = false;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvUsuarios.BackgroundColor = Color.FromArgb(231, 238, 246);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(63, 95, 132);
@@ -73,7 +74,7 @@
             dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.EnableHeadersVisualStyles = false;
-            dgvUsuarios.Location = new Point(463, 119);
+            dgvUsuarios.Location = new Point(519, 149);
             dgvUsuarios.Margin = new Padding(2);
             dgvUsuarios.Name = "dgvUsuarios";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -85,7 +86,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvUsuarios.RowHeadersWidth = 62;
-            dgvUsuarios.Size = new Size(512, 267);
+            dgvUsuarios.Size = new Size(513, 268);
             dgvUsuarios.TabIndex = 78;
             dgvUsuarios.SelectionChanged += dgvUsuario_SelectionChanged;
             // 
@@ -163,7 +164,7 @@
             txtNombreUsuario.BackColor = Color.White;
             txtNombreUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtNombreUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreUsuario.Location = new Point(463, 89);
+            txtNombreUsuario.Location = new Point(519, 119);
             txtNombreUsuario.Margin = new Padding(1);
             txtNombreUsuario.Name = "txtNombreUsuario";
             txtNombreUsuario.PlaceholderText = "Buscar usuario";

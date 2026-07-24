@@ -74,9 +74,9 @@
             pnlCancelaciones.Controls.Add(txtMotivo);
             pnlCancelaciones.Controls.Add(lblMotivo);
             pnlCancelaciones.Dock = DockStyle.Bottom;
-            pnlCancelaciones.Location = new Point(0, 59);
+            pnlCancelaciones.Location = new Point(0, 98);
             pnlCancelaciones.Name = "pnlCancelaciones";
-            pnlCancelaciones.Size = new Size(1119, 497);
+            pnlCancelaciones.Size = new Size(1135, 497);
             pnlCancelaciones.TabIndex = 75;
             // 
             // btnAceptar
@@ -214,7 +214,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 236, 230);
-            ClientSize = new Size(1119, 556);
+            ClientSize = new Size(1135, 595);
             Controls.Add(pnlCancelaciones);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalas));
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlSalas = new Panel();
             txtAforo = new TextBox();
@@ -114,7 +114,7 @@
             txtNombreSala.BackColor = Color.White;
             txtNombreSala.BorderStyle = BorderStyle.FixedSingle;
             txtNombreSala.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreSala.Location = new Point(445, 103);
+            txtNombreSala.Location = new Point(428, 103);
             txtNombreSala.Margin = new Padding(1);
             txtNombreSala.Name = "txtNombreSala";
             txtNombreSala.PlaceholderText = "Buscar sala";
@@ -124,9 +124,9 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(43, 62, 80);
-            Column1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(43, 62, 80);
+            Column1.DefaultCellStyle = dataGridViewCellStyle1;
             Column1.HeaderText = "text1";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
@@ -191,32 +191,33 @@
             // dgvSalas
             // 
             dgvSalas.AllowUserToAddRows = false;
+            dgvSalas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSalas.BackgroundColor = Color.FromArgb(231, 238, 246);
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(63, 95, 132);
-            dataGridViewCellStyle8.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(43, 62, 80);
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvSalas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(63, 95, 132);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 62, 80);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvSalas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvSalas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSalas.EnableHeadersVisualStyles = false;
-            dgvSalas.Location = new Point(445, 135);
+            dgvSalas.Location = new Point(428, 135);
             dgvSalas.Margin = new Padding(2);
             dgvSalas.Name = "dgvSalas";
             dgvSalas.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(235, 197, 153);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgvSalas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(235, 197, 153);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvSalas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvSalas.RowHeadersVisible = false;
             dgvSalas.RowHeadersWidth = 62;
-            dgvSalas.Size = new Size(638, 312);
+            dgvSalas.Size = new Size(662, 312);
             dgvSalas.TabIndex = 124;
             dgvSalas.SelectionChanged += dgvSalas_SelectionChanged;
             // 
